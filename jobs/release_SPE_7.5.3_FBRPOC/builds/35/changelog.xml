@@ -1,0 +1,14 @@
+commit 823b19692bc6323d8a618df430d95833d1be19f1
+tree c5cc57205fcc387d8339ba73fe81c36d335f402f
+parent e1caceafe41fc87322abf6fcef18693fdb27cfa8
+author gguo <George.Guo@nextlabs.com> 2016-07-07 18:46:39 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-07 18:46:39 +0800
+
+    Change the code for feature "make sure the clumn using display name and
+    case-sensitive".
+
+
+
+:100644 100644 aa16977a413e932f8674250ccdc490a4160d3262 7ddaa4ed9d2906c79eb80806e0f6cb3e7a305ba7 M	prod/NextLabs.Common/NextLabs.Common/Global.cs
+:100644 100644 154dbac52851207f284f4e17c1b121ccfdec6c34 63bc50291f1e1c5bb7d046b57006fd6c80a5fbab M	prod/sync_handlers/EventHandlers/ClassificationNotificationMismatchWorker.cs
+:100644 100644 9d95e025186b56477c2de7a33f6c9ebaa0a1f703 3a27474e6874e1eb01684e67600a122984d57cdc M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs

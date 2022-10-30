@@ -1,0 +1,12 @@
+commit 2f0d12b45ce99b4999bb49a7cf67448181f5965f
+tree db8c21754d9a2b223382679318f7fe00711c256e
+parent ddcde50555a42a281b7e734942732d8e9ab67560
+author emily <emily.lv@nextlabs.com> 2016-11-07 15:25:16 +0800
+committer emily <emily.lv@nextlabs.com> 2016-11-07 15:25:16 +0800
+
+    Bug 37568 - [Post Trimming]cannot trim special character named file in
+    content and structure
+
+
+
+:100644 100644 009a7415c21959f8f29690522d69d07ca47a377b 48e1746fb730f7355917e14c8ca9913c2f761028 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/SmtGridViewRowTrimmer.cs

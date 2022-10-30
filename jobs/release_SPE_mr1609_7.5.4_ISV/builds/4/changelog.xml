@@ -1,0 +1,26 @@
+commit cb6fe2b0405617989e54bafe49cacc90dddbc411
+tree 77ca2233dd644a8e980da4129f15b285eae3a3b2
+parent 3687ae36fcee22bd82abd2806a9cf95fe26585da
+author Lakshminarayanan K <lakshmi.krishnan@nextlabs.com> 2016-09-27 12:26:13 +0800
+committer Lakshminarayanan K <lakshmi.krishnan@nextlabs.com> 2016-09-27 12:31:09 +0800
+
+    Makes changes to echo code-signing command that is getting executed for
+    better debugging.
+
+
+
+:100644 100644 f908ef74f578f421dd852f4744810b285a21fb84 0b371a0db2cede9cb93da4d3fb212dadd7c6bfd3 M	build/Makefile
+:100644 100644 92f38541f0fec1055809fd8ff851273550bda621 89dc7379a5bdffdaa434ea776612d9c4c0a2195a M	install/scripts/Makefile.install
+:100644 100644 31c7e230c4f3fb828236e73bdd6504e2886a1c78 381c02e4fa296f177558aae2491c78089ab38be8 M	prod/CSCInvoke/CSCInvoke/Makefile
+:100644 100644 79e0cc6abae02a32d9aaabc4f8ad1a7692542c08 477c9163d9f463e9e4e9d3f27423f6566b527baf M	prod/IrmSettingTool/Makefile
+:100644 100644 fbf92b52f89ce20b5b66d1763b95aad66913cc9f b914a2832da76aa4dda3b1eaa72a2e3c0a922b59 M	prod/NextLabs.Common/NextLabs.Common/Makefile
+:100644 100644 afb918f4c983de8e1b670381cc6fb87035144bdd bd3c8b9b709d52bdf5475d6f1ee86b12be7cd236 M	prod/NextLabs.Deployment/Makefile
+:100644 100644 bffd279647614389432a0626c4aa9ba0c8b26a9b 14994e3ee64de3c59a6fac61ee9f7a85fe7c05f6 M	prod/NextLabs.PLE/NextLabs.PLE/Makefile
+:100644 100644 e5d760c4de5c6beae7a955a2749c9de63d85b7e7 2a184541fdd2b78fbd891e02a365000976d3ec36 M	prod/Nextlabs.Diagnostic/Makefile
+:100644 100644 3d61f2f128e9944a4b1b37750b2f761b460f5936 7fe668ca6e1fd3653a2b39fe426cb03dc1ad210d M	prod/Nextlabs.Entitlement.Wizard/Makefile
+:100644 100644 9255554cf74ee1c3a2b5832b1f68ed30e8c2f5f9 d77723b9752202a70d6295ea93740e5955db1747 M	prod/Nextlabs.SPE.Console/Nextlabs.SPE.Console.SPEAdmin/Makefile
+:100644 100644 19baecbfa5af89cf6c9f5ecffbf1757c5aa0bf3f 16e89ede21be97d381425191037973e8969827a4 M	prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule/Makefile
+:100644 100644 a69c960308b262252b077d0f8df35d63a3c64a11 5471165828a4eae1a30c711ba4ece73448a8b4b6 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/Makefile
+:100644 100644 a6f00138b68728fba2f5275caa82d5a8c9165d8e 8cff06dc23d923bd2c33bd58ebe021e16fad9a98 M	prod/SharepointConfigModifier/Makefile
+:100644 100644 4dc8fb1a42acb74702bd0889d1c955ef1612cc45 4c1fe26e20b6c938dfad6971402bae5e15341616 M	prod/ceSPService/Makefile
+:100644 100644 c7ece7d52d8335621e2d11634fa1dc04491765ce 443622aaf80aabc4fbf1d071a2d7c1a4ae6d694b M	prod/sync_handlers/EventHandlers/Makefile

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64990</changenumber>
+		<date>2017-05-22 17:10:26</date>
+		<description>Honestly, I have no idea what jaxb version these files are.</description>
+		<user>amorgan</user>
+		<workspace>amorgan_mann</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/jaxb/jaxb-2.2.11/jaxb-jxc.jar</name>
+				<workspacePath>jaxb/jaxb-2.2.11/jaxb-jxc.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64990</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/jaxb/jaxb-2.2.7/jaxb-xjc.jar</name>
+				<workspacePath>jaxb/jaxb-2.2.7/jaxb-xjc.jar</workspacePath>
+				<rev>2</rev>
+				<changenumber>64990</changenumber>
+				<action>DELETE</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

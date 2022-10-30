@@ -1,0 +1,23 @@
+commit 38d54ef35f3d4cecf026034edac9664b4098e737
+tree 8635574d640c86504dc6ff28d3f5691cb5ad927a
+parent 95eedf1ed4d36964c8d0c53874161e51c65b6192
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2017-01-09 19:11:48 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2017-01-09 19:11:48 +0800
+
+    fix an issue: cannot upgrade from 7.5.1 to 7.6
+
+
+
+:100644 100644 024945e0f5922d1821911cbe5d25824e8b6ba697 5f2f46d17f6312b9c3a80528626f6676d84c3593 M	install/spe2010/SharePointEnforcer-2010.ism
+:100644 100644 5b16dff857a4376ea4b05b47c622ce811c28fed9 f0ba0fe342249954ca1a1df2758dd84a98cecec2 M	install/spe2013/SharePointEnforcer-2013.ism
+commit 95eedf1ed4d36964c8d0c53874161e51c65b6192
+tree 580345b49ae8fe0d39187621449b594d1bfa1fa9
+parent 2f0d12b45ce99b4999bb49a7cf67448181f5965f
+author George Guo <George.Guo@nextlabs.com> 2017-01-09 16:57:15 +0800
+committer George Guo <George.Guo@nextlabs.com> 2017-01-09 16:57:15 +0800
+
+    fix bug 38100, pre-filter trimming bug.
+
+
+
+:100644 100644 68a7aa8bdb3281173cd87f90d18e5564ccbc3b40 f9a60549fbcdde247c6bc1b47d309c8c1d1c3261 M	prod/NextLabs.Common/NextLabs.Common/Global.cs

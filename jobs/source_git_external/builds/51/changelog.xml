@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64545</changenumber>
+		<date>2017-01-16 22:34:21</date>
+		<description>Updates with latest version of the CC Help videos.</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/TechPubs-Destiny-Help/Videos/DelegatedAdministration.mp4</name>
+				<workspacePath>TechPubs-Destiny-Help/Videos/DelegatedAdministration.mp4</workspacePath>
+				<rev>3</rev>
+				<changenumber>64545</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/TechPubs-Destiny-Help/Videos/OnPremise/ControlCenterIntro.mp4</name>
+				<workspacePath>TechPubs-Destiny-Help/Videos/OnPremise/ControlCenterIntro.mp4</workspacePath>
+				<rev>2</rev>
+				<changenumber>64545</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/TechPubs-Destiny-Help/Videos/PolicyModel.mp4</name>
+				<workspacePath>TechPubs-Destiny-Help/Videos/PolicyModel.mp4</workspacePath>
+				<rev>3</rev>
+				<changenumber>64545</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/TechPubs-Destiny-Help/Videos/SaaS/ControlCenterIntro.mp4</name>
+				<workspacePath>TechPubs-Destiny-Help/Videos/SaaS/ControlCenterIntro.mp4</workspacePath>
+				<rev>2</rev>
+				<changenumber>64545</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

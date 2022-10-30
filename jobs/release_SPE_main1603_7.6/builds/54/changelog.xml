@@ -1,0 +1,38 @@
+commit 691e253673bd40a5a91eb80117be219acade5f33
+tree 54904299f1d50b65040bf1cb5fed7baca7c8cd74
+parent f46c18fe73f73af787f8103833e3ca0ff012b4c2
+author emily <emily.lv@nextlabs.com> 2016-11-03 11:33:30 +0800
+committer emily <emily.lv@nextlabs.com> 2016-11-03 11:33:30 +0800
+
+    back the System.Windows.Forms version to 2.0.0.0
+
+
+
+:100644 100644 9d98a0fc336033c6bd3223e5a94c821a93c1dacd 62e807f5214abf75ce8b93be6a293b3c41c47b87 M	configuration/sp2013/Resources/SPSecurityTrimming.resx
+commit f46c18fe73f73af787f8103833e3ca0ff012b4c2
+tree 0289a34eea75df2f6d4b3fc23ed6917d530f447b
+parent 03468a4d8ad79c9139b7347f20beb99dca127205
+author emily <emily.lv@nextlabs.com> 2016-11-03 11:25:21 +0800
+committer emily <emily.lv@nextlabs.com> 2016-11-03 11:25:21 +0800
+
+    modify text of list trimming and pre-filter trimming feature.
+
+
+
+:100644 100644 ba609fae5e7a119eecb596633a5135434444d53d 9d98a0fc336033c6bd3223e5a94c821a93c1dacd M	configuration/sp2013/Resources/SPSecurityTrimming.resx
+:100644 100644 18754241f71bbeebe2a5c995f7117ff11990c99a f91082339cd9bae2e9f4042560bbdc91b55e0964 M	configuration/sp2013/pages/ICSetting.aspx
+:100644 100644 1695e593deb98a60ae71a7a210a06a2edb9b479a b3efe3f50f2306ee07e75d7d20407f0c05670bc3 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/Resources/SPSecurityTrimming.resx
+commit 03468a4d8ad79c9139b7347f20beb99dca127205
+tree 3264ff966b093c1baf3a77946fdcbb88bedd5f14
+parent b1b719c9ca534a3a432447816a0fd09ac01fac52
+author George Guo <George.Guo@nextlabs.com> 2016-11-03 11:11:16 +0800
+committer George Guo <George.Guo@nextlabs.com> 2016-11-03 11:11:16 +0800
+
+    change code for pre-filter when column value is null and clumn name is
+    invalid. if column value is null and clumn name is invalid, we will
+    think this obligation is invalid we will ignore it. If all obligation is
+    invalid we will deny all.
+
+
+
+:100644 100644 7679d521c1dfbce8f2957d72d4da2c390d25846b 0521e49f366f2bd5dcdb3877f16f4c2afcf4938c M	prod/NextLabs.Common/NextLabs.Common/Global.cs

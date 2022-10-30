@@ -1,0 +1,70 @@
+commit 35f14e8d882fa4574d5a8e92b399795eb9ba5956
+tree 2f17e6ad083f83996e3651216f81a7908917e1b0
+parent 68a57cde87e24b3c1614c0c9eb6a128965646421
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-12 18:06:49 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-12 18:06:49 +0800
+
+    fix bug 35432
+
+
+
+:100644 100644 5ba5788aaff4c3d5e9139daafe403dadb9b5c0ce 0f23bab8e67c94ab9ce4d21eb909e2cb1203a41a M	prod/sync_handlers/EventHandlers/ClassificationNotificationMismatchWorker.cs
+commit 68a57cde87e24b3c1614c0c9eb6a128965646421
+tree f53be7f6602611d6f975118dd3f4f9015f7bd045
+parent 08467e5ca5f4fcc3e604dcd543796517bca1abee
+author gguo <George.Guo@nextlabs.com> 2016-07-12 18:04:43 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-12 18:04:43 +0800
+
+    Fix bug 35414, do "add header" for list type item.
+
+
+
+:100644 100644 62182064c1dfed30a28a15f4168ea91b99a13775 a392276b3956a8c552a54ee6a18294dd20a81c21 M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs
+commit 08467e5ca5f4fcc3e604dcd543796517bca1abee
+tree 8fdc15f74f3f4be10be8ef154c004253b183cc45
+parent 1f99b19c73e07fb9413428a109ecd57d16cb401e
+author emily <emily.lv@nextlabs.com> 2016-07-12 17:47:44 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-12 17:47:44 +0800
+
+    fix bug 35426 - [POC]same people appear twice
+
+
+
+:100644 100644 c65f0e3bf7f8077c17d4f5df8696cf6d68128619 e05c027e7c4e9a468007d57c5a9c97b6ab0b05e5 M	prod/NextLabs.Common/NextLabs.Common/Global.cs
+:100644 100644 0ca2d7222e662482cebdf68c44210db7dcb6c67a 8871784679ab463024835ce08e945be22af081fb M	prod/sync_handlers/EventHandlers/SPEReport.cs
+commit 1f99b19c73e07fb9413428a109ecd57d16cb401e
+tree b86adb278f3408dd8daf8448f1a29aadd7fe06e8
+parent 40ef9fad89bf2bbd4943b5a5e82edaef1995af49
+author emily <emily.lv@nextlabs.com> 2016-07-12 15:25:47 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-12 15:25:47 +0800
+
+    fix bug 35374, and when use multiple lines of text to add header use ";"
+    to join multiple value
+
+
+
+:100644 100644 d906f8b8b8991d2c8dde5a33d5a3600913bd08bf 62182064c1dfed30a28a15f4168ea91b99a13775 M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs
+commit 40ef9fad89bf2bbd4943b5a5e82edaef1995af49
+tree 867da372af121a16041e2412bc8243e0e0226d4e
+parent 02aa0fa80e50089779f90a5e3f9dca9963396642
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-12 10:06:30 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-12 10:06:30 +0800
+
+    fix bug 35416
+
+
+
+:100644 100644 37caa8ed1d13758ecef66d1d02e9820808a04b3c 5ba5788aaff4c3d5e9139daafe403dadb9b5c0ce M	prod/sync_handlers/EventHandlers/ClassificationNotificationMismatchWorker.cs
+:100644 100644 a383e0bd1a370c23cafe7fa5a3ca0c1dc9c78f06 a639ee6154de5987eae7713c0c90240c7e511131 M	prod/sync_handlers/EventHandlers/ItemHandler.cs
+commit 02aa0fa80e50089779f90a5e3f9dca9963396642
+tree be5165f3d49b0718c6f5b2bbdc5c992d1ede2335
+parent 2491875c2194c2621f54b2bf63c3b2adb2d795d0
+author gguo <George.Guo@nextlabs.com> 2016-07-12 09:48:35 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-12 09:48:35 +0800
+
+    fix bug 35382, add managed matadata case for "mismatch" and "Add header"
+    obligation,
+
+
+
+:100644 100644 1171ca57d226c9791a387adc3a517e7a84ddc849 d906f8b8b8991d2c8dde5a33d5a3600913bd08bf M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs

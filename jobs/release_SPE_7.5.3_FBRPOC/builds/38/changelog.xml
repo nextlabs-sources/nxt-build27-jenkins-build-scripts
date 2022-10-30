@@ -1,0 +1,35 @@
+commit 2949c7dddb46fafdbc3ac202cad44e9544b9ac6a
+tree 165d57152ee17ff92cd04fbeaa3937a8420649e8
+parent 1a6592edb1f1ff7857703f996585aab2938db61f
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-08 18:00:12 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-08 18:00:12 +0800
+
+    fix code error
+
+
+
+:100644 100644 c629de87a7353800b6fc3d0b61007c2fb800731c 37caa8ed1d13758ecef66d1d02e9820808a04b3c M	prod/sync_handlers/EventHandlers/ClassificationNotificationMismatchWorker.cs
+commit 1a6592edb1f1ff7857703f996585aab2938db61f
+tree 9d79f7c886087c79b9024a390e1de1b8bc3eba81
+parent 4a26db6711aafc7e627ea204518aed9384c7aaa5
+author emily <emily.lv@nextlabs.com> 2016-07-08 17:27:36 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-08 17:27:36 +0800
+
+    Fix bug that save site properties to rootweb properties
+
+
+
+:100644 100644 dd229c3f9d768dcd5b8e4d050283e397c5d5c109 07d246656ebfec7c9848b10ff4da5b0bf181c444 M	prod/sync_handlers/EventHandlers/NxlClassificationComparisonPage.cs
+commit 4a26db6711aafc7e627ea204518aed9384c7aaa5
+tree 8cb416cb4fd79efafddbc0e0c8ec4d79b8e0041e
+parent cca5777dfe6c69b85fc74a2a168362e051ebffd5
+author gguo <George.Guo@nextlabs.com> 2016-07-08 16:45:04 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-08 16:45:04 +0800
+
+    Fix bug 35388 and 35384, we don't need do "SP Classification Mismatch
+    Notification" when values in obligation not contain the site property or
+    item clomn value.
+
+
+
+:100644 100644 3a27474e6874e1eb01684e67600a122984d57cdc 06f189ca1a53c5abf0d04707662d7bc78b07e3df M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs

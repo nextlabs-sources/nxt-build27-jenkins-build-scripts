@@ -1,0 +1,95 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyREgZu/dLi1CL9lOSM1DwABt9ML8AAAAA=[0mDaniel (Demiao) Chen
+Building in workspace C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace
+ > C:\Git\cmd\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Git\cmd\git.exe config remote.origin.url git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git # timeout=10
+Cleaning workspace
+ > C:\Git\cmd\git.exe rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > C:\Git\cmd\git.exe reset --hard # timeout=10
+ > C:\Git\cmd\git.exe clean -fdx # timeout=10
+ERROR: Error fetching remote repo 'origin'
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mhudson.plugins.git.GitException: Failed to fetch from git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git
+	at hudson.plugins.git.GitSCM.fetchFrom(GitSCM.java:797)
+	at hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1051)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1082)
+	at hudson.scm.SCM.checkout(SCM.java:495)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1278)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:604)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:86)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:529)
+	at hudson.model.Run.execute(Run.java:1720)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:404)
+Caused by: hudson.plugins.git.GitException: Command "C:\Git\cmd\git.exe clean -fdx" returned status code 1:
+stdout: Removing bin/
+Removing build.config
+Removing buildRelease.log
+Removing prod/CE_Log_Interface/CE_Log_Interface/release_win_x64/
+Removing prod/CE_Log_Interface/CE_Log_Interface/release_win_x86/
+Removing prod/CE_Log_Interface/CE_Log_Interface/src/use_default.rc
+Removing prod/CE_Log_Interface/CE_Log_Interface/vc100.pdb
+Removing prod/CSCInvoke/CSCInvoke/Properties/
+Removing prod/CSCInvoke/CSCInvoke/debug/
+Removing prod/CSCInvoke/CSCInvoke/obj/
+Removing prod/CSCInvoke/CSCInvoke/release/
+Removing prod/CSCInvoke/CSCInvoke/release_build.log
+Removing prod/IRM_Doc_Protector/TagDocProtector/idlgen/
+Removing prod/IRM_Doc_Protector/TagDocProtector/release_win_x64/
+Removing prod/IRM_Doc_Protector/TagDocProtector/release_win_x86/
+Removing prod/IRM_Doc_Protector/TagDocProtector/src/TagDocProtector_i.c
+Removing prod/IRM_Doc_Protector/TagDocProtector/src/TagDocProtector_p.c
+Removing prod/IRM_Doc_Protector/TagDocProtector/src/dlldata.c
+Removing prod/IRM_Doc_Protector/TagDocProtector/vc90.pdb
+Removing prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule/SP2013Release/
+Removing prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule/debug/
+Removing prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule/obj/
+Removing prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule/sp2013release_build.log
+Removing prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule/sp2016release_build.log
+Removing prod/PdfEditor/idlgen/
+Removing prod/PdfEditor/release_win_x64/
+Removing prod/PdfEditor/release_win_x86/
+Removing prod/PdfEditor/src/PdfEditor_i.c
+Removing prod/PdfEditor/src/PdfEditor_p.c
+Removing prod/PdfEditor/src/dlldata.c
+Removing prod/PdfEditor/vc90.pdb
+Removing prod/SDKWrapper/idlgen/
+Removing prod/SDKWrapper/release_win_x64/
+Removing prod/SDKWrapper/release_win_x86/
+Removing prod/SDKWrapper/vc90.pdb
+Removing prod/WorkFlowAdapter/debug/
+Removing prod/WorkFlowAdapter/obj/
+Removing prod/WorkFlowAdapter/release/
+Removing prod/WorkFlowAdapter/release_build.log
+Removing prod/ceSPService/SP2013Debug/
+Removing prod/ceSPService/SP2013Release/
+Removing prod/ceSPService/obj/
+Removing prod/ceSPService/sp2013release_build.log
+Removing prod/wfRetry/release_win_x64/
+Removing prod/wfRetry/release_win_x86/
+Removing prod/wfRetry/src/use_default.rc
+Removing prod/wfRetry/vc100.pdb
+Removing xlib/
+
+stderr: warning: failed to remove prod/ceSPService/sp2016release_build.log
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1745)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1718)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1714)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1385)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1397)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.clean(CliGitAPIImpl.java:678)
+	at hudson.plugins.git.GitAPI.clean(GitAPI.java:311)
+	at hudson.plugins.git.extensions.impl.CleanBeforeCheckout.decorateFetchCommand(CleanBeforeCheckout.java:32)
+	at hudson.plugins.git.GitSCM.fetchFrom(GitSCM.java:793)
+	... 11 more
+ERROR: null
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mStarted calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: hudson-build@nextlabs.com Tonny.He@cn.nextlabs.com Icy.Qin@cn.nextlabs.com Daniel.Chen@cn.nextlabs.com
+Finished: FAILURE

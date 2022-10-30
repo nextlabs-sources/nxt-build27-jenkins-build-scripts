@@ -1,0 +1,75 @@
+Started by user [8mha:AAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ+/dLi1CL9nOyizOKMvMQ8AD/V67jEAAAA[0mLakshminarayanan Krishnan
+Building in workspace C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace
+Using master perforce client: jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" workspace -o jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5
+Last build changeset: 63691
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" changes -s submitted -m 1 //jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5/...
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -s changes -s submitted //jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5/...@63692,@63692
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 63692
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" info
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -G where //...
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -s users nxbuild
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" user -o nxbuild
+Sync'ing workspace to changelist 63692.
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -s sync //jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5/...@63692
+Sync complete, took 62 ms
+No emails were triggered.
+[workspace] $ C:\cygwin\bin\bash.exe -xe C:\TEMP\hudson1493891295248505474.sh
++ export NLEXTERNALDIR=C:/P4/external
++ NLEXTERNALDIR=C:/P4/external
++ export XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace
++ XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace
++ export VERSION_BUILD=2
++ VERSION_BUILD=2
++ export PUBLISH_TO_BODA=1
++ PUBLISH_TO_BODA=1
++ cd 'C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace'
++ source ./setEnv
+++ echo 'NextLabs Build Environment Preparation Script (setEnv)'
+NextLabs Build Environment Preparation Script (setEnv)
+++ echo 'Specify --help for more information'
+Specify --help for more information
+++ '[' 'C:\Program Files' == '' ']'
+++ ENV_OS=x64
+++ PROGRAM_FILES_X86='C:/Program Files (x86)'
++++ cygpath -d 'C:/Program Files (x86)'
+++ PROGRAM_FILES_X86_DOS='C:\PROGRA~2'
+++ echo 'Drive Mapping Before:'
+Drive Mapping Before:
+++ set -x
+++ net use
+New connections will not be remembered.
+
+
+Status       Local     Remote                    Network
+
+-------------------------------------------------------------------------------
+             S:        \\nextlabs.com\share\data Microsoft Windows Network
+The command completed successfully.
+
++++ subst
++++ grep -ci X:
+++ '[' 1 -ne 0 ']'
+++ subst X: /d
++++ net use
++++ grep -ci X:
+++ '[' 0 -ne 0 ']'
+++ subst x: 'C:\PROGRA~2\Microsoft Visual Studio 10.0'
++++ subst
++++ grep -ci O:
+++ '[' 1 -ne 0 ']'
+++ subst O: /d
++++ net use
++++ grep -ci O:
+++ '[' 0 -ne 0 ']'
+++ subst o: 'c:\Program Files\Microsoft SDKs\Windows\v7.0A'
+Path not found - C:\Program Files\Microsoft SDKs\Windows\v7.0A
+Build step 'Execute shell' marked build as failure
+Started calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: hudson-build@nextlabs.com Tonny.He@cn.nextlabs.com Daniel.Chen@nextlabs.com
+Finished: FAILURE

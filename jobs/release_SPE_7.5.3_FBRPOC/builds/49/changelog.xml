@@ -1,0 +1,34 @@
+commit 3cec21d0b8b0b6a074344b91b7755a393a525d9b
+tree 5b1a1968b9d7f2e8adf034408496b9369601d615
+parent 12ffbdd8f37ad9be92985eee11d64aba3dbb2e05
+author gguo <George.Guo@nextlabs.com> 2016-07-18 17:03:13 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-18 17:03:13 +0800
+
+    Add try catch and grant elevated permissions for "Get user emial
+    address" and "Send Email" method.
+
+
+
+:100644 100644 4c58a428f9ee050c3d61c7992630c49539b36c75 d5ec513724ccfb2450a1764e2640716c214b44fa M	prod/NextLabs.Common/NextLabs.Common/Global.cs
+commit 12ffbdd8f37ad9be92985eee11d64aba3dbb2e05
+tree 69cc7d7ddd485165de71f910b90537242bddc4a5
+parent c00591a33cfb01855a67945a2ff1208b261fa99f
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-18 16:54:47 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-18 16:54:47 +0800
+
+    fix bug 35432
+
+
+
+:100644 100644 0f23bab8e67c94ab9ce4d21eb909e2cb1203a41a 714fa87352b4e1faba9e3a0d9285b6529045a97c M	prod/sync_handlers/EventHandlers/ClassificationNotificationMismatchWorker.cs
+commit c00591a33cfb01855a67945a2ff1208b261fa99f
+tree c2369a0ac3e9d28f284270396bb382e31c9cf062
+parent 9c92528734bf79f094936be47da93df51cd0e578
+author gguo <George.Guo@nextlabs.com> 2016-07-18 14:36:41 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-18 14:36:41 +0800
+
+    Change the send email recipients to parent web owners.
+
+
+
+:100644 100644 662f45b2c69fcb29350eb2bc90e59f4017c2fe88 e7a66861783a1c5c9e5fa575d23a8996ed37487c M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs

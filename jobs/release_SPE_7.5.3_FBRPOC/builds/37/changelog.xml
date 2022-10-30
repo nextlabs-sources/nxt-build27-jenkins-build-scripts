@@ -1,0 +1,11 @@
+commit cca5777dfe6c69b85fc74a2a168362e051ebffd5
+tree f7a6eebf7d125d7914e10df23b36394301605c14
+parent a754e68e24e89d65d6a6652d861eacf463c9bf07
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-08 15:57:44 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-08 15:57:44 +0800
+
+    fix a bug: compare to web but not site collection.
+
+
+
+:100644 100644 63bc50291f1e1c5bb7d046b57006fd6c80a5fbab c629de87a7353800b6fc3d0b61007c2fb800731c M	prod/sync_handlers/EventHandlers/ClassificationNotificationMismatchWorker.cs

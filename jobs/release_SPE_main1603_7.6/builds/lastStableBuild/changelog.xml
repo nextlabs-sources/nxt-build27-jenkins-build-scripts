@@ -1,0 +1,11 @@
+commit 66d880727bf3638fdb36b717b1277d2d66c33660
+tree da79d7374583d6f8310912cfcf7709ea09972cdc
+parent 5519b46c3b18d85ed2d4501edd7d74d607560534
+author emily lv <emily.lv@cn.nextlabs.com> 2017-01-16 22:12:08 +0800
+committer emily lv <emily.lv@cn.nextlabs.com> 2017-01-16 22:12:08 +0800
+
+    submit for fix pre-filter in webpart trimming.
+
+
+
+:100644 100644 51b7addfb990883253dc1266fc6417318120172d 5b0698bb59510d36d3e7ce82f98beefd390237d1 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/SPSecurityTrimmingControl.cs

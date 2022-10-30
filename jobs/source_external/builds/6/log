@@ -1,0 +1,23 @@
+Started by user [8mha:AAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ+/dLi1CL9nOyizOKMvMQ8AD/V67jEAAAA[0mLakshminarayanan Krishnan
+Building in workspace C:\P4\external
+Using master perforce client: jenkins_nb27_source_main_external
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" workspace -o jenkins_nb27_source_main_external
+Last build changeset: 63091
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" changes -s submitted -m 1 //jenkins_nb27_source_main_external/...
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" -s changes -s submitted //jenkins_nb27_source_main_external/...@63092,@63092
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 63092
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" info
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" -G where //...
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" -s users scm
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" user -o scm
+Sync'ing workspace to changelist 63092.
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" -s sync //jenkins_nb27_source_main_external/...@63092
+Sync complete, took 2058 ms
+Labelling Build in Perforce using ${BUILD_TAG}_nb27
+[external] $ "C:\Program Files (x86)\Perforce\p4.exe" -s label -i
+Label 'jenkins-source_external-6_nb27' successfully generated.
+Started calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in  28 second
+Finished: SUCCESS

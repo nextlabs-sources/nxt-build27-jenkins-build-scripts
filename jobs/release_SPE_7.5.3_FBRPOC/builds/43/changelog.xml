@@ -1,0 +1,58 @@
+commit 64f698007e50afdc1d582bc7468e85549204db39
+tree 2229319034f26a4291e9c26661d88bc7f570412c
+parent cecc3dd070dcf839b9b0a89ab4293c58ae69d350
+author gguo <George.Guo@nextlabs.com> 2016-07-14 15:46:22 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-14 15:46:22 +0800
+
+    Fix the exception for empty column value, check the column value before
+    using it.
+
+
+
+:100644 100644 06f5786ae69fe86f5346806873fd048e0aa172a9 89ea41b304ffb5c18d6a773e7cbce02584cfb99f M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs
+commit bb20d5caa867b6ab74c46168dae63768ee4412c5
+tree 2874398cd4ef88e21fca119a3d8aa742faf9e64e
+parent cecc3dd070dcf839b9b0a89ab4293c58ae69d350
+author emily <emily.lv@nextlabs.com> 2016-07-14 15:42:15 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-14 15:42:15 +0800
+
+    fix a bug: web url may contain ":", but report file name can not contain
+    ":",  replace ":" to "_"
+
+
+
+:100644 100644 9d7fe884581703fa34c340ed86fd0984b6213861 33cc8d2f4ffd02f3fb3556720d74a29e7b8dec3e M	prod/sync_handlers/EventHandlers/SPEReport.cs
+commit e258355e5eccda689c75005a3137062e838a24ca
+tree e0fff9b0626453c2b9d1fb490310b81dd488f131
+parent 57d4d540fd6540928c01e843709b1df85e2f9b92
+author emily <emily.lv@nextlabs.com> 2016-07-14 14:12:34 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-14 14:12:34 +0800
+
+    Fix a bug: create the same file when operate the same site in a minute.
+
+
+
+:100644 100644 7bd27190697e722044d4db16de8ea56e9865be22 9d7fe884581703fa34c340ed86fd0984b6213861 M	prod/sync_handlers/EventHandlers/SPEReport.cs
+commit e553b426f7760810f17626bad484f9313b5397f0
+tree 8b02216947750e62213e0e7c575ad8c23d7c9a03
+parent 68a57cde87e24b3c1614c0c9eb6a128965646421
+author gguo <George.Guo@nextlabs.com> 2016-07-14 11:27:00 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-14 11:27:00 +0800
+
+    fix bug 35418 and 35420, release the file lock when happen "File is
+    locked" exception in updating file.
+
+
+
+:100644 100644 a392276b3956a8c552a54ee6a18294dd20a81c21 06f5786ae69fe86f5346806873fd048e0aa172a9 M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs
+commit 57d4d540fd6540928c01e843709b1df85e2f9b92
+tree 40fa2c8a67a375df44b8773be715c4f9ee287215
+parent 35f14e8d882fa4574d5a8e92b399795eb9ba5956
+author emily <emily.lv@nextlabs.com> 2016-07-14 10:28:25 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-14 10:28:25 +0800
+
+    clear up message.
+
+
+
+:100644 100644 8871784679ab463024835ce08e945be22af081fb 7bd27190697e722044d4db16de8ea56e9865be22 M	prod/sync_handlers/EventHandlers/SPEReport.cs

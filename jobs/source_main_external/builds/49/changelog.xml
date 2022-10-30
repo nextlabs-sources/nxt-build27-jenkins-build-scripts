@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64750</changenumber>
+		<date>2017-03-05 19:53:27</date>
+		<description>by: Kent
+	Add version for Enovia EM</description>
+		<user>sgdev</user>
+		<workspace>sgdev_LEO</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/commons-lang3/commons-lang3-3.3.2/LICENSE.txt</name>
+				<workspacePath>commons-lang3/commons-lang3-3.3.2/LICENSE.txt</workspacePath>
+				<rev>1</rev>
+				<changenumber>64750</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/commons-lang3/commons-lang3-3.3.2/NOTICE.txt</name>
+				<workspacePath>commons-lang3/commons-lang3-3.3.2/NOTICE.txt</workspacePath>
+				<rev>1</rev>
+				<changenumber>64750</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/commons-lang3/commons-lang3-3.3.2/RELEASE-NOTES.txt</name>
+				<workspacePath>commons-lang3/commons-lang3-3.3.2/RELEASE-NOTES.txt</workspacePath>
+				<rev>1</rev>
+				<changenumber>64750</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+	<entry>
+		<changenumber>64749</changenumber>
+		<date>2017-03-05 19:52:18</date>
+		<description>by: Kent
+	Add new ehcache</description>
+		<user>sgdev</user>
+		<workspace>sgdev_LEO</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/ehcache/ehcache-2.10.3/lib/ehcache-2.10.3.jar</name>
+				<workspacePath>ehcache/ehcache-2.10.3/lib/ehcache-2.10.3.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64749</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/ehcache/ehcache-2.10.3/lib/slf4j-api-1.7.21.jar</name>
+				<workspacePath>ehcache/ehcache-2.10.3/lib/slf4j-api-1.7.21.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64749</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/ehcache/ehcache-2.10.3/lib/slf4j-ext-1.7.21.jar</name>
+				<workspacePath>ehcache/ehcache-2.10.3/lib/slf4j-ext-1.7.21.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64749</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

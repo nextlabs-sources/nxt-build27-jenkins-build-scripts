@@ -1,0 +1,11 @@
+commit 0210ce483c3722d82e0a0dfe95bb302c495bd896
+tree 502d64d23bf2c2b9aae2c8122f58fc5e2777e2c5
+parent 0ed46e1741a584d840c537eea4b2e54f5a257a3c
+author George Guo <George.Guo@nextlabs.com> 2016-11-22 10:53:49 +0800
+committer George Guo <George.Guo@nextlabs.com> 2016-11-22 10:53:49 +0800
+
+    Change the reference path for project.
+
+
+
+:100644 100644 c36572c86a35ba044d2b953f43954fa8cebda8c6 2fab84a5bd94e61aae8fce7b036576e3877053bb M	prod/IrmSettingTool/IrmSettingTool_SP2016.csproj

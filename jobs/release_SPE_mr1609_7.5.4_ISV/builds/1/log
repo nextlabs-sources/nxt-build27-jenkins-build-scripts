@@ -1,0 +1,30 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyREgZu/dLi1CL9lOSM1DwABt9ML8AAAAA=[0mDaniel (Demiao) Chen
+Building in workspace C:\Jenkins\jobs\release_SPE_mr1609_7.5.4_ISV\workspace
+Cloning the remote Git repository
+Cloning repository git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git
+ > C:\Git\cmd\git.exe init C:\Jenkins\jobs\release_SPE_mr1609_7.5.4_ISV\workspace # timeout=10
+Fetching upstream changes from git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git
+ > C:\Git\cmd\git.exe --version # timeout=10
+ > C:\Git\cmd\git.exe -c core.askpass=true fetch --tags --progress git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Git\cmd\git.exe config remote.origin.url git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git # timeout=10
+ > C:\Git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Git\cmd\git.exe config remote.origin.url git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git # timeout=10
+Cleaning workspace
+ > C:\Git\cmd\git.exe rev-parse --verify HEAD # timeout=10
+No valid HEAD. Skipping the resetting
+ > C:\Git\cmd\git.exe clean -fdx # timeout=10
+Fetching upstream changes from git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git
+ > C:\Git\cmd\git.exe -c core.askpass=true fetch --tags --progress git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Git\cmd\git.exe rev-parse "release/mr1607_7.5.4_ISV^{commit}" # timeout=10
+ > C:\Git\cmd\git.exe rev-parse "refs/remotes/origin/release/mr1607_7.5.4_ISV^{commit}" # timeout=10
+ > C:\Git\cmd\git.exe rev-parse "release/mr1607_7.5.4_ISV^{commit}" # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mStarted calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+Email was triggered for: Always
+Sending email for trigger: Always
+Failed to create e-mail address for Daniel.Chen@cn.nextlabs.com Raymond.Zeng@nextlabs.com
+An attempt to send an e-mail to empty list of recipients, ignored.
+Finished: FAILURE

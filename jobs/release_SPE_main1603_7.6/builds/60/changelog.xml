@@ -1,0 +1,13 @@
+commit 5519b46c3b18d85ed2d4501edd7d74d607560534
+tree dcfcea701b9cbf0f17f5889ded6711e3ec593c4f
+parent 58e8b4d97b5f78ae3a7016438ad9b2b92e3a5fc1
+author emily lv <emily.lv@cn.nextlabs.com> 2017-01-16 21:24:10 +0800
+committer emily lv <emily.lv@cn.nextlabs.com> 2017-01-16 21:24:10 +0800
+
+    Fix bug: pre-filter function is not work in site contents cath exception
+    in prefilter function
+
+
+
+:100644 100644 4a18b13395d8b0842c81b98894646822c3aa4665 73bf292a3dba8b89e1ebe2814e06af93c3182f44 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/ViewListPageTrimmer.cs
+:100644 100644 93c49a1559560b66c65b660e7daa7193681bf0b6 bec8ae06e137a31e7d1f0f274d731161cb1131d4 M	prod/sync_handlers/EventHandlers/PreFilterModule.cs

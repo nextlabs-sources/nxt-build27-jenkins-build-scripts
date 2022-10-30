@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64841</changenumber>
+		<date>2017-03-29 01:55:58</date>
+		<description>modify project file</description>
+		<user>kzhou</user>
+		<workspace>my</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/DropboxSDK/Mac/4.1.1-swift/srcCode/SwiftyDropbox-master/SwiftyDropbox-master/Source/SwiftyDropbox/SwiftyDropbox.xcodeproj/project.pbxproj</name>
+				<workspacePath>DropboxSDK/Mac/4.1.1-swift/srcCode/SwiftyDropbox-master/SwiftyDropbox-master/Source/SwiftyDropbox/SwiftyDropbox.xcodeproj/project.pbxproj</workspacePath>
+				<rev>2</rev>
+				<changenumber>64841</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64970</changenumber>
+		<date>2017-05-15 20:01:26</date>
+		<description>Adds StrCharStrip utility</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/nsis/3.0b1/Include/StrCharStrip.nsh</name>
+				<workspacePath>nsis/3.0b1/Include/StrCharStrip.nsh</workspacePath>
+				<rev>1</rev>
+				<changenumber>64970</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+	<entry>
+		<changenumber>64969</changenumber>
+		<date>2017-05-15 19:55:39</date>
+		<description>Adds javamail 1.5.6
+	    - first required for Proserv log4j_nextlabssmtpappender component</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/javamail/javamail-1.5.6/lib/javax.mail.jar</name>
+				<workspacePath>javamail/javamail-1.5.6/lib/javax.mail.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64969</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64605</changenumber>
+		<date>2017-01-22 20:27:54</date>
+		<description>Update PDFBox 2.0.4 with official release jar.</description>
+		<user>sgdev</user>
+		<workspace>sgdev_ASCENSION</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/pdfbox/pdfbox-2.0.4/fontbox-2.0.4.jar</name>
+				<workspacePath>pdfbox/pdfbox-2.0.4/fontbox-2.0.4.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64605</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/pdfbox/pdfbox-2.0.4/pdfbox-app-2.0.4.jar</name>
+				<workspacePath>pdfbox/pdfbox-2.0.4/pdfbox-app-2.0.4.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64605</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/pdfbox/pdfbox-2.0.4/xmpbox-2.0.4.jar</name>
+				<workspacePath>pdfbox/pdfbox-2.0.4/xmpbox-2.0.4.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64605</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

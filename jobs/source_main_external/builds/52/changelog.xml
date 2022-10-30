@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64871</changenumber>
+		<date>2017-04-18 22:02:00</date>
+		<description>Adds SQLite-jdbc 3.16.1
+	    first required for UAP</description>
+		<user>scm</user>
+		<workspace>nxbuild_OENO</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/SQLite/sqlite-jdbc/3.16.1/sqlite-jdbc-3.16.1.jar</name>
+				<workspacePath>SQLite/sqlite-jdbc/3.16.1/sqlite-jdbc-3.16.1.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64871</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

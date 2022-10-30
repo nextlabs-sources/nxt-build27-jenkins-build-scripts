@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64655</changenumber>
+		<date>2017-01-31 21:23:17</date>
+		<description>Adds commons-httpclient-3.1 &amp; commons-io-2.5 libraries.</description>
+		<user>scm</user>
+		<workspace>nxbuild_OENO</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/commons-httpclient/commons-httpclient-3.1/commons-httpclient-3.1.jar</name>
+				<workspacePath>commons-httpclient/commons-httpclient-3.1/commons-httpclient-3.1.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64655</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/commons-io/commons-io-2.5/commons-io-2.5-javadoc.jar</name>
+				<workspacePath>commons-io/commons-io-2.5/commons-io-2.5-javadoc.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64655</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/commons-io/commons-io-2.5/commons-io-2.5.jar</name>
+				<workspacePath>commons-io/commons-io-2.5/commons-io-2.5.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64655</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

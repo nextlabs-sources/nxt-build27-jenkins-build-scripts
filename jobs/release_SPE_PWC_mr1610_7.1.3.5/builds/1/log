@@ -1,0 +1,879 @@
+Started by user [8mha:AAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ+/dLi1CL9nOyizOKMvMQ8AD/V67jEAAAA[0mLakshminarayanan Krishnan
+Building in workspace C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace
+Using master perforce client: jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" workspace -o jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5
+Changing P4 Client Root to: C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace
+Changing P4 Client View from:
+//depot/... //jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5/...
+
+Changing P4 Client View to: 
+  //depot/SharePointEnforcer/release/mr1610_PWC_7.1.3.5/... //jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5/...
+Saving new client jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -s client -i
+Last build changeset: 0
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" changes -s submitted -m 1 //jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5/...
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -s changes -s submitted //jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5/...@63642,@63691
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 63691
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" info
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -G where //...
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 63690
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 63683
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 63682
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -s users the
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" user -o the
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -s users nxbuild
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" user -o nxbuild
+Sync'ing workspace to changelist 63691.
+[workspace] $ "C:\Program Files (x86)\Perforce\p4.exe" -s sync //jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5/...@63691
+Sync complete, took 8574 ms
+No emails were triggered.
+[workspace] $ C:\cygwin\bin\bash.exe -xe C:\TEMP\hudson2214021171770724562.sh
++ export NLEXTERNALDIR=C:/P4/external
++ NLEXTERNALDIR=C:/P4/external
++ export XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace
++ XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace
++ export VERSION_BUILD=1
++ VERSION_BUILD=1
++ export PUBLISH_TO_BODA=1
++ PUBLISH_TO_BODA=1
++ cd 'C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace'
++ source ./setEnv
+++ echo 'NextLabs Build Environment Preparation Script (setEnv)'
+NextLabs Build Environment Preparation Script (setEnv)
+++ echo 'Specify --help for more information'
+Specify --help for more information
+++ '[' 'C:\Program Files' == '' ']'
+++ ENV_OS=x64
+++ PROGRAM_FILES_X86='C:/Program Files (x86)'
++++ cygpath -d 'C:/Program Files (x86)'
+++ PROGRAM_FILES_X86_DOS='C:\PROGRA~2'
+++ echo 'Drive Mapping Before:'
+Drive Mapping Before:
+++ set -x
+++ net use
+New connections will not be remembered.
+
+
+Status       Local     Remote                    Network
+
+-------------------------------------------------------------------------------
+             S:        \\nextlabs.com\share\data Microsoft Windows Network
+The command completed successfully.
+
+++ '[' '!' -d x:/ ']'
+++ '[' '!' -d o:/ ']'
++++ subst
++++ fgrep -q -i S:
++++ echo 1
+++ FOUND_IN_SUBST=1
++++ net use
++++ fgrep -q -i S:
++++ echo 0
+++ FOUND_IN_NET_USE=0
+++ '[' '' == '' ']'
+++ '[' 1 -eq 0 ']'
+++ '[' 0 -eq 0 ']'
+++ net use s: /delete
+s: was deleted successfully.
+
+++ net use s: '\\nextlabs.com\share\data'
+The command completed successfully.
+
+++ set +x
+Drive Mapping After:
+++ net use
+New connections will not be remembered.
+
+
+Status       Local     Remote                    Network
+
+-------------------------------------------------------------------------------
+             S:        \\nextlabs.com\share\data Microsoft Windows Network
+The command completed successfully.
+
+++ set +x
+
+-------------------------------------------------------------------------
+IMPORTANT: You must source this script in a Bash shell to setup the environment.
+Invoking ./setEnv will create a new child shell process and the script will
+run in the child process. Changes to the environment is limited to the child
+process, parent process is not affected. The command you should run is:
+  source ./setEnv
+-------------------------------------------------------------------------
++ '[' -f ../config.xml ']'
++ build/getPerforceWorkspace.pl ../config.xml
+NextLabs Get Perforce Workspace Setting Script
+Parameters:
+  Config file       = ../config.xml
+
+INFO: Parse config data
+[BUILD MANIFEST] Perforce Workspace Name: jenkins_nb27_release_SPE_PWC_mr1610_7.1.3.5
+[BUILD MANIFEST] Perforce Workspace View: //depot/SharePointEnforcer/release/mr1610_PWC_7.1.3.5/... //default/...
+[BUILD MANIFEST] Perforce Label         : jenkins-release_SPE_PWC_mr1610_7.1.3.5-1
+[BUILD MANIFEST] Hudson Build URL       : http://nxt-build27.nextlabs.com:9031/job/release_SPE_PWC_mr1610_7.1.3.5/1/
+[BUILD MANIFEST] Hudson Build Number    : 1
+[BUILD MANIFEST] Hudson Build Id        : 1
+[BUILD MANIFEST] Hudson Workspace Path  : C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace
+[BUILD MANIFEST] Hudson Build Script    : export NLEXTERNALDIR=C:/P4/external; export XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace; export VERSION_BUILD=${BUILD_NUMBER}; ; export PUBLISH_TO_BODA=1; ; cd ${WORKSPACE}; source ./setEnv; ./buildRelease
++ ./configure --type=release
+NextLabs SharePoint Products Build Configuration Script
+Specify --help for more information
+INFO: Parameters:
+  CONFIG_TYPE      = release
+  MAP_BUILD_ROOT   = 
+
+INFO: build.config
+#!/bin/bash
+#
+# Description
+#	This script contains variable to be used by ./buildAll script. It can also be used to
+#	setup the environment for manual compilation. It is especially useful for partial 
+#	rebuilding after fixing compilation problem or incremental build after bug fix.
+#
+# WARNING
+#	This file is generated by ./configure. You may edit this file for debugging because
+#	changes will be overriden when ./configure is run.
+
+export CONFIG_TYPE=release
+export BUILD_NUMBER=1
+export VERSION_BUILD=1
+export VERSION_BUILD_SHORT=1
+export BUILDTYPE=release
+export BUILD_DATE=20161009
+export BUILD_DATE_LONG=201610090845
+export PREFAST=0
+export OFFICIALCERT=1
+
+export XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+
+export REPOSITORY_ROOT=s:/build/release_candidate
+export SYNC_FOLDER_ROOT=s:/global/Us2Cdc/engineering
+
+export NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+export NLEXTERNALDIR=C:/P4/external
+
+export MAKE_CFLAGS_32="-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=1"
+export MAKE_CFLAGS_64="-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=1"
+export MAKE_CSFLAGS="-k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=1"
+export MAKE_INSTALLFLAGS="-k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=1"
++ source build.config
+++ export CONFIG_TYPE=release
+++ CONFIG_TYPE=release
+++ export BUILD_NUMBER=1
+++ BUILD_NUMBER=1
+++ export VERSION_BUILD=1
+++ VERSION_BUILD=1
+++ export VERSION_BUILD_SHORT=1
+++ VERSION_BUILD_SHORT=1
+++ export BUILDTYPE=release
+++ BUILDTYPE=release
+++ export BUILD_DATE=20161009
+++ BUILD_DATE=20161009
+++ export BUILD_DATE_LONG=201610090845
+++ BUILD_DATE_LONG=201610090845
+++ export PREFAST=0
+++ PREFAST=0
+++ export OFFICIALCERT=1
+++ OFFICIALCERT=1
+++ export XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+++ XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+++ export REPOSITORY_ROOT=s:/build/release_candidate
+++ REPOSITORY_ROOT=s:/build/release_candidate
+++ export SYNC_FOLDER_ROOT=s:/global/Us2Cdc/engineering
+++ SYNC_FOLDER_ROOT=s:/global/Us2Cdc/engineering
+++ export NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+++ NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+++ export NLEXTERNALDIR=C:/P4/external
+++ NLEXTERNALDIR=C:/P4/external
+++ export 'MAKE_CFLAGS_32=-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=1'
+++ MAKE_CFLAGS_32='-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=1'
+++ export 'MAKE_CFLAGS_64=-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=1'
+++ MAKE_CFLAGS_64='-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=1'
+++ export 'MAKE_CSFLAGS=-k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=1'
+++ MAKE_CSFLAGS='-k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=1'
+++ export 'MAKE_INSTALLFLAGS=-k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=1'
+++ MAKE_INSTALLFLAGS='-k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=1'
++ make -f build/Makefile.xlib
+
+==========================================================================
+BUILDTYPE=release
+XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+==========================================================================
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/include/resattrlib.h' -d "C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include"
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include/resattrlib.h  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/include/resattrmgr.h' -d "C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include"
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include/resattrmgr.h  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/include/celog.h' -d "C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include"
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include/celog.h  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/include/celog_policy_file.hpp' -d "C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include"
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include/celog_policy_file.hpp  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/win_x86/resattrlib32.lib' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86/resattrlib32.lib  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/win_x86/resattrmgr32.lib' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86/resattrmgr32.lib  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/win_x86/celog32.dll' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86/celog32.dll  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/installer/win_x86/nlQuench.exe' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86/nlQuench.exe  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/installer/win_x86/PluginInstallerSDK32.dll' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86/PluginInstallerSDK32.dll  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/win_x64/resattrlib.lib' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64/resattrlib.lib  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/win_x64/resattrmgr.lib' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64/resattrmgr.lib  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/win_x64/celog.dll' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64/celog.dll  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/installer/win_x64/nlQuench.exe' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64/nlQuench.exe  
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" 'PolicyAdapterSDK/installer/win_x64/PluginInstallerSDK.dll' -d C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64/PluginInstallerSDK.dll  
++ build/checkBuildLog.pl buildRelease.log
+NextLabs Check Build Error Script
+Parameters:
+  Log File       = buildRelease.log
+
+INFO: Parse log file
+INFO:  Found 0 error line(s)
++ make -f build/Makefile.compile compile install
+--------------------------------------------------------------
+[Build Configuration]
+CONFIG_TYPE                = release
+VERSION_BUILD              = 1
+VERSION_BUILD_SHORT        = 1
+BUILDTYPE                  = release
+BUILD_DATE                 = 20161009
+BUILD_DATE_LONG            = 201610090845
+PREFAST                    = 0
+OFFICIALCERT               = 1
+NLBUILDROOT                = C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR              = C:/P4/external
+MAKE_CFLAGS_32             = -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=1
+MAKE_CFLAGS_64             = -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=1
+MAKE_CSFLAGS               = -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=1
+MAKE_INSTALLFLAGS          = -k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=1
+--------------------------------------------------------------
+INFO: Compile 32- and 64-bit C/C++ code
+cd C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace; make -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=1 TARGETSFILE=prod/targets
+make[1]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace'
+
+==========================================================================
+BUILDTYPE=release
+TARGETENVOS=
+TARGETENVARCH=x64
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+BUILDOUTPUTDIR=
+==========================================================================
+--------------------------------------------------------------------
+Building prod/CE_Log_Interface/CE_Log_Interface
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/CE_Log_Interface/CE_Log_Interface'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=CE_Log_Interface
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x64
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+BINDIR=release_win_x64
+LIBDIR=release_win_x64
+BINDIR_DIST=release_win_x64
+LIBDIR_DIST=release_win_x64
+LIBPATH=x://VC/lib/amd64 x://VC/atlmfc/Lib/amd64 O://Lib/x64 C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+[Tools]
+CC=x://VC/bin/x86_amd64/cl.exe
+LD=x://VC/bin/x86_amd64/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/x86_amd64/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=7.1.3.5 (1)
+---------------------------------------------------------------------------
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -IC:/P4/external/boost/boost_1_45_0 -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/CE_Log_Interface.cpp -Forelease_win_x64/CE_Log_Interface.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+CE_Log_Interface.cpp
+C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace\prod\CE_Log_Interface\CE_Log_Interface\include\stdafx.h(26) : warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+        command-line arguments :  see previous definition of 'WIN32_LEAN_AND_MEAN'
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -IC:/P4/external/boost/boost_1_45_0 -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x64/use_default.res src/use_default.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/x86_amd64/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:CE_Log_Interface.def release_win_x64/CE_Log_Interface.o release_win_x64/use_default.res -OUT:release_win_x64/CE_Log_Interface.dll -LIBPATH:x://VC/lib/amd64 -LIBPATH:x://VC/atlmfc/Lib/amd64 -LIBPATH:O://Lib/x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x64/CE_Log_Interface.lib and object release_win_x64/CE_Log_Interface.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x64/CE_Log_Interface.dll
+Done Adding Additional Store
+Successfully signed: release_win_x64/CE_Log_Interface.dll
+cp -pf release_win_x64/CE_Log_Interface.dll C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x64  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/CE_Log_Interface/CE_Log_Interface'
+--------------------------------------------------------------------
+Building prod/IRM_Doc_Protector/TagDocProtector
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/IRM_Doc_Protector/TagDocProtector'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=TagDocProtector
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x64
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+BINDIR=release_win_x64
+LIBDIR=release_win_x64
+BINDIR_DIST=release_win_x64
+LIBDIR_DIST=release_win_x64
+LIBPATH=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x64 C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64 x://VC/lib/amd64 x://VC/atlmfc/Lib/amd64 O://Lib/x64 C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+[Tools]
+CC=x://VC/bin/x86_amd64/cl.exe
+LD=x://VC/bin/x86_amd64/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/x86_amd64/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=7.1.3.5 (1)
+---------------------------------------------------------------------------
+NextLabs Update Resource File VersionInfo Script (Make)
+Parameters:
+  Resource File       = src/TagDocProtector.rc
+  Product Name        = Entitlement Manager for Microsoft SharePoint
+  Major Version       = 7
+  Minor Version       = 1
+  Maintenance Version = 3
+  Patch Version       = 5
+  Build Number        = 1
+  Architecture        = x64
+  Show Updated File   = 0
+O://Bin/midl.exe  -char signed -win64 -x64 -env x64 -Oicf -error all  -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include /out idlgen src/TagDocProtector.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 7.00.0555 
+Copyright (c) Microsoft Corporation. All rights reserved.
+midl : command line warning MIDL1007 : switch specified more than once on command line : env
+64 bit Processing src\TagDocProtector.idl
+TagDocProtector.idl
+64 bit Processing O://Include\oaidl.idl
+oaidl.idl
+64 bit Processing O://Include\objidl.idl
+objidl.idl
+64 bit Processing O://Include\unknwn.idl
+unknwn.idl
+64 bit Processing O://Include\wtypes.idl
+wtypes.idl
+64 bit Processing O://Include\basetsd.h
+basetsd.h
+64 bit Processing O://Include\guiddef.h
+guiddef.h
+64 bit Processing O://Include\ocidl.idl
+ocidl.idl
+64 bit Processing O://Include\oleidl.idl
+oleidl.idl
+64 bit Processing O://Include\servprov.idl
+servprov.idl
+64 bit Processing O://Include\urlmon.idl
+urlmon.idl
+64 bit Processing O://Include\msxml.idl
+msxml.idl
+64 bit Processing O:\\Include\oaidl.acf
+oaidl.acf
+64 bit Processing O:\\Include\ocidl.acf
+ocidl.acf
+cp -f idlgen/*.h include
+cp -f idlgen/*.c src
+cp -f idlgen/*.tlb release_win_x64
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/FileTagging.cpp -Forelease_win_x64/FileTagging.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+FileTagging.cpp
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/log.cpp -Forelease_win_x64/log.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+log.cpp
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/stdafx.cpp -Forelease_win_x64/stdafx.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+stdafx.cpp
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/TagDocProtector.cpp -Forelease_win_x64/TagDocProtector.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+TagDocProtector.cpp
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/TagProtector.cpp -Forelease_win_x64/TagProtector.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+TagProtector.cpp
+x:\VC\include\string(757) : warning C4995: 'swprintf': name was marked as #pragma deprecated
+x:\VC\include\string(766) : warning C4995: 'swprintf': name was marked as #pragma deprecated
+x:\VC\include\string(775) : warning C4995: 'swprintf': name was marked as #pragma deprecated
+x:\VC\include\intrin.h(1092) : warning C4995: 'wcscat': name was marked as #pragma deprecated
+x:\VC\include\intrin.h(1094) : warning C4995: 'wcscpy': name was marked as #pragma deprecated
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/TagDocProtector_i.c -Forelease_win_x64/TagDocProtector_i.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+TagDocProtector_i.c
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x64/TagDocProtector.res src/TagDocProtector.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/x86_amd64/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:TagDocProtector.def release_win_x64/FileTagging.o release_win_x64/log.o release_win_x64/stdafx.o release_win_x64/TagDocProtector.o release_win_x64/TagProtector.o release_win_x64/TagDocProtector_i.o release_win_x64/TagDocProtector.res -OUT:release_win_x64/TagDocProtector.dll -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x64 -LIBPATH:x://VC/lib/amd64 -LIBPATH:x://VC/atlmfc/Lib/amd64 -LIBPATH:O://Lib/x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin resattrlib.lib resattrmgr.lib ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x64/TagDocProtector.lib and object release_win_x64/TagDocProtector.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x64/TagDocProtector.dll
+Done Adding Additional Store
+Successfully signed: release_win_x64/TagDocProtector.dll
+cp -pf release_win_x64/TagDocProtector.dll C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x64  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/IRM_Doc_Protector/TagDocProtector'
+--------------------------------------------------------------------
+Building prod/wfRetry
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/wfRetry'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=wfRetry
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x64
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+BINDIR=release_win_x64
+LIBDIR=release_win_x64
+BINDIR_DIST=release_win_x64
+LIBDIR_DIST=release_win_x64
+LIBPATH=x://VC/lib/amd64 x://VC/atlmfc/Lib/amd64 O://Lib/x64 C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+[Tools]
+CC=x://VC/bin/x86_amd64/cl.exe
+LD=x://VC/bin/x86_amd64/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/x86_amd64/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=7.1.3.5 (1)
+---------------------------------------------------------------------------
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWFRETRY_EXPORTS -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/wfRetry.cpp -Forelease_win_x64/wfRetry.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+wfRetry.cpp
+C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace\prod\wfRetry\include\stdafx.h(26) : warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+        command-line arguments :  see previous definition of 'WIN32_LEAN_AND_MEAN'
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x64/use_default.res src/use_default.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/x86_amd64/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:wfRetry.def release_win_x64/wfRetry.o release_win_x64/use_default.res -OUT:release_win_x64/wfRetry.dll -LIBPATH:x://VC/lib/amd64 -LIBPATH:x://VC/atlmfc/Lib/amd64 -LIBPATH:O://Lib/x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+wfRetry.o : warning LNK4197: export 'PluginUnload' specified multiple times; using first specification
+wfRetry.o : warning LNK4197: export 'PluginEntry' specified multiple times; using first specification
+   Creating library release_win_x64/wfRetry.lib and object release_win_x64/wfRetry.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x64/wfRetry.dll
+Done Adding Additional Store
+Successfully signed: release_win_x64/wfRetry.dll
+cp -pf release_win_x64/wfRetry.dll C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x64  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/wfRetry'
+make[1]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace'
+cd C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace; make -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=1 TARGETSFILE=prod/targets
+make[1]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace'
+
+==========================================================================
+BUILDTYPE=release
+TARGETENVOS=
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+BUILDOUTPUTDIR=
+==========================================================================
+--------------------------------------------------------------------
+Building prod/CE_Log_Interface/CE_Log_Interface
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/CE_Log_Interface/CE_Log_Interface'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=CE_Log_Interface
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x86
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+BINDIR=release_win_x86
+LIBDIR=release_win_x86
+BINDIR_DIST=release_win_x86
+LIBDIR_DIST=release_win_x86
+LIBPATH=x://VC/lib x://VC/atlmfc/Lib O://Lib C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+[Tools]
+CC=x://VC/bin/cl.exe
+LD=x://VC/bin/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=7.1.3.5 (1)
+---------------------------------------------------------------------------
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -IC:/P4/external/boost/boost_1_45_0 -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/CE_Log_Interface.cpp -Forelease_win_x86/CE_Log_Interface.o
+CE_Log_Interface.cpp
+C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace\prod\CE_Log_Interface\CE_Log_Interface\include\stdafx.h(26) : warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+        command-line arguments :  see previous definition of 'WIN32_LEAN_AND_MEAN'
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -IC:/P4/external/boost/boost_1_45_0 -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x86/use_default.res src/use_default.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:CE_Log_Interface.def release_win_x86/CE_Log_Interface.o release_win_x86/use_default.res -OUT:release_win_x86/CE_Log_Interface32.dll -LIBPATH:x://VC/lib -LIBPATH:x://VC/atlmfc/Lib -LIBPATH:O://Lib -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x86/CE_Log_Interface32.lib and object release_win_x86/CE_Log_Interface32.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x86/CE_Log_Interface32.dll
+Done Adding Additional Store
+Successfully signed: release_win_x86/CE_Log_Interface32.dll
+cp -pf release_win_x86/CE_Log_Interface32.dll C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x86  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/CE_Log_Interface/CE_Log_Interface'
+--------------------------------------------------------------------
+Building prod/IRM_Doc_Protector/TagDocProtector
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/IRM_Doc_Protector/TagDocProtector'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=TagDocProtector
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x86
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+BINDIR=release_win_x86
+LIBDIR=release_win_x86
+BINDIR_DIST=release_win_x86
+LIBDIR_DIST=release_win_x86
+LIBPATH=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x86 C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86 x://VC/lib x://VC/atlmfc/Lib O://Lib C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+[Tools]
+CC=x://VC/bin/cl.exe
+LD=x://VC/bin/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=7.1.3.5 (1)
+---------------------------------------------------------------------------
+NextLabs Update Resource File VersionInfo Script (Make)
+Parameters:
+  Resource File       = src/TagDocProtector.rc
+  Product Name        = Entitlement Manager for Microsoft SharePoint
+  Major Version       = 7
+  Minor Version       = 1
+  Maintenance Version = 3
+  Patch Version       = 5
+  Build Number        = 1
+  Architecture        = x86
+  Show Updated File   = 0
+O://Bin/midl.exe  -char signed -win32 -Oicf -error all  -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include /out idlgen src/TagDocProtector.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 7.00.0555 
+Copyright (c) Microsoft Corporation. All rights reserved.
+Processing src\TagDocProtector.idl
+TagDocProtector.idl
+Processing O://Include\oaidl.idl
+oaidl.idl
+Processing O://Include\objidl.idl
+objidl.idl
+Processing O://Include\unknwn.idl
+unknwn.idl
+Processing O://Include\wtypes.idl
+wtypes.idl
+Processing O://Include\basetsd.h
+basetsd.h
+Processing O://Include\guiddef.h
+guiddef.h
+Processing O://Include\ocidl.idl
+ocidl.idl
+Processing O://Include\oleidl.idl
+oleidl.idl
+Processing O://Include\servprov.idl
+servprov.idl
+Processing O://Include\urlmon.idl
+urlmon.idl
+Processing O://Include\msxml.idl
+msxml.idl
+Processing O:\\Include\oaidl.acf
+oaidl.acf
+Processing O:\\Include\ocidl.acf
+ocidl.acf
+cp -f idlgen/*.h include
+cp -f idlgen/*.c src
+cp -f idlgen/*.tlb release_win_x86
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/FileTagging.cpp -Forelease_win_x86/FileTagging.o
+FileTagging.cpp
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/log.cpp -Forelease_win_x86/log.o
+log.cpp
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/stdafx.cpp -Forelease_win_x86/stdafx.o
+stdafx.cpp
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/TagDocProtector.cpp -Forelease_win_x86/TagDocProtector.o
+TagDocProtector.cpp
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/TagProtector.cpp -Forelease_win_x86/TagProtector.o
+TagProtector.cpp
+x:\VC\include\string(757) : warning C4995: 'swprintf': name was marked as #pragma deprecated
+x:\VC\include\string(766) : warning C4995: 'swprintf': name was marked as #pragma deprecated
+x:\VC\include\string(775) : warning C4995: 'swprintf': name was marked as #pragma deprecated
+x:\VC\include\intrin.h(1092) : warning C4995: 'wcscat': name was marked as #pragma deprecated
+x:\VC\include\intrin.h(1094) : warning C4995: 'wcscpy': name was marked as #pragma deprecated
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/TagDocProtector_i.c -Forelease_win_x86/TagDocProtector_i.o
+TagDocProtector_i.c
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -IC:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x86/TagDocProtector.res src/TagDocProtector.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:TagDocProtector.def release_win_x86/FileTagging.o release_win_x86/log.o release_win_x86/stdafx.o release_win_x86/TagDocProtector.o release_win_x86/TagProtector.o release_win_x86/TagDocProtector_i.o release_win_x86/TagDocProtector.res -OUT:release_win_x86/TagDocProtector32.dll -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x86 -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/xlib/release_win_x86 -LIBPATH:x://VC/lib -LIBPATH:x://VC/atlmfc/Lib -LIBPATH:O://Lib -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin resattrlib32.lib resattrmgr32.lib ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x86/TagDocProtector32.lib and object release_win_x86/TagDocProtector32.exp
+TagDocProtector32.exp : warning LNK4070: /OUT:TagDocProtector.DLL directive in .EXP differs from output filename 'release_win_x86/TagDocProtector32.dll'; ignoring directive
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x86/TagDocProtector32.dll
+Done Adding Additional Store
+Successfully signed: release_win_x86/TagDocProtector32.dll
+cp -pf release_win_x86/TagDocProtector32.dll C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x86  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/IRM_Doc_Protector/TagDocProtector'
+--------------------------------------------------------------------
+Building prod/wfRetry
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/wfRetry'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=wfRetry
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x86
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+BINDIR=release_win_x86
+LIBDIR=release_win_x86
+BINDIR_DIST=release_win_x86
+LIBDIR_DIST=release_win_x86
+LIBPATH=x://VC/lib x://VC/atlmfc/Lib O://Lib C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin
+[Tools]
+CC=x://VC/bin/cl.exe
+LD=x://VC/bin/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=7.1.3.5 (1)
+---------------------------------------------------------------------------
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWFRETRY_EXPORTS -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/wfRetry.cpp -Forelease_win_x86/wfRetry.o
+wfRetry.cpp
+C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace\prod\wfRetry\include\stdafx.h(26) : warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+        command-line arguments :  see previous definition of 'WIN32_LEAN_AND_MEAN'
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x86/use_default.res src/use_default.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:wfRetry.def release_win_x86/wfRetry.o release_win_x86/use_default.res -OUT:release_win_x86/wfRetry32.dll -LIBPATH:x://VC/lib -LIBPATH:x://VC/atlmfc/Lib -LIBPATH:O://Lib -LIBPATH:C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x86/wfRetry32.lib and object release_win_x86/wfRetry32.exp
+wfRetry32.exp : warning LNK4070: /OUT:wfRetry.dll directive in .EXP differs from output filename 'release_win_x86/wfRetry32.dll'; ignoring directive
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x86/wfRetry32.dll
+Done Adding Additional Store
+Successfully signed: release_win_x86/wfRetry32.dll
+cp -pf release_win_x86/wfRetry32.dll C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_win_x86  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/wfRetry'
+make[1]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace'
+INFO: Compile C# code
+cd C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace; make -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=1 TARGETSFILE=prod/targets.cs.common
+make[1]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace'
+
+==========================================================================
+BUILDTYPE=release
+TARGETENVOS=
+TARGETENVARCH=
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+BUILDOUTPUTDIR=
+==========================================================================
+--------------------------------------------------------------------
+Building prod/CSCInvoke/CSCInvoke
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/CSCInvoke/CSCInvoke'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=CSCInvoke_SP2010.csproj
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (1)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT=CSCInvoke_SP2010.csproj
+[Parameters]
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building CSCInvoke_SP2010.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf release_build.log
+x:/common7/IDE/devenv.exe CSCInvoke_SP2010.csproj /build "Release|AnyCPU" /out release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f release_build.log ] ; then						\
+	echo "[[DUMP BEGIN - release_build.log]]" ;			\
+	cat release_build.log ;								\
+	echo "[[DUMP END - release_build.log]]" ;			\
+else													\
+	echo "INFO: Cannot find release_build.log" ;			\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - release_build.log]]
+------ Build started: Project: CSCInvoke_SP2010, Configuration: Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace\prod\CSCInvoke\CSCInvoke\AssemblyInfo.cs(46,12): warning CS1699: Use command line option '/keyfile' or appropriate project settings instead of 'AssemblyKeyFile'
+warning CS1616: Option 'keyfile' overrides attribute 'System.Reflection.AssemblyKeyFileAttribute' given in a source file or added module
+
+Compile complete -- 0 errors, 2 warnings
+  CSCInvoke_SP2010 -> C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace\prod\CSCInvoke\CSCInvoke\release\NextLabs.CSCInvoke.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - release_build.log]]
+/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release/NextLabs.CSCInvoke.dll
+/bin/sh: line 2: /Windows Kits/8.0/bin/x64/signtool.exe: No such file or directory
+Makefile:68: recipe for target 'compile' failed
+make[2]: *** [compile] Error 127
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/CSCInvoke/CSCInvoke'
+Makefile:59: recipe for target 'prod/CSCInvoke/CSCInvoke' failed
+make[1]: *** [prod/CSCInvoke/CSCInvoke] Error 2
+--------------------------------------------------------------------
+Building prod/WorkflowAdapter
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/WorkflowAdapter'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=WorkFlowAdapter.csproj
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (1)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT=WorkFlowAdapter.csproj
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building WorkFlowAdapter.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  release_build.log
+x:/common7/IDE/devenv.exe WorkFlowAdapter.csproj /build "Release|AnyCPU" /out release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f release_build.log ] ; then						\
+	echo "[[DUMP BEGIN - release_build.log]]" ;			\
+	cat release_build.log ;								\
+	echo "[[DUMP END - release_build.log]]" ;			\
+else													\
+	echo "INFO: Cannot find release_build.log" ;			\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - release_build.log]]
+------ Build started: Project: WorkFlowAdapter, Configuration: Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_PWC_mr1610_7.1.3.5\workspace\prod\WorkFlowAdapter\Program.cs(10,7): error CS0246: The type or namespace name 'NextLabs' could not be found (are you missing a using directive or an assembly reference?)
+
+Compile complete -- 1 errors, 0 warnings
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NextLabs.CSCInvoke". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+========== Build: 0 succeeded or up-to-date, 1 failed, 0 skipped ==========
+
+[[DUMP END - release_build.log]]
+Makefile:64: recipe for target 'compile' failed
+make[2]: *** [compile] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace/prod/WorkflowAdapter'
+Makefile:59: recipe for target 'prod/WorkflowAdapter' failed
+make[1]: *** [prod/WorkflowAdapter] Error 2
+make[1]: Target 'all' not remade because of errors.
+make[1]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_PWC_mr1610_7.1.3.5/workspace'
+build/Makefile.compile:78: recipe for target 'compile_cs' failed
+make: *** [compile_cs] Error 2
++ exit 2
+Build step 'Execute shell' marked build as failure
+Started calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: hudson-build@nextlabs.com Tonny.He@cn.nextlabs.com Daniel.Chen@nextlabs.com
+Finished: FAILURE

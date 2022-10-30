@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64704</changenumber>
+		<date>2017-02-15 22:07:53</date>
+		<description>support DoNotCare in policy enforcement result.</description>
+		<user>the</user>
+		<workspace>the_bard</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/SDKWrapper/include/QueryPC.h</name>
+				<workspacePath>SDKWrapper/include/QueryPC.h</workspacePath>
+				<rev>5</rev>
+				<changenumber>64704</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/SDKWrapper/src/QueryPC.cpp</name>
+				<workspacePath>SDKWrapper/src/QueryPC.cpp</workspacePath>
+				<rev>9</rev>
+				<changenumber>64704</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

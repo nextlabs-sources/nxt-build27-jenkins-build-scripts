@@ -1,0 +1,13 @@
+commit ac7567961ec11c6f6acf3619215a3c1dbf5062ee
+tree 5e8279ddafd85473d49e5a753350ff7eada831d3
+parent cb6fe2b0405617989e54bafe49cacc90dddbc411
+author Lakshminarayanan K <lakshmi.krishnan@nextlabs.com> 2016-09-27 12:41:52 +0800
+committer Lakshminarayanan K <lakshmi.krishnan@nextlabs.com> 2016-09-27 12:41:52 +0800
+
+    Removes legacy code-signing tool and changes to using signtool.exe
+
+
+
+:100644 100644 0b371a0db2cede9cb93da4d3fb212dadd7c6bfd3 9e20f3c2235f094af3d091fd6a96cf9a60b1f94f M	build/Makefile
+:100644 100644 431147990f24d4113e4c6b5b71eed30c116e8264 87b41d1adfc03729be2740753c840130015bf369 M	build/Makefile.vs
+:100644 100644 89dc7379a5bdffdaa434ea776612d9c4c0a2195a d0b34be7590d0f2a36385daf79d4ba0c43029148 M	install/scripts/Makefile.install

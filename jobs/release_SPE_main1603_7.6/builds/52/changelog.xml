@@ -1,0 +1,11 @@
+commit 57c6fbbe3b6fe8606aed79b9462fd4650b50f36a
+tree ab413fad4864b31955cbc8d25637c276e40d96ae
+parent 77332abc0043936e934491ab0b84e1cd118be54a
+author George Guo <George.Guo@nextlabs.com> 2016-10-26 17:43:57 +0800
+committer George Guo <George.Guo@nextlabs.com> 2016-10-26 17:43:57 +0800
+
+    fix bug 37500, there just one item in library.
+
+
+
+:100644 100644 559f65890a990d834f7d99758044c2bed7fecc34 a541cd2b942e92213c133b50b7362aee71d2c6b5 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/PostResponseFilter.cs

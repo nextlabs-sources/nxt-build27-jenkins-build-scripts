@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64539</changenumber>
+		<date>2017-01-16 19:38:41</date>
+		<description>Updates aspectj jars required for TCDCE2.7 PartialDownload module</description>
+		<user>scm</user>
+		<workspace>nxbuild_OENO</workspace>
+		<files>
+			<file>
+				<name>//depot/external/aspectj/1.8.9/aspectjtools.jar</name>
+				<workspacePath>aspectj/1.8.9/aspectjtools.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64539</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/aspectj/1.8.9/aspectjweaver.jar</name>
+				<workspacePath>aspectj/1.8.9/aspectjweaver.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64539</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/aspectj/1.8.9/org.aspectj.matcher.jar</name>
+				<workspacePath>aspectj/1.8.9/org.aspectj.matcher.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64539</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

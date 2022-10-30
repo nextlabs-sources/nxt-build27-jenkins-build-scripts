@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64713</changenumber>
+		<date>2017-02-21 19:36:33</date>
+		<description>fix a build, token expiresin time unit change to second</description>
+		<user>the</user>
+		<workspace>C:\preforce</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</workspacePath>
+				<rev>18</rev>
+				<changenumber>64713</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/Model.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/Model.cs</workspacePath>
+				<rev>14</rev>
+				<changenumber>64713</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

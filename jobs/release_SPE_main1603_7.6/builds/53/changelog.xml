@@ -1,0 +1,12 @@
+commit b1b719c9ca534a3a432447816a0fd09ac01fac52
+tree bbdb07e02500143f594c500750b0bbce25db98b1
+parent 57c6fbbe3b6fe8606aed79b9462fd4650b50f36a
+author George Guo <George.Guo@nextlabs.com> 2016-10-27 15:25:40 +0800
+committer George Guo <George.Guo@nextlabs.com> 2016-10-27 15:25:40 +0800
+
+    fix bug 37508, Change the reat api trimming code in "XML" when "Json"
+    have changed the code to remvoe "Newtonsoft.Json" model.
+
+
+
+:100644 100644 2b291c3395be7ce2c0f6d9dda6fa652b74c7cb19 c4b4ea05744aae90e285785acbb878ca74816746 M	prod/sync_handlers/EventHandlers/RestapiTrimming.cs

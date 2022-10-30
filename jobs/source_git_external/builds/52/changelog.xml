@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64569</changenumber>
+		<date>2017-01-18 04:33:58</date>
+		<description>fix bug that onedrive sdk cannot read current account from keychain with MAC</description>
+		<user>kzhou</user>
+		<workspace>my</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/OneDriveSDK/Mac/1.0/ADALiOS/ADALiOS/ADALiOS/ADKeyChainHelper.m</name>
+				<workspacePath>OneDriveSDK/Mac/1.0/ADALiOS/ADALiOS/ADALiOS/ADKeyChainHelper.m</workspacePath>
+				<rev>2</rev>
+				<changenumber>64569</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

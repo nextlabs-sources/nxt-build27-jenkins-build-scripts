@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64376</changenumber>
+		<date>2016-12-21 21:40:39</date>
+		<description>fix can not update cookie issue ,and suppport update cookie for end use call</description>
+		<user>the</user>
+		<workspace>C:\preforce</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</workspacePath>
+				<rev>11</rev>
+				<changenumber>64376</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

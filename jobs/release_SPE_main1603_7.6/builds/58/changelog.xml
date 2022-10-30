@@ -1,0 +1,12 @@
+commit 91fe411d70fc4baeb191967949c3f30f08ad948e
+tree d2246d567583a79b48f696093ede3ff95f425512
+parent 38d54ef35f3d4cecf026034edac9664b4098e737
+author emily lv <emily.lv@cn.nextlabs.com> 2017-01-10 09:58:14 +0800
+committer emily lv <emily.lv@cn.nextlabs.com> 2017-01-10 09:58:14 +0800
+
+    Fix customer issue : When enable list trimming, server buttons in ribbon
+    bar gets disabled.
+
+
+
+:100644 100644 a541cd2b942e92213c133b50b7362aee71d2c6b5 a4a32d5c30392e6fdc5bbc3c64cea3dba4f45e78 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/PostResponseFilter.cs

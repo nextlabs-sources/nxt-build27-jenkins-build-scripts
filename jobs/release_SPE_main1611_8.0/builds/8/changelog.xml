@@ -1,0 +1,23 @@
+commit bd083e1d27bfe0e88d8966c5dbb8a344fc8b02d0
+tree 2fc1456083aa0541e7bb951075c9147c9f055425
+parent a0ae8ab0d97dbd536f75d0b34b57dfbf31eb7b72
+author George Guo <George.Guo@nextlabs.com> 2016-11-16 10:39:36 +0800
+committer George Guo <George.Guo@nextlabs.com> 2016-11-16 10:39:36 +0800
+
+    change build "2013" to "2016" in SP2016 project.
+
+
+
+:100644 100644 731c2b65c8c91e717ccef061b2dd897aba303742 445813f40dcd6e3b562e98fd27a5ea4bd4016e89 M	install/spe2016/prepareAssembly.pl
+:100644 100644 47756319ec2ba3974acdf058de194e74dcad94b4 ac0638bb625b37a2618a3c403644265915f2d8ac M	prod/NextLabs.Common/NextLabs.Common/NextLabs.Common_SP2016.csproj
+:100644 100644 b1d9e552928edd4e4ea38e935e91ecc4072dd30d 484e529eca9331bf09172c3c6f669ae5deb37dcd M	prod/NextLabs.Deployment/NextLabs.Deployment_SP2016.csproj
+:100644 100644 28951f6f972db4e3b3b8c0327b03185fbfeea290 c27dd751e8bdd4555475658fbecae593b6dbfb6e M	prod/NextLabs.Deployment/Package_SP2016/Package.package
+:100644 100644 953730af0b23c596247a2cd15c20cb3e5c34abbd fc25c4160791a4d76216f873ec49c4cf04164b2f M	prod/NextLabs.PLE/NextLabs.PLE/NextLabs.PLE_SP2016.csproj
+:100644 100644 d7f3ca184e4b0c2201cf1133c9158587b1f71c10 9c4f33dcb44106d6eab027fd1e6d2476928764c4 M	prod/Nextlabs.Diagnostic/NextLabs.Diagnostic_SP2016.csproj
+:100644 100644 f666eb4144be95154364898f326a72455761ba2a 186b5dd1a6d327fecad6a86cee7a6d9bdb3ced60 M	prod/Nextlabs.Entitlement.Wizard/Nextlabs.Entitlement.Wizard_SP2016.csproj
+:100644 100644 0aba3b92e98ad462662a9b4e6d71140e6bb4ca6f aa37c5d1ac350f1896d97551371d91b478e0d710 M	prod/Nextlabs.SPE.Console/Nextlabs.SPE.Console.SPEAdmin/Nextlabs.SPE.Console.SPEAdmin_SP2016.csproj
+:100644 100644 d7ad15445f408217b57f85bfd060513b81d2d5e3 592eecd335ec5602e002b9f26384bde689d59f07 M	prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule_SP2016.csproj
+:100644 100644 0bd366f2e0bd7b722c1eb8b48ebc1f43ffb373be 3d7d572d181cfc643227cec5d3ddb16d55cf1210 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming_SP2016.csproj
+:100644 100644 d4e31bb4298809c543caa0c05cce4fa5a40205df 603bf0d9a289d466286e07aa14cf0dadc249fa86 M	prod/SharepointConfigModifier/SharepointConfigModifier_SP2016.csproj
+:100644 100644 d914deaedcc679388da15063561caa05e84bf05a 48067d8332ae6aeb9a1eb0c3abb8422365bbe961 M	prod/ceSPService/ceSPService_SP2016.csproj
+:100644 100644 92d3bd6503b504cd35fb1e84d78156f55e8d14c1 6cd768c80d7bfb5ea59a2f192127a923f55ba847 M	prod/sync_handlers/EventHandlers/EventHandlers_SP2016.csproj

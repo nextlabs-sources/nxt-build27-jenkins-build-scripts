@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>63694</changenumber>
+		<date>2016-10-09 10:23:19</date>
+		<description>Minor change to display build.manifest contents at the end of the builds.</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/SharePointEnforcer/release/mr1610_PWC_7.1.3.5/build/env.CYGWIN_NT-5.1.bak</name>
+				<workspacePath>build/env.CYGWIN_NT-5.1.bak</workspacePath>
+				<rev>1</rev>
+				<changenumber>63694</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/SharePointEnforcer/release/mr1610_PWC_7.1.3.5/buildPcv</name>
+				<workspacePath>buildPcv</workspacePath>
+				<rev>2</rev>
+				<changenumber>63694</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/SharePointEnforcer/release/mr1610_PWC_7.1.3.5/buildRelease</name>
+				<workspacePath>buildRelease</workspacePath>
+				<rev>2</rev>
+				<changenumber>63694</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

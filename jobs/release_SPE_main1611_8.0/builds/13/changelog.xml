@@ -1,0 +1,11 @@
+commit bf0a50fc6a8c1c8df79288a3cb5e36ee4d1b5c7f
+tree 9d0a9af3b74be8608b20323a926f109cbbf79f67
+parent d6098dcbbfc55286140574a78d8dadcd0231130b
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-11-25 15:12:05 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-11-25 15:12:05 +0800
+
+    fix build deployment module error.
+
+
+
+:100644 100644 de17cc1dd4925b136d738675d6c75d614f878390 be68e55bd48c5c1ee26672765b1de992be722bc2 M	prod/NextLabs.Deployment/NextLabs.Deployment_SP2016.csproj

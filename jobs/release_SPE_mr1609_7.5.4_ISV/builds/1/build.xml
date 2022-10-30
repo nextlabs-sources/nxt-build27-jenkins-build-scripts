@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>dchen</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction plugin="buildtriggerbadge@2.3">
+      <cause class="hudson.model.Cause$UserIdCause" reference="../../hudson.model.CauseAction/causeBag/entry/hudson.model.Cause_-UserIdCause"/>
+    </org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction>
+  </actions>
+  <queueId>15</queueId>
+  <timestamp>1474615483127</timestamp>
+  <startTime>1474615483127</startTime>
+  <result>FAILURE</result>
+  <duration>21456</duration>
+  <charset>windows-1252</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>C:\Jenkins\jobs\release_SPE_mr1609_7.5.4_ISV\workspace</workspace>
+  <hudsonVersion>2.7.2</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

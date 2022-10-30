@@ -1,0 +1,14 @@
+commit 58e8b4d97b5f78ae3a7016438ad9b2b92e3a5fc1
+tree 984e1a2365eaa4d0786ffb8c7437b7e0171c4458
+parent 91fe411d70fc4baeb191967949c3f30f08ad948e
+author emily lv <emily.lv@cn.nextlabs.com> 2017-01-16 15:32:09 +0800
+committer emily lv <emily.lv@cn.nextlabs.com> 2017-01-16 15:32:09 +0800
+
+    fix bug 38510 - some behavior still enforce when enable PreFilter
+
+
+
+:100644 100644 dd397c5332c266a96cf49797e90311678a7c046e db19f0cca08186bb8f740b4ea1e50a3ce78404e8 M	prod/NextLabs.Common/NextLabs.Common/EventHelper.cs
+:100644 100644 20747d055e06e8a3dfd78c6a8f06028235b209b8 51b7addfb990883253dc1266fc6417318120172d M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/SPSecurityTrimmingControl.cs
+:100644 100644 8b479e37780b5aaa600655dd3b189a2af5c860e0 2e31cc34c4e458a5811d6cd326648da0ce5b86ca M	prod/sync_handlers/EventHandlers/ItemHandler.cs
+:100644 100644 1aedef02efeaaa2118b4ec1fe5c41869813eb3c2 93c49a1559560b66c65b660e7daa7193681bf0b6 M	prod/sync_handlers/EventHandlers/PreFilterModule.cs

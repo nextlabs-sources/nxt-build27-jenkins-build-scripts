@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>63204</changenumber>
+		<date>2016-08-24 20:52:28</date>
+		<description>Removes Microsoft.Office.Interop.Word.dll since it is a common library, and is checked in to Common folder</description>
+		<user>scm</user>
+		<workspace>nxbuild_OENO</workspace>
+		<files>
+			<file>
+				<name>//depot/external/microsoft/sharepoint/sp2013/Microsoft.Office.Interop.Word.dll</name>
+				<workspacePath>microsoft/sharepoint/sp2013/Microsoft.Office.Interop.Word.dll</workspacePath>
+				<rev>2</rev>
+				<changenumber>63204</changenumber>
+				<action>DELETE</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

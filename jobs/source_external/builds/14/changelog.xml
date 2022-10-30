@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64524</changenumber>
+		<date>2017-01-15 20:44:07</date>
+		<description>Adds aspectJ JRT 1.8.9
+	    - required for TC-DCE2.7 PartialDownload component build</description>
+		<user>scm</user>
+		<workspace>nxbuild_OENO</workspace>
+		<files>
+			<file>
+				<name>//depot/external/aspectj/1.8.9/aspectjrt.jar</name>
+				<workspacePath>aspectj/1.8.9/aspectjrt.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64524</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+	<entry>
+		<changenumber>64523</changenumber>
+		<date>2017-01-15 20:38:39</date>
+		<description>Adds Teamcenter10 related files
+	    - required for building TC-DCE2.7 PartialDownload Tool</description>
+		<user>scm</user>
+		<workspace>nxbuild_OENO</workspace>
+		<files>
+			<file>
+				<name>//depot/external/siemens/teamcenter10/fmsservercache.jar</name>
+				<workspacePath>siemens/teamcenter10/fmsservercache.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64523</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/siemens/teamcenter10/fmsutil.jar</name>
+				<workspacePath>siemens/teamcenter10/fmsutil.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64523</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/siemens/teamcenter10/third_party/jetty/9.2.0/jetty-http-9.2.0.v20140526.jar</name>
+				<workspacePath>siemens/teamcenter10/third_party/jetty/9.2.0/jetty-http-9.2.0.v20140526.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64523</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/siemens/teamcenter10/third_party/jetty/9.2.0/jetty-server-9.2.0.v20140526.jar</name>
+				<workspacePath>siemens/teamcenter10/third_party/jetty/9.2.0/jetty-server-9.2.0.v20140526.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64523</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/siemens/teamcenter10/third_party/jetty/9.2.0/jetty-util-9.2.0.v20140526.jar</name>
+				<workspacePath>siemens/teamcenter10/third_party/jetty/9.2.0/jetty-util-9.2.0.v20140526.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64523</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/siemens/teamcenter10/third_party/jetty/9.2.0/servlet-api-3.1.jar</name>
+				<workspacePath>siemens/teamcenter10/third_party/jetty/9.2.0/servlet-api-3.1.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64523</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/siemens/teamcenter10/third_party/mld/tc9.1.0.20120806/plmJMXmonitor.jar</name>
+				<workspacePath>siemens/teamcenter10/third_party/mld/tc9.1.0.20120806/plmJMXmonitor.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64523</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

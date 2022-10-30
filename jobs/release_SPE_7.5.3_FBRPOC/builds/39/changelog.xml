@@ -1,0 +1,23 @@
+commit 7112a8418987e310e6c8a3ecfa5db31439c97df3
+tree 30ff2600135a18073abaf9d2b813d82136dfadf5
+parent 100b62b2a4e87819b8d4f257a3d7f692aeec6991
+author emily <emily.lv@nextlabs.com> 2016-07-11 14:57:11 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-11 14:57:11 +0800
+
+    fix bug  35338 - [POC]no log in log view when Set Managed Metadata
+    Column Value sucessfully
+
+
+
+:100644 100644 0bd366f2e0bd7b722c1eb8b48ebc1f43ffb373be b3f0db4eefffcbd8305f2f122fcbdd2897aa2987 M	prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming_SP2013.csproj
+commit 100b62b2a4e87819b8d4f257a3d7f692aeec6991
+tree 05aa7526bb84933eca8ea243f8a488c0a9a5f983
+parent 2949c7dddb46fafdbc3ac202cad44e9544b9ac6a
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-11 14:51:44 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-11 14:51:44 +0800
+
+    fix bug 35394
+
+
+
+:100644 100644 06f189ca1a53c5abf0d04707662d7bc78b07e3df 873f6ce8fa3af553e1297a05a717941206081d7b M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs

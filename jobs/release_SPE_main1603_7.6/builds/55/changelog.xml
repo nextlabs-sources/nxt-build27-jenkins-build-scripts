@@ -1,0 +1,13 @@
+commit ddcde50555a42a281b7e734942732d8e9ab67560
+tree b92190b865ce983f91d7cc323984e99f8cae5a5a
+parent 691e253673bd40a5a91eb80117be219acade5f33
+author George Guo <George.Guo@nextlabs.com> 2016-11-03 14:44:08 +0800
+committer George Guo <George.Guo@nextlabs.com> 2016-11-03 14:44:08 +0800
+
+    change the obligation name from "SP_Trimming_condition" to
+    "SP_Security_Filter_Criteria".
+
+
+
+:100644 100644 0686341fc2960941906985a67945334dae3e3dcb dece1b7b60846696fee583b3cdfbb1dbb311e6a5 M	prod/NextLabs.Common/NextLabs.Common/Evaluator.cs
+:100644 100644 0521e49f366f2bd5dcdb3877f16f4c2afcf4938c 68a7aa8bdb3281173cd87f90d18e5564ccbc3b40 M	prod/NextLabs.Common/NextLabs.Common/Global.cs

@@ -1,0 +1,2574 @@
+Started by user [8mha:AAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ+/dLi1CL9nOyizOKMvMQ8AD/V67jEAAAA[0mLakshminarayanan Krishnan
+Building in workspace C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace
+Cloning the remote Git repository
+Cloning repository git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git
+ > C:\Git\cmd\git.exe init C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace # timeout=10
+Fetching upstream changes from git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git
+ > C:\Git\cmd\git.exe --version # timeout=10
+ > C:\Git\cmd\git.exe fetch --tags --progress git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Git\cmd\git.exe config remote.origin.url git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git # timeout=10
+ > C:\Git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Git\cmd\git.exe config remote.origin.url git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git # timeout=10
+Cleaning workspace
+ > C:\Git\cmd\git.exe rev-parse --verify HEAD # timeout=10
+No valid HEAD. Skipping the resetting
+ > C:\Git\cmd\git.exe clean -fdx # timeout=10
+Fetching upstream changes from git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git
+ > C:\Git\cmd\git.exe fetch --tags --progress git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Git\cmd\git.exe rev-parse "refs/remotes/origin/release/main1611_8.0^{commit}" # timeout=10
+ > C:\Git\cmd\git.exe rev-parse "refs/remotes/origin/origin/release/main1611_8.0^{commit}" # timeout=10
+Checking out Revision bd083e1d27bfe0e88d8966c5dbb8a344fc8b02d0 (refs/remotes/origin/release/main1611_8.0)
+ > C:\Git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Git\cmd\git.exe checkout -f bd083e1d27bfe0e88d8966c5dbb8a344fc8b02d0
+ > C:\Git\cmd\git.exe rev-list a0ae8ab0d97dbd536f75d0b34b57dfbf31eb7b72 # timeout=10
+No emails were triggered.
+[workspace] $ C:\cygwin\bin\bash.exe -xe C:\TEMP\hudson7595766651953047581.sh
++ export NLEXTERNALDIR=C:/P4/external
++ NLEXTERNALDIR=C:/P4/external
++ export XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace
++ XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace
++ export VERSION_BUILD=8
++ VERSION_BUILD=8
++ export PUBLISH_TO_BODA=1
++ PUBLISH_TO_BODA=1
++ cd 'C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace'
++ git clean -fd
++ true
++ git add .
++ git stash
+No local changes to save
++ true
++ git stash drop
+No stash found.
++ source ./setEnv
+++ echo 'NextLabs Build Environment Preparation Script (setEnv)'
+NextLabs Build Environment Preparation Script (setEnv)
+++ echo 'Specify --help for more information'
+Specify --help for more information
+++ '[' 'C:\Program Files' == '' ']'
+++ ENV_OS=x64
+++ PROGRAM_FILES_X86='C:/Program Files (x86)'
++++ cygpath -d 'C:/Program Files (x86)'
+++ PROGRAM_FILES_X86_DOS='C:\PROGRA~2'
+++ echo 'Drive Mapping Before:'
+Drive Mapping Before:
+++ set -x
+++ net use
+New connections will not be remembered.
+
+There are no entries in the list.
+
+++ subst
++++ subst
++++ grep -ic X:
+++ '[' 0 -ne 0 ']'
++++ net use
++++ grep -ic X:
+++ '[' 0 -ne 0 ']'
+++ subst x: 'C:\PROGRA~2\Microsoft Visual Studio 10.0'
++++ subst
++++ grep -ic y:
+++ '[' 0 -ne 0 ']'
++++ net use
++++ grep -ic y:
+++ '[' 0 -ne 0 ']'
+++ '[' X '!=' X ']'
+++ subst y: 'C:\PROGRA~2\Microsoft Visual Studio 9.0'
++++ subst
++++ grep -ic O:
+++ '[' 0 -ne 0 ']'
++++ net use
++++ grep -ic O:
+++ '[' 0 -ne 0 ']'
+++ subst O: 'c:\Program Files\Microsoft SDKs\Windows\v7.0'
+++ '[' '' == '' ']'
++++ subst
++++ grep -ic S:
+++ '[' 0 -ne 0 ']'
++++ net use
++++ grep -ic S:
+++ '[' 0 -ne 0 ']'
+++ net use s: '\\nextlabs.com\share\data'
+The command completed successfully.
+
+++ set +x
+Drive Mapping After:
+++ net use
+New connections will not be remembered.
+
+
+Status       Local     Remote                    Network
+
+-------------------------------------------------------------------------------
+             S:        \\nextlabs.com\share\data Microsoft Windows Network
+The command completed successfully.
+
+++ subst
+O:\: => C:\Program Files\Microsoft SDKs\Windows\v7.0
+X:\: => C:\PROGRA~2\Microsoft Visual Studio 10.0
+Y:\: => C:\PROGRA~2\Microsoft Visual Studio 9.0
+++ set +x
+
+-------------------------------------------------------------------------
+IMPORTANT: You must source this script in a Bash shell to setup the environment.
+Invoking ./setEnv will create a new child shell process and the script will
+run in the child process. Changes to the environment is limited to the child
+process, parent process is not affected. The command you should run is:
+  source ./setEnv
+-------------------------------------------------------------------------
++ '[' -f ../config.xml ']'
++ build/getGitWorkspaceInfo.pl ../config.xml
+NextLabs Get Git Workspace Setting Script
+Parameters:
+  Config file       = ../config.xml
+
+INFO: Parse config data
+[BUILD MANIFEST] Git Repo URL      : git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git
+[BUILD MANIFEST] Git Branch        : origin/release/main1611_8.0
+[BUILD MANIFEST] Git Label         : jenkins-release_SPE_main1611_8.0-8
+[BUILD MANIFEST] Jenkins Build URL       : http://nxt-build27.nextlabs.com:9031/job/release_SPE_main1611_8.0/8/
+[BUILD MANIFEST] Jenkins Build Number    : 8
+[BUILD MANIFEST] Jenkins Build Id        : 8
+[BUILD MANIFEST] Jenkins Workspace Path  : C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace
+[BUILD MANIFEST] Jenkins Build Script    : export NLEXTERNALDIR=C:/P4/external; export XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace; export VERSION_BUILD=${BUILD_NUMBER}; ; export PUBLISH_TO_BODA=1; ; cd ${WORKSPACE}; ; ############################; # Clean the workspace; ############################; git clean -fd &amp;&amp; true; git add .; git stash &amp;&amp; true; git stash drop &amp;&amp; true; ############################; ; source ./setEnv; ./buildRelease
++ ./configure --type=release
+NextLabs SharePoint Products Build Configuration Script
+Specify --help for more information
+INFO: Parameters:
+  CONFIG_TYPE      = release
+  MAP_BUILD_ROOT   = 
+
+INFO: build.config
+#!/bin/bash
+#
+# Description
+#	This script contains variable to be used by ./buildAll script. It can also be used to
+#	setup the environment for manual compilation. It is especially useful for partial 
+#	rebuilding after fixing compilation problem or incremental build after bug fix.
+#
+# WARNING
+#	This file is generated by ./configure. You may edit this file for debugging because
+#	changes will be overriden when ./configure is run.
+
+export CONFIG_TYPE=release
+export BUILD_NUMBER=8
+export VERSION_BUILD=8
+export VERSION_BUILD_SHORT=8
+export BUILDTYPE=release
+export BUILD_DATE=20161115
+export BUILD_DATE_LONG=201611151942
+export PREFAST=0
+export OFFICIALCERT=1
+
+export XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+
+export REPOSITORY_ROOT=s:/build/release_candidate
+export SYNC_FOLDER_ROOT=s:/global/Us2Cdc/engineering
+
+export NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+export NLEXTERNALDIR=C:/P4/external
+
+export MAKE_CFLAGS_32="-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=8"
+export MAKE_CFLAGS_64="-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=8"
+export MAKE_CSFLAGS="-k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=8"
+export MAKE_INSTALLFLAGS="-k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=8"
++ source build.config
+++ export CONFIG_TYPE=release
+++ CONFIG_TYPE=release
+++ export BUILD_NUMBER=8
+++ BUILD_NUMBER=8
+++ export VERSION_BUILD=8
+++ VERSION_BUILD=8
+++ export VERSION_BUILD_SHORT=8
+++ VERSION_BUILD_SHORT=8
+++ export BUILDTYPE=release
+++ BUILDTYPE=release
+++ export BUILD_DATE=20161115
+++ BUILD_DATE=20161115
+++ export BUILD_DATE_LONG=201611151942
+++ BUILD_DATE_LONG=201611151942
+++ export PREFAST=0
+++ PREFAST=0
+++ export OFFICIALCERT=1
+++ OFFICIALCERT=1
+++ export XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+++ XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+++ export REPOSITORY_ROOT=s:/build/release_candidate
+++ REPOSITORY_ROOT=s:/build/release_candidate
+++ export SYNC_FOLDER_ROOT=s:/global/Us2Cdc/engineering
+++ SYNC_FOLDER_ROOT=s:/global/Us2Cdc/engineering
+++ export NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+++ NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+++ export NLEXTERNALDIR=C:/P4/external
+++ NLEXTERNALDIR=C:/P4/external
+++ export 'MAKE_CFLAGS_32=-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=8'
+++ MAKE_CFLAGS_32='-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=8'
+++ export 'MAKE_CFLAGS_64=-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=8'
+++ MAKE_CFLAGS_64='-k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=8'
+++ export 'MAKE_CSFLAGS=-k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=8'
+++ MAKE_CSFLAGS='-k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=8'
+++ export 'MAKE_INSTALLFLAGS=-k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=8'
+++ MAKE_INSTALLFLAGS='-k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=8'
++ make -f build/Makefile.xlib
+
+==========================================================================
+BUILDTYPE=release
+XLIB_POLICY_ADAPTOR_SDK_ZIP_FILE=S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+==========================================================================
+mkdir -p "C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include"
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" \
+	'PolicyAdapterSDK/include/resattrlib.h' \
+	'PolicyAdapterSDK/include/resattrmgr.h' \
+	'PolicyAdapterSDK/include/celog.h' \
+	'PolicyAdapterSDK/include/celog_policy_file.hpp' \
+	-d "C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include"
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include/celog.h  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include/celog_policy_file.hpp  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include/resattrlib.h  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include/resattrmgr.h  
+mkdir -p C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" \
+	'PolicyAdapterSDK/win_x86/resattrlib32.lib' \
+	'PolicyAdapterSDK/win_x86/resattrmgr32.lib' \
+	'PolicyAdapterSDK/win_x86/celog32.dll' \
+	'PolicyAdapterSDK/installer/win_x86/nlQuench.exe' \
+	'PolicyAdapterSDK/installer/win_x86/PluginInstallerSDK32.dll' \
+	-d C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86/nlQuench.exe  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86/PluginInstallerSDK32.dll  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86/celog32.dll  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86/resattrlib32.lib  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86/resattrmgr32.lib  
+mkdir -p C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64
+unzip -jo "S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip" \
+	'PolicyAdapterSDK/win_x64/resattrlib.lib' \
+	'PolicyAdapterSDK/win_x64/resattrmgr.lib' \
+	'PolicyAdapterSDK/win_x64/celog.dll' \
+	'PolicyAdapterSDK/installer/win_x64/nlQuench.exe' \
+	'PolicyAdapterSDK/installer/win_x64/PluginInstallerSDK.dll' \
+	-d C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64
+Archive:  S:/releases/PolicyAdapterSDK/6.2.0.0/PolicyAdapterSDK-6.2.0.0-274-20121017.zip
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64/nlQuench.exe  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64/PluginInstallerSDK.dll  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64/celog.dll  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64/resattrlib.lib  
+  inflating: C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64/resattrmgr.lib  
+mkdir -p C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_dotnet
++ make -f build/Makefile.compile compile install
+--------------------------------------------------------------
+[Build Configuration]
+CONFIG_TYPE                = release
+VERSION_BUILD              = 8
+VERSION_BUILD_SHORT        = 8
+BUILDTYPE                  = release
+BUILD_DATE                 = 20161115
+BUILD_DATE_LONG            = 201611151942
+PREFAST                    = 0
+OFFICIALCERT               = 1
+NLBUILDROOT                = C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR              = C:/P4/external
+MAKE_CFLAGS_32             = -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=8
+MAKE_CFLAGS_64             = -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=8
+MAKE_CSFLAGS               = -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=8
+MAKE_INSTALLFLAGS          = -k OFFICIALCERT=1 BUILDTYPE=release VERSION_BUILD=8
+--------------------------------------------------------------
+INFO: Compile 32- and 64-bit C/C++ code
+cd C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace; make -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x64 PREFAST=0 VERSION_BUILD=8 TARGETSFILE=prod/targets
+make[1]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace'
+
+==========================================================================
+BUILDTYPE=release
+TARGETENVOS=
+TARGETENVARCH=x64
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+BUILDOUTPUTDIR=
+==========================================================================
+--------------------------------------------------------------------
+Building prod/CE_Log_Interface/CE_Log_Interface
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/CE_Log_Interface/CE_Log_Interface'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=CE_Log_Interface
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x64
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x64
+LIBDIR=release_win_x64
+BINDIR_DIST=release_win_x64
+LIBDIR_DIST=release_win_x64
+LIBPATH=x://VC/lib/amd64 x://VC/atlmfc/Lib/amd64 O://Lib/x64 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=x://VC/bin/x86_amd64/cl.exe
+LD=x://VC/bin/x86_amd64/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/x86_amd64/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -IC:/P4/external/boost/boost_1_45_0 -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/CE_Log_Interface.cpp -Forelease_win_x64/CE_Log_Interface.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+CE_Log_Interface.cpp
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\CE_Log_Interface\CE_Log_Interface\include\stdafx.h(26) : warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+        command-line arguments :  see previous definition of 'WIN32_LEAN_AND_MEAN'
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -IC:/P4/external/boost/boost_1_45_0 -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x64/use_default.res src/use_default.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/x86_amd64/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:CE_Log_Interface.def release_win_x64/CE_Log_Interface.o release_win_x64/use_default.res -OUT:release_win_x64/CE_Log_Interface.dll -LIBPATH:x://VC/lib/amd64 -LIBPATH:x://VC/atlmfc/Lib/amd64 -LIBPATH:O://Lib/x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x64/CE_Log_Interface.lib and object release_win_x64/CE_Log_Interface.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x64/CE_Log_Interface.dll
+Done Adding Additional Store
+Successfully signed: release_win_x64/CE_Log_Interface.dll
+cp -pf release_win_x64/CE_Log_Interface.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/CE_Log_Interface/CE_Log_Interface'
+--------------------------------------------------------------------
+Building prod/IRM_Doc_Protector/TagDocProtector
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/IRM_Doc_Protector/TagDocProtector'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=TagDocProtector
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x64
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x64
+LIBDIR=release_win_x64
+BINDIR_DIST=release_win_x64
+LIBDIR_DIST=release_win_x64
+LIBPATH=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64 y:/VC/lib/amd64 y:/VC/atlmfc/Lib/amd64 O://Lib/x64 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=y:/VC/bin/x86_amd64/cl.exe
+LD=y:/VC/bin/x86_amd64/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=y:/VC/bin/x86_amd64/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+NextLabs Update Resource File VersionInfo Script (Make)
+Parameters:
+  Resource File       = src/TagDocProtector.rc
+  Product Name        = Entitlement Manager for Microsoft SharePoint
+  Major Version       = 8
+  Minor Version       = 0
+  Maintenance Version = 0
+  Patch Version       = 0
+  Build Number        = 8
+  Architecture        = x64
+  Show Updated File   = 0
+O://Bin/midl.exe  -char signed -win64 -x64 -env x64 -Oicf -error all  -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include /out idlgen src/TagDocProtector.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 7.00.0555 
+Copyright (c) Microsoft Corporation. All rights reserved.
+midl : command line warning MIDL1007 : switch specified more than once on command line : env
+64 bit Processing src\TagDocProtector.idl
+TagDocProtector.idl
+64 bit Processing O://Include\oaidl.idl
+oaidl.idl
+64 bit Processing O://Include\objidl.idl
+objidl.idl
+64 bit Processing O://Include\unknwn.idl
+unknwn.idl
+64 bit Processing O://Include\wtypes.idl
+wtypes.idl
+64 bit Processing O://Include\basetsd.h
+basetsd.h
+64 bit Processing O://Include\guiddef.h
+guiddef.h
+64 bit Processing O://Include\ocidl.idl
+ocidl.idl
+64 bit Processing O://Include\oleidl.idl
+oleidl.idl
+64 bit Processing O://Include\servprov.idl
+servprov.idl
+64 bit Processing O://Include\urlmon.idl
+urlmon.idl
+64 bit Processing O://Include\msxml.idl
+msxml.idl
+64 bit Processing O:\\Include\oaidl.acf
+oaidl.acf
+64 bit Processing O:\\Include\ocidl.acf
+ocidl.acf
+cp -f idlgen/*.h include
+cp -f idlgen/*.c src
+cp -f idlgen/*.tlb release_win_x64
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/AddNXLHeader.cpp -Forelease_win_x64/AddNXLHeader.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+AddNXLHeader.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/FileTagging.cpp -Forelease_win_x64/FileTagging.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+FileTagging.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/log.cpp -Forelease_win_x64/log.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+log.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/stdafx.cpp -Forelease_win_x64/stdafx.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+stdafx.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/TagDocProtector.cpp -Forelease_win_x64/TagDocProtector.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+TagDocProtector.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/TagProtector.cpp -Forelease_win_x64/TagProtector.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+TagProtector.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/TagDocProtector_i.c -Forelease_win_x64/TagDocProtector_i.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+TagDocProtector_i.c
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/FileEncryptIgnore.cpp -Forelease_win_x64/FileEncryptIgnore.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+FileEncryptIgnore.cpp
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -Forelease_win_x64/TagDocProtector.res src/TagDocProtector.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+y:/VC/bin/x86_amd64/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:TagDocProtector.def release_win_x64/AddNXLHeader.o release_win_x64/FileTagging.o release_win_x64/log.o release_win_x64/stdafx.o release_win_x64/TagDocProtector.o release_win_x64/TagProtector.o release_win_x64/TagDocProtector_i.o release_win_x64/FileEncryptIgnore.o release_win_x64/TagDocProtector.res -OUT:release_win_x64/TagDocProtector.dll -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64 -LIBPATH:y:/VC/lib/amd64 -LIBPATH:y:/VC/atlmfc/Lib/amd64 -LIBPATH:O://Lib/x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin resattrlib.lib resattrmgr.lib ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x64/TagDocProtector.lib and object release_win_x64/TagDocProtector.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x64/TagDocProtector.dll
+Done Adding Additional Store
+Successfully signed: release_win_x64/TagDocProtector.dll
+cp -pf release_win_x64/TagDocProtector.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/IRM_Doc_Protector/TagDocProtector'
+--------------------------------------------------------------------
+Building prod/PdfEditor
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/PdfEditor'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=PdfEditor
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x64
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x64
+LIBDIR=release_win_x64
+BINDIR_DIST=release_win_x64
+LIBDIR_DIST=release_win_x64
+LIBPATH=C:/P4/external/podofo-0.8.1/release_lib_x64_vs2008 y:/VC/lib/amd64 y:/VC/atlmfc/Lib/amd64 O://Lib/x64 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=y:/VC/bin/x86_amd64/cl.exe
+LD=y:/VC/bin/x86_amd64/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=y:/VC/bin/x86_amd64/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+NextLabs Update Resource File VersionInfo Script (Make)
+Parameters:
+  Resource File       = src/PdfEditor.rc
+  Product Name        = Entitlement Manager for Microsoft SharePoint
+  Major Version       = 8
+  Minor Version       = 0
+  Maintenance Version = 0
+  Patch Version       = 0
+  Build Number        = 8
+  Architecture        = x64
+  Show Updated File   = 0
+O://Bin/midl.exe  -char signed -win64 -x64 -env x64 -Oicf -error all  -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include /out idlgen src/PdfEditor.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 7.00.0555 
+Copyright (c) Microsoft Corporation. All rights reserved.
+midl : command line warning MIDL1007 : switch specified more than once on command line : env
+64 bit Processing src\PdfEditor.idl
+PdfEditor.idl
+64 bit Processing O://Include\oaidl.idl
+oaidl.idl
+64 bit Processing O://Include\objidl.idl
+objidl.idl
+64 bit Processing O://Include\unknwn.idl
+unknwn.idl
+64 bit Processing O://Include\wtypes.idl
+wtypes.idl
+64 bit Processing O://Include\basetsd.h
+basetsd.h
+64 bit Processing O://Include\guiddef.h
+guiddef.h
+64 bit Processing O://Include\ocidl.idl
+ocidl.idl
+64 bit Processing O://Include\oleidl.idl
+oleidl.idl
+64 bit Processing O://Include\servprov.idl
+servprov.idl
+64 bit Processing O://Include\urlmon.idl
+urlmon.idl
+64 bit Processing O://Include\msxml.idl
+msxml.idl
+64 bit Processing O:\\Include\oaidl.acf
+oaidl.acf
+64 bit Processing O:\\Include\ocidl.acf
+ocidl.acf
+cp -f idlgen/*.h include
+cp -f idlgen/*.c src
+cp -f idlgen/*.tlb release_win_x64
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/stdafx.cpp -Forelease_win_x64/stdafx.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+stdafx.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/dllmain.cpp -Forelease_win_x64/dllmain.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+dllmain.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/PdfHeaderFooter.cpp -Forelease_win_x64/PdfHeaderFooter.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+PdfHeaderFooter.cpp
+src/PdfHeaderFooter.cpp(15) : warning C4005: 'CreateFont' : macro redefinition
+        O:\Include\wingdi.h(3281) : see previous definition of 'CreateFont'
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/PdfEditor.cpp -Forelease_win_x64/PdfEditor.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+PdfEditor.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/PdfEditor_i.c -Forelease_win_x64/PdfEditor_i.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+PdfEditor_i.c
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -Forelease_win_x64/PdfEditor.res src/PdfEditor.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+y:/VC/bin/x86_amd64/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:PdfEditor.def release_win_x64/stdafx.o release_win_x64/dllmain.o release_win_x64/PdfHeaderFooter.o release_win_x64/PdfEditor.o release_win_x64/PdfEditor_i.o release_win_x64/PdfEditor.res -OUT:release_win_x64/PdfEditor.dll -LIBPATH:C:/P4/external/podofo-0.8.1/release_lib_x64_vs2008 -LIBPATH:y:/VC/lib/amd64 -LIBPATH:y:/VC/atlmfc/Lib/amd64 -LIBPATH:O://Lib/x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin PoDoFoLib.lib ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x64/PdfEditor.lib and object release_win_x64/PdfEditor.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x64/PdfEditor.dll
+Done Adding Additional Store
+Successfully signed: release_win_x64/PdfEditor.dll
+cp -pf release_win_x64/PdfEditor.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/PdfEditor'
+--------------------------------------------------------------------
+Building prod/SDKWrapper
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/SDKWrapper'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=SDKWrapper
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x64
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x64
+LIBDIR=release_win_x64
+BINDIR_DIST=release_win_x64
+LIBDIR_DIST=release_win_x64
+LIBPATH=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64  y:/VC/lib/amd64 y:/VC/atlmfc/Lib/amd64 O://Lib/x64 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=y:/VC/bin/x86_amd64/cl.exe
+LD=y:/VC/bin/x86_amd64/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=y:/VC/bin/x86_amd64/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+NextLabs Update Resource File VersionInfo Script (Make)
+Parameters:
+  Resource File       = src/SDKWrapper.rc
+  Product Name        = Entitlement Manager for Microsoft SharePoint
+  Major Version       = 8
+  Minor Version       = 0
+  Maintenance Version = 0
+  Patch Version       = 0
+  Build Number        = 8
+  Architecture        = x64
+  Show Updated File   = 0
+O://Bin/midl.exe  -char signed -win64 -x64 -env x64 -Oicf -error all  -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include /out idlgen src/SDKWrapper.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 7.00.0555 
+Copyright (c) Microsoft Corporation. All rights reserved.
+midl : command line warning MIDL1007 : switch specified more than once on command line : env
+64 bit Processing src\SDKWrapper.idl
+SDKWrapper.idl
+64 bit Processing O://Include\oaidl.idl
+oaidl.idl
+64 bit Processing O://Include\objidl.idl
+objidl.idl
+64 bit Processing O://Include\unknwn.idl
+unknwn.idl
+64 bit Processing O://Include\wtypes.idl
+wtypes.idl
+64 bit Processing O://Include\basetsd.h
+basetsd.h
+64 bit Processing O://Include\guiddef.h
+guiddef.h
+64 bit Processing O://Include\ocidl.idl
+ocidl.idl
+64 bit Processing O://Include\oleidl.idl
+oleidl.idl
+64 bit Processing O://Include\servprov.idl
+servprov.idl
+64 bit Processing O://Include\urlmon.idl
+urlmon.idl
+64 bit Processing O://Include\msxml.idl
+msxml.idl
+64 bit Processing O:\\Include\oaidl.acf
+oaidl.acf
+64 bit Processing O:\\Include\ocidl.acf
+ocidl.acf
+cp -f idlgen/*.h include
+cp -f idlgen/*.c src
+cp -f idlgen/*.tlb release_win_x64
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/stdafx.cpp -Forelease_win_x64/stdafx.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+stdafx.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/CEAttres.cpp -Forelease_win_x64/CEAttres.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+CEAttres.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/common_tools.cpp -Forelease_win_x64/common_tools.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+common_tools.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/dllmain.cpp -Forelease_win_x64/dllmain.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+dllmain.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/nlofficerep_only_debug.cpp -Forelease_win_x64/nlofficerep_only_debug.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+nlofficerep_only_debug.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/QueryPC.cpp -Forelease_win_x64/QueryPC.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+QueryPC.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/SDKWrapper.cpp -Forelease_win_x64/SDKWrapper.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+SDKWrapper.cpp
+y:/VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/SDKWrapper_i.c -Forelease_win_x64/SDKWrapper_i.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+SDKWrapper_i.c
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -Forelease_win_x64/SDKWrapper.res src/SDKWrapper.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+y:/VC/bin/x86_amd64/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:SDKWrapper.def release_win_x64/stdafx.o release_win_x64/CEAttres.o release_win_x64/common_tools.o release_win_x64/dllmain.o release_win_x64/nlofficerep_only_debug.o release_win_x64/QueryPC.o release_win_x64/SDKWrapper.o release_win_x64/SDKWrapper_i.o release_win_x64/SDKWrapper.res -OUT:release_win_x64/SDKWrapper.dll -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x64 -LIBPATH:y:/VC/lib/amd64 -LIBPATH:y:/VC/atlmfc/Lib/amd64 -LIBPATH:O://Lib/x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin comsuppw.lib Ws2_32.lib ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x64/SDKWrapper.lib and object release_win_x64/SDKWrapper.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x64/SDKWrapper.dll
+Done Adding Additional Store
+Successfully signed: release_win_x64/SDKWrapper.dll
+cp -pf release_win_x64/SDKWrapper.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/SDKWrapper'
+--------------------------------------------------------------------
+Building prod/wfRetry
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/wfRetry'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=wfRetry
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x64
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x64
+LIBDIR=release_win_x64
+BINDIR_DIST=release_win_x64
+LIBDIR_DIST=release_win_x64
+LIBPATH=x://VC/lib/amd64 x://VC/atlmfc/Lib/amd64 O://Lib/x64 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=x://VC/bin/x86_amd64/cl.exe
+LD=x://VC/bin/x86_amd64/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/x86_amd64/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+x://VC/bin/x86_amd64/cl.exe -EHsc -nologo  -O2 -MT -Zi /Wp64 -I./include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWFRETRY_EXPORTS -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -D_WIN64 -D_AMD64_ -DNDEBUG -c src/wfRetry.cpp -Forelease_win_x64/wfRetry.o
+cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release
+wfRetry.cpp
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\wfRetry\include\stdafx.h(26) : warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+        command-line arguments :  see previous definition of 'WIN32_LEAN_AND_MEAN'
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x64/use_default.res src/use_default.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/x86_amd64/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:wfRetry.def release_win_x64/wfRetry.o release_win_x64/use_default.res -OUT:release_win_x64/wfRetry.dll -LIBPATH:x://VC/lib/amd64 -LIBPATH:x://VC/atlmfc/Lib/amd64 -LIBPATH:O://Lib/x64 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+wfRetry.o : warning LNK4197: export 'PluginUnload' specified multiple times; using first specification
+wfRetry.o : warning LNK4197: export 'PluginEntry' specified multiple times; using first specification
+   Creating library release_win_x64/wfRetry.lib and object release_win_x64/wfRetry.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x64/wfRetry.dll
+Done Adding Additional Store
+Successfully signed: release_win_x64/wfRetry.dll
+cp -pf release_win_x64/wfRetry.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/wfRetry'
+make[1]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace'
+cd C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace; make -k OFFICIALCERT=1 BUILDTYPE=release TARGETENVARCH=x86 PREFAST=0 VERSION_BUILD=8 TARGETSFILE=prod/targets
+make[1]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace'
+
+==========================================================================
+BUILDTYPE=release
+TARGETENVOS=
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+BUILDOUTPUTDIR=
+==========================================================================
+--------------------------------------------------------------------
+Building prod/CE_Log_Interface/CE_Log_Interface
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/CE_Log_Interface/CE_Log_Interface'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=CE_Log_Interface
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x86
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x86
+LIBDIR=release_win_x86
+BINDIR_DIST=release_win_x86
+LIBDIR_DIST=release_win_x86
+LIBPATH=x://VC/lib x://VC/atlmfc/Lib O://Lib C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=x://VC/bin/cl.exe
+LD=x://VC/bin/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -IC:/P4/external/boost/boost_1_45_0 -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/CE_Log_Interface.cpp -Forelease_win_x86/CE_Log_Interface.o
+CE_Log_Interface.cpp
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\CE_Log_Interface\CE_Log_Interface\include\stdafx.h(26) : warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+        command-line arguments :  see previous definition of 'WIN32_LEAN_AND_MEAN'
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -IC:/P4/external/boost/boost_1_45_0 -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x86/use_default.res src/use_default.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:CE_Log_Interface.def release_win_x86/CE_Log_Interface.o release_win_x86/use_default.res -OUT:release_win_x86/CE_Log_Interface32.dll -LIBPATH:x://VC/lib -LIBPATH:x://VC/atlmfc/Lib -LIBPATH:O://Lib -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x86/CE_Log_Interface32.lib and object release_win_x86/CE_Log_Interface32.exp
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x86/CE_Log_Interface32.dll
+Done Adding Additional Store
+Successfully signed: release_win_x86/CE_Log_Interface32.dll
+cp -pf release_win_x86/CE_Log_Interface32.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/CE_Log_Interface/CE_Log_Interface'
+--------------------------------------------------------------------
+Building prod/IRM_Doc_Protector/TagDocProtector
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/IRM_Doc_Protector/TagDocProtector'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=TagDocProtector
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x86
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x86
+LIBDIR=release_win_x86
+BINDIR_DIST=release_win_x86
+LIBDIR_DIST=release_win_x86
+LIBPATH=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86 y:/VC/lib y:/VC/atlmfc/Lib O://Lib C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=y:/VC/bin/cl.exe
+LD=y:/VC/bin/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=y:/VC/bin/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+NextLabs Update Resource File VersionInfo Script (Make)
+Parameters:
+  Resource File       = src/TagDocProtector.rc
+  Product Name        = Entitlement Manager for Microsoft SharePoint
+  Major Version       = 8
+  Minor Version       = 0
+  Maintenance Version = 0
+  Patch Version       = 0
+  Build Number        = 8
+  Architecture        = x86
+  Show Updated File   = 0
+O://Bin/midl.exe  -char signed -win32 -Oicf -error all  -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include /out idlgen src/TagDocProtector.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 7.00.0555 
+Copyright (c) Microsoft Corporation. All rights reserved.
+Processing src\TagDocProtector.idl
+TagDocProtector.idl
+Processing O://Include\oaidl.idl
+oaidl.idl
+Processing O://Include\objidl.idl
+objidl.idl
+Processing O://Include\unknwn.idl
+unknwn.idl
+Processing O://Include\wtypes.idl
+wtypes.idl
+Processing O://Include\basetsd.h
+basetsd.h
+Processing O://Include\guiddef.h
+guiddef.h
+Processing O://Include\ocidl.idl
+ocidl.idl
+Processing O://Include\oleidl.idl
+oleidl.idl
+Processing O://Include\servprov.idl
+servprov.idl
+Processing O://Include\urlmon.idl
+urlmon.idl
+Processing O://Include\msxml.idl
+msxml.idl
+Processing O:\\Include\oaidl.acf
+oaidl.acf
+Processing O:\\Include\ocidl.acf
+ocidl.acf
+cp -f idlgen/*.h include
+cp -f idlgen/*.c src
+cp -f idlgen/*.tlb release_win_x86
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/AddNXLHeader.cpp -Forelease_win_x86/AddNXLHeader.o
+AddNXLHeader.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/FileTagging.cpp -Forelease_win_x86/FileTagging.o
+FileTagging.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/log.cpp -Forelease_win_x86/log.o
+log.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/stdafx.cpp -Forelease_win_x86/stdafx.o
+stdafx.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/TagDocProtector.cpp -Forelease_win_x86/TagDocProtector.o
+TagDocProtector.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/TagProtector.cpp -Forelease_win_x86/TagProtector.o
+TagProtector.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/TagDocProtector_i.c -Forelease_win_x86/TagDocProtector_i.o
+TagDocProtector_i.c
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/FileEncryptIgnore.cpp -Forelease_win_x86/FileEncryptIgnore.o
+FileEncryptIgnore.cpp
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -IC:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -Forelease_win_x86/TagDocProtector.res src/TagDocProtector.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+y:/VC/bin/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:TagDocProtector.def release_win_x86/AddNXLHeader.o release_win_x86/FileTagging.o release_win_x86/log.o release_win_x86/stdafx.o release_win_x86/TagDocProtector.o release_win_x86/TagProtector.o release_win_x86/TagDocProtector_i.o release_win_x86/FileEncryptIgnore.o release_win_x86/TagDocProtector.res -OUT:release_win_x86/TagDocProtector32.dll -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86 -LIBPATH:y:/VC/lib -LIBPATH:y:/VC/atlmfc/Lib -LIBPATH:O://Lib -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin resattrlib32.lib resattrmgr32.lib ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x86/TagDocProtector32.lib and object release_win_x86/TagDocProtector32.exp
+TagDocProtector32.exp : warning LNK4070: /OUT:TagDocProtector.DLL directive in .EXP differs from output filename 'release_win_x86/TagDocProtector32.dll'; ignoring directive
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x86/TagDocProtector32.dll
+Done Adding Additional Store
+Successfully signed: release_win_x86/TagDocProtector32.dll
+cp -pf release_win_x86/TagDocProtector32.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/IRM_Doc_Protector/TagDocProtector'
+--------------------------------------------------------------------
+Building prod/PdfEditor
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/PdfEditor'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=PdfEditor
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x86
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x86
+LIBDIR=release_win_x86
+BINDIR_DIST=release_win_x86
+LIBDIR_DIST=release_win_x86
+LIBPATH=C:/P4/external/podofo-0.8.1/release_lib_win32_vs2008 y:/VC/lib y:/VC/atlmfc/Lib O://Lib C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=y:/VC/bin/cl.exe
+LD=y:/VC/bin/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=y:/VC/bin/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+NextLabs Update Resource File VersionInfo Script (Make)
+Parameters:
+  Resource File       = src/PdfEditor.rc
+  Product Name        = Entitlement Manager for Microsoft SharePoint
+  Major Version       = 8
+  Minor Version       = 0
+  Maintenance Version = 0
+  Patch Version       = 0
+  Build Number        = 8
+  Architecture        = x86
+  Show Updated File   = 0
+O://Bin/midl.exe  -char signed -win32 -Oicf -error all  -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include /out idlgen src/PdfEditor.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 7.00.0555 
+Copyright (c) Microsoft Corporation. All rights reserved.
+Processing src\PdfEditor.idl
+PdfEditor.idl
+Processing O://Include\oaidl.idl
+oaidl.idl
+Processing O://Include\objidl.idl
+objidl.idl
+Processing O://Include\unknwn.idl
+unknwn.idl
+Processing O://Include\wtypes.idl
+wtypes.idl
+Processing O://Include\basetsd.h
+basetsd.h
+Processing O://Include\guiddef.h
+guiddef.h
+Processing O://Include\ocidl.idl
+ocidl.idl
+Processing O://Include\oleidl.idl
+oleidl.idl
+Processing O://Include\servprov.idl
+servprov.idl
+Processing O://Include\urlmon.idl
+urlmon.idl
+Processing O://Include\msxml.idl
+msxml.idl
+Processing O:\\Include\oaidl.acf
+oaidl.acf
+Processing O:\\Include\ocidl.acf
+ocidl.acf
+cp -f idlgen/*.h include
+cp -f idlgen/*.c src
+cp -f idlgen/*.tlb release_win_x86
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/stdafx.cpp -Forelease_win_x86/stdafx.o
+stdafx.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/dllmain.cpp -Forelease_win_x86/dllmain.o
+dllmain.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/PdfHeaderFooter.cpp -Forelease_win_x86/PdfHeaderFooter.o
+PdfHeaderFooter.cpp
+src/PdfHeaderFooter.cpp(15) : warning C4005: 'CreateFont' : macro redefinition
+        O:\Include\wingdi.h(3281) : see previous definition of 'CreateFont'
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/PdfEditor.cpp -Forelease_win_x86/PdfEditor.o
+PdfEditor.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/PdfEditor_i.c -Forelease_win_x86/PdfEditor_i.o
+PdfEditor_i.c
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./idlgen -I./include -IC:/P4/external/podofo-0.8.1/podofo -IC:/P4/external/podofo-0.8.1/src -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -Forelease_win_x86/PdfEditor.res src/PdfEditor.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+y:/VC/bin/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:PdfEditor.def release_win_x86/stdafx.o release_win_x86/dllmain.o release_win_x86/PdfHeaderFooter.o release_win_x86/PdfEditor.o release_win_x86/PdfEditor_i.o release_win_x86/PdfEditor.res -OUT:release_win_x86/PdfEditor32.dll -LIBPATH:C:/P4/external/podofo-0.8.1/release_lib_win32_vs2008 -LIBPATH:y:/VC/lib -LIBPATH:y:/VC/atlmfc/Lib -LIBPATH:O://Lib -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin PoDoFoLib.lib ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x86/PdfEditor32.lib and object release_win_x86/PdfEditor32.exp
+PdfEditor32.exp : warning LNK4070: /OUT:PdfEditor.DLL directive in .EXP differs from output filename 'release_win_x86/PdfEditor32.dll'; ignoring directive
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x86/PdfEditor32.dll
+Done Adding Additional Store
+Successfully signed: release_win_x86/PdfEditor32.dll
+cp -pf release_win_x86/PdfEditor32.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/PdfEditor'
+--------------------------------------------------------------------
+Building prod/SDKWrapper
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/SDKWrapper'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=SDKWrapper
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x86
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x86
+LIBDIR=release_win_x86
+BINDIR_DIST=release_win_x86
+LIBDIR_DIST=release_win_x86
+LIBPATH=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86 C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86  y:/VC/lib y:/VC/atlmfc/Lib O://Lib C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=y:/VC/bin/cl.exe
+LD=y:/VC/bin/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=y:/VC/bin/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+NextLabs Update Resource File VersionInfo Script (Make)
+Parameters:
+  Resource File       = src/SDKWrapper.rc
+  Product Name        = Entitlement Manager for Microsoft SharePoint
+  Major Version       = 8
+  Minor Version       = 0
+  Maintenance Version = 0
+  Patch Version       = 0
+  Build Number        = 8
+  Architecture        = x86
+  Show Updated File   = 0
+O://Bin/midl.exe  -char signed -win32 -Oicf -error all  -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include /out idlgen src/SDKWrapper.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 7.00.0555 
+Copyright (c) Microsoft Corporation. All rights reserved.
+Processing src\SDKWrapper.idl
+SDKWrapper.idl
+Processing O://Include\oaidl.idl
+oaidl.idl
+Processing O://Include\objidl.idl
+objidl.idl
+Processing O://Include\unknwn.idl
+unknwn.idl
+Processing O://Include\wtypes.idl
+wtypes.idl
+Processing O://Include\basetsd.h
+basetsd.h
+Processing O://Include\guiddef.h
+guiddef.h
+Processing O://Include\ocidl.idl
+ocidl.idl
+Processing O://Include\oleidl.idl
+oleidl.idl
+Processing O://Include\servprov.idl
+servprov.idl
+Processing O://Include\urlmon.idl
+urlmon.idl
+Processing O://Include\msxml.idl
+msxml.idl
+Processing O:\\Include\oaidl.acf
+oaidl.acf
+Processing O:\\Include\ocidl.acf
+ocidl.acf
+cp -f idlgen/*.h include
+cp -f idlgen/*.c src
+cp -f idlgen/*.tlb release_win_x86
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/stdafx.cpp -Forelease_win_x86/stdafx.o
+stdafx.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/CEAttres.cpp -Forelease_win_x86/CEAttres.o
+CEAttres.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/common_tools.cpp -Forelease_win_x86/common_tools.o
+common_tools.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/dllmain.cpp -Forelease_win_x86/dllmain.o
+dllmain.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/nlofficerep_only_debug.cpp -Forelease_win_x86/nlofficerep_only_debug.o
+nlofficerep_only_debug.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/QueryPC.cpp -Forelease_win_x86/QueryPC.o
+QueryPC.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/SDKWrapper.cpp -Forelease_win_x86/SDKWrapper.o
+SDKWrapper.cpp
+y:/VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/SDKWrapper_i.c -Forelease_win_x86/SDKWrapper_i.o
+SDKWrapper_i.c
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -Iy:/VC/include -Iy:/VC/atlmfc/Include -IO://Include -Forelease_win_x86/SDKWrapper.res src/SDKWrapper.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+y:/VC/bin/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:SDKWrapper.def release_win_x86/stdafx.o release_win_x86/CEAttres.o release_win_x86/common_tools.o release_win_x86/dllmain.o release_win_x86/nlofficerep_only_debug.o release_win_x86/QueryPC.o release_win_x86/SDKWrapper.o release_win_x86/SDKWrapper_i.o release_win_x86/SDKWrapper.res -OUT:release_win_x86/SDKWrapper32.dll -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86 -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_win_x86 -LIBPATH:y:/VC/lib -LIBPATH:y:/VC/atlmfc/Lib -LIBPATH:O://Lib -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin comsuppw.lib Ws2_32.lib ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x86/SDKWrapper32.lib and object release_win_x86/SDKWrapper32.exp
+SDKWrapper32.exp : warning LNK4070: /OUT:SDKWrapper.DLL directive in .EXP differs from output filename 'release_win_x86/SDKWrapper32.dll'; ignoring directive
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x86/SDKWrapper32.dll
+Done Adding Additional Store
+Successfully signed: release_win_x86/SDKWrapper32.dll
+cp -pf release_win_x86/SDKWrapper32.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/SDKWrapper'
+--------------------------------------------------------------------
+Building prod/wfRetry
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/wfRetry'
+WARNING: TARGETENVOS undefined. Defaulting to TARGETENVOS=win.
+--------------------------------------------------------------------------
+[Target]
+TARGET=
+SUBTARGET=wfRetry
+CUSTOM=
+[Parameters]
+BUILDTYPE=release
+TARGETENVOS=win
+TARGETENVARCH=x86
+SUBTARGET_STATIC=no
+PREFAST=0
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+JDKDIR=C:/P4/external/j2sdk/jdk1.6.0_18
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+BINDIR=release_win_x86
+LIBDIR=release_win_x86
+BINDIR_DIST=release_win_x86
+LIBDIR_DIST=release_win_x86
+LIBPATH=x://VC/lib x://VC/atlmfc/Lib O://Lib C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin
+[Tools]
+CC=x://VC/bin/cl.exe
+LD=x://VC/bin/link.exe
+RC=O://bin/rc.exe
+MIDL=O://Bin/midl.exe 
+STATIC_LD=x://VC/bin/lib.exe
+[VERSION]
+PRODUCT=Entitlement Manager for Microsoft SharePoint
+RELEASE=8.0.0.0 (8)
+---------------------------------------------------------------------------
+x://VC/bin/cl.exe -EHsc -nologo  -O2 -MT -Zi -I./include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -DWFRETRY_EXPORTS -DWIN32 -D_WINDOWS -D_UNICODE -DUNICODE -D_X86_ -DWIN32_LEAN_AND_MEAN -D_WIN32_WINNT=0x0502 -DNDEBUG -c src/wfRetry.cpp -Forelease_win_x86/wfRetry.o
+wfRetry.cpp
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\wfRetry\include\stdafx.h(26) : warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+        command-line arguments :  see previous definition of 'WIN32_LEAN_AND_MEAN'
+O://bin/rc.exe -D_UNICODE -DUNICODE -I./include -Ix://VC/include -Ix://VC/atlmfc/Include -IO://Include -Forelease_win_x86/use_default.res src/use_default.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+x://VC/bin/link.exe -NOLOGO -DEBUG -OPT:REF -OPT:ICF -DLL -DEF:wfRetry.def release_win_x86/wfRetry.o release_win_x86/use_default.res -OUT:release_win_x86/wfRetry32.dll -LIBPATH:x://VC/lib -LIBPATH:x://VC/atlmfc/Lib -LIBPATH:O://Lib -LIBPATH:C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin ws2_32.lib Advapi32.lib Shell32.lib User32.lib Imagehlp.lib secur32.lib WtsApi32.lib
+   Creating library release_win_x86/wfRetry32.lib and object release_win_x86/wfRetry32.exp
+wfRetry32.exp : warning LNK4070: /OUT:wfRetry.dll directive in .EXP differs from output filename 'release_win_x86/wfRetry32.dll'; ignoring directive
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release_win_x86/wfRetry32.dll
+Done Adding Additional Store
+Successfully signed: release_win_x86/wfRetry32.dll
+cp -pf release_win_x86/wfRetry32.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x86  
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/wfRetry'
+make[1]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace'
+INFO: Compile C# code
+cd C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace; make -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=8 TARGETSFILE=prod/targets.cs.common
+make[1]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace'
+
+==========================================================================
+BUILDTYPE=release
+TARGETENVOS=
+TARGETENVARCH=
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+BUILDOUTPUTDIR=
+==========================================================================
+--------------------------------------------------------------------
+Building prod/CSCInvoke/CSCInvoke
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/CSCInvoke/CSCInvoke'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=CSCInvoke.csproj
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT=CSCInvoke.csproj
+[Parameters]
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building CSCInvoke.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf release_build.log
+x:/common7/IDE/devenv.exe CSCInvoke.csproj /build "Release|AnyCPU" /out release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f release_build.log ] ; then						\
+	echo "[[DUMP BEGIN - release_build.log]]" ;			\
+	cat release_build.log ;								\
+	echo "[[DUMP END - release_build.log]]" ;			\
+else													\
+	echo "INFO: Cannot find release_build.log" ;			\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - release_build.log]]
+------ Build started: Project: CSCInvoke, Configuration: Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\CSCInvoke\CSCInvoke\AssemblyInfo.cs(46,12): warning CS1699: Use command line option '/keyfile' or appropriate project settings instead of 'AssemblyKeyFile'
+warning CS1616: Option 'keyfile' overrides attribute 'System.Reflection.AssemblyKeyFileAttribute' given in a source file or added module
+
+Compile complete -- 0 errors, 2 warnings
+  CSCInvoke -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\CSCInvoke\CSCInvoke\release\NextLabs.CSCInvoke.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com release/NextLabs.CSCInvoke.dll
+Done Adding Additional Store
+Successfully signed: release/NextLabs.CSCInvoke.dll
+cp -pf release/NextLabs.CSCInvoke.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+cp -pf release/NextLabs.CSCInvoke.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+cp -pf release/NextLabs.CSCInvoke.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/xlib/release_dotnet
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/CSCInvoke/CSCInvoke'
+--------------------------------------------------------------------
+Building prod/WorkflowAdapter
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/WorkflowAdapter'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=WorkFlowAdapter.csproj
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT=WorkFlowAdapter.csproj
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building WorkFlowAdapter.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  release_build.log
+x:/common7/IDE/devenv.exe WorkFlowAdapter.csproj /build "Release|AnyCPU" /out release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f release_build.log ] ; then						\
+	echo "[[DUMP BEGIN - release_build.log]]" ;			\
+	cat release_build.log ;								\
+	echo "[[DUMP END - release_build.log]]" ;			\
+else													\
+	echo "INFO: Cannot find release_build.log" ;			\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - release_build.log]]
+------ Build started: Project: WorkFlowAdapter, Configuration: Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\WorkFlowAdapter\Program.cs(520,37): warning CS0168: The variable 'e' is declared but never used
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\WorkFlowAdapter\Program.cs(1135,34): warning CS0168: The variable 'e' is declared but never used
+
+Compile complete -- 0 errors, 2 warnings
+  WorkFlowAdapter -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\WorkFlowAdapter\release\WorkFlowAdapter.exe
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - release_build.log]]
+cp -pf release/WorkflowAdapter.exe C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+cp -pf release/WorkflowAdapter.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/WorkflowAdapter'
+make[1]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace'
+cd C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace; make -k OFFICIALCERT=1 BUILDTYPE=release PREFAST=0 VERSION_BUILD=8 TARGETSFILE=prod/targets.cs.sharepoint
+make[1]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace'
+
+==========================================================================
+BUILDTYPE=release
+TARGETENVOS=
+TARGETENVARCH=
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+NLENFORCERSDIR= (legacy)
+BUILDOUTPUTDIR=
+==========================================================================
+--------------------------------------------------------------------
+Building prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT=
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building Nextlabs.SPEConfigModule_SP2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2013release_build.log
+x:/common7/IDE/devenv.exe Nextlabs.SPEConfigModule_SP2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: Nextlabs.SPEConfigModule_SP2013, Configuration: SP2013Release Any CPU ------
+  Nextlabs.SPEConfigModule_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPEConfigModule\Nextlabs.SPEConfigModule\SP2013Release\Nextlabs.SPEConfigModule.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/NextLabs.SPEConfigModule.dll
+Done Adding Additional Store
+Successfully signed: sp2013release/Nextlabs.SPEConfigModule.dll
+cp -pf sp2013release/Nextlabs.SPEConfigModule.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/Nextlabs.SPEConfigModule.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building Nextlabs.SPEConfigModule_SP2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2016release_build.log
+x:/common7/IDE/devenv.exe Nextlabs.SPEConfigModule_SP2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: Nextlabs.SPEConfigModule_SP2016, Configuration: SP2016Release Any CPU ------
+  Nextlabs.SPEConfigModule_SP2016 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPEConfigModule\Nextlabs.SPEConfigModule\SP2016Release\Nextlabs.SPEConfigModule.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2016release/NextLabs.SPEConfigModule.dll
+Done Adding Additional Store
+Successfully signed: sp2016release/Nextlabs.SPEConfigModule.dll
+cp -pf sp2016release/Nextlabs.SPEConfigModule.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release
+cp -pf sp2016release/Nextlabs.SPEConfigModule.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.SPEConfigModule/Nextlabs.SPEConfigModule'
+--------------------------------------------------------------------
+Building prod/ceSPService
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/ceSPService'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=ceSPService_sp2013.csproj
+PROJECT_SP2016=ceSPService_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building ceSPService_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf sp2013release_build.log
+x:/common7/IDE/devenv.exe ceSPService_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: ceSPService_SP2013, Configuration: SP2013Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\ceSPService\AssemblyInfo.cs(41,12): warning CS1699: Use command line option '/keyfile' or appropriate project settings instead of 'AssemblyKeyFile'
+warning CS1616: Option 'keyfile' overrides attribute 'System.Reflection.AssemblyKeyFileAttribute' given in a source file or added module
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\ceSPService\ceSPService.asmx.cs(333,37): warning CS0168: The variable 'ex' is declared but never used
+
+Compile complete -- 0 errors, 3 warnings
+  ceSPService_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\ceSPService\SP2013Release\ceSPService.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/ceSPService.dll
+Done Adding Additional Store
+Successfully signed: sp2013release/ceSPService.dll
+cp -pf sp2013release/ceSPService.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release/
+cp -pf sp2013release/ceSPService.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release/
+
+Building ceSPService_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf sp2016release_build.log
+x:/common7/IDE/devenv.exe ceSPService_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: ceSPService_SP2016, Configuration: SP2016Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\ceSPService\AssemblyInfo.cs(41,12): warning CS1699: Use command line option '/keyfile' or appropriate project settings instead of 'AssemblyKeyFile'
+warning CS1616: Option 'keyfile' overrides attribute 'System.Reflection.AssemblyKeyFileAttribute' given in a source file or added module
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\ceSPService\ceSPService.asmx.cs(333,37): warning CS0168: The variable 'ex' is declared but never used
+
+Compile complete -- 0 errors, 3 warnings
+  ceSPService_SP2016 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\ceSPService\SP2016Release\ceSPService.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2016release/ceSPService.dll
+Done Adding Additional Store
+Successfully signed: sp2016release/ceSPService.dll
+cp -pf sp2016release/ceSPService.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release/
+cp -pf sp2016release/ceSPService.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release/
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/ceSPService'
+--------------------------------------------------------------------
+Building prod/IrmSettingTool
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/IrmSettingTool'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=IrmSettingTool_sp2013.csproj
+PROJECT_SP2016=IrmSettingTool_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building IrmSettingTool_sp2013.csproj  (release) for NextLabs SharePoint Enforcer
+rm -rf sp2013release_build.log
+x:/common7/IDE/devenv.exe IrmSettingTool_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: IrmSettingTool_SP2013, Configuration: SP2013Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\IrmSettingTool\AssemblyInfo.cs(42,12): warning CS1699: Use command line option '/keyfile' or appropriate project settings instead of 'AssemblyKeyFile'
+
+Compile complete -- 0 errors, 1 warnings
+  IrmSettingTool_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\IrmSettingTool\SP2013Release\IrmSettingTool.exe
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/IrmSettingTool.exe
+Done Adding Additional Store
+Successfully signed: sp2013release/IrmSettingTool.exe
+cp -pf sp2013release/IrmSettingTool.exe C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/IrmSettingTool.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building IrmSettingTool_sp2016.csproj  (release) for NextLabs SharePoint Enforcer
+rm -rf sp2016release_build.log
+x:/common7/IDE/devenv.exe IrmSettingTool_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+
+The following files were specified on the command line:
+
+	IrmSettingTool_sp2016.csproj
+
+These files could not be found and will not be loaded.
+[[DUMP END - sp2016release_build.log]]
+Makefile:95: recipe for target 'sp2016' failed
+make[2]: *** [sp2016] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/IrmSettingTool'
+Makefile:59: recipe for target 'prod/IrmSettingTool' failed
+make[1]: *** [prod/IrmSettingTool] Error 2
+--------------------------------------------------------------------
+Building prod/Nextlabs.Diagnostic
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.Diagnostic'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=NextLabs.Diagnostic_sp2013.csproj
+PROJECT_SP2016=NextLabs.Diagnostic_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building NextLabs.Diagnostic_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf sp2013release_build.log
+x:/common7/IDE/devenv.exe NextLabs.Diagnostic_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: NextLabs.Diagnostic_SP2013, Configuration: SP2013Release Any CPU ------
+  NextLabs.Diagnostic_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.Diagnostic\SP2013Release\NextLabs.Diagnostic.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/NextLabs.Diagnostic.dll
+Done Adding Additional Store
+Successfully signed: sp2013release/NextLabs.Diagnostic.dll
+cp -pf sp2013release/NextLabs.Diagnostic.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/NextLabs.Diagnostic.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building NextLabs.Diagnostic_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf sp2016release_build.log
+x:/common7/IDE/devenv.exe NextLabs.Diagnostic_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: NextLabs.Diagnostic_SP2016, Configuration: SP2016Release Any CPU ------
+  NextLabs.Diagnostic_SP2016 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.Diagnostic\SP2016Release\NextLabs.Diagnostic.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2016release/NextLabs.Diagnostic.dll
+Done Adding Additional Store
+Successfully signed: sp2016release/NextLabs.Diagnostic.dll
+cp -pf sp2016release/NextLabs.Diagnostic.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release
+cp -pf sp2016release/NextLabs.Diagnostic.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.Diagnostic'
+--------------------------------------------------------------------
+Building prod/NextLabs.Common/NextLabs.Common
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/NextLabs.Common/NextLabs.Common'
+TLB=O:/bin/TlbImp.exe
+SDKWSRC=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_win_x64/SDKWrapper.dll
+SDKWDST=SDKWrapper.dll
+SDKWLib=/out:SDKWrapperLib.dll
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=NextLabs.Common_sp2013.csproj
+PROJECT_SP2016=NextLabs.Common_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+ Common.snk is existed!
+O:/bin/TlbImp.exe SDKWrapper.dll /machine:x64 /keyfile:Common.snk /out:SDKWrapperLib.dll
+Microsoft (R) .NET Framework Type Library to Assembly Converter 3.5.30729.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Type library imported to C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SDKWrapperLib.dll
+cp -pf SDKWrapperLib.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+O:/bin/TlbImp.exe PdfEditor.dll /machine:x64 /keyfile:Common.snk /out:PdfEditorLib.dll
+Microsoft (R) .NET Framework Type Library to Assembly Converter 3.5.30729.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Type library imported to C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\PdfEditorLib.dll
+cp -pf PdfEditorLib.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building NextLabs.Common_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2013release_build.log
+#regsvr32 "C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/../release_win_x86/SDKWrapper32.dll" /s
+x:/common7/IDE/devenv.exe NextLabs.Common_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: NextLabs.Common_SP2013, Configuration: SP2013Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(5069,29): warning CS0618: 'Microsoft.SharePoint.SPRoleCollection' is obsolete: 'Use the SPRoleDefinitionCollection class instead'
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(5070,29): warning CS0618: 'Microsoft.SharePoint.SPRole' is obsolete: 'Use the SPRoleDefinition class instead'
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(5071,38): warning CS0618: 'Microsoft.SharePoint.SPRole' is obsolete: 'Use the SPRoleDefinition class instead'
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(5069,56): warning CS0618: 'Microsoft.SharePoint.SPWeb.Roles' is obsolete: 'Use the RoleDefinitions property instead'
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SPAddHeader.cs(261,33): warning CS0467: Ambiguity between method 'Microsoft.Office.Interop.Word._Document.Close(ref object, ref object, ref object)' and non-method 'Microsoft.Office.Interop.Word.DocumentEvents2_Event.Close'. Using method group.
+
+Compile complete -- 0 errors, 5 warnings
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3270: There was a mismatch between the processor architecture of the project being built "MSIL" and the processor architecture of the reference "PdfEditorLib", "AMD64". This mismatch may cause runtime failures. Please consider changing the targeted processor architecture of your project through the Configuration Manager so as to align the processor architectures between your project and references, or take a dependency on references with a processor architecture that matches the targeted processor architecture of your project.
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3270: There was a mismatch between the processor architecture of the project being built "MSIL" and the processor architecture of the reference "SDKWrapperLib", "AMD64". This mismatch may cause runtime failures. Please consider changing the targeted processor architecture of your project through the Configuration Manager so as to align the processor architectures between your project and references, or take a dependency on references with a processor architecture that matches the targeted processor architecture of your project.
+  NextLabs.Common_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SP2013Release\NextLabs.Common.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/NextLabs.Common.dll
+Done Adding Additional Store
+Successfully signed: sp2013release/NextLabs.Common.dll
+cp -pf sp2013release/Nextlabs.Common.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/Nextlabs.Common.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+ Common.snk is existed!
+O:/bin/TlbImp.exe SDKWrapper.dll /machine:x64 /keyfile:Common.snk /out:SDKWrapperLib.dll
+Microsoft (R) .NET Framework Type Library to Assembly Converter 3.5.30729.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Type library imported to C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SDKWrapperLib.dll
+cp -pf SDKWrapperLib.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release
+O:/bin/TlbImp.exe PdfEditor.dll /machine:x64 /keyfile:Common.snk /out:PdfEditorLib.dll
+Microsoft (R) .NET Framework Type Library to Assembly Converter 3.5.30729.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Type library imported to C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\PdfEditorLib.dll
+cp -pf PdfEditorLib.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release
+
+Building NextLabs.Common_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2016release_build.log
+#regsvr32 "C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/../release_win_x86/SDKWrapper32.dll" /s
+x:/common7/IDE/devenv.exe NextLabs.Common_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: NextLabs.Common_SP2016, Configuration: SP2016Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SPTrimming.cs(33,33): error CS0103: The name 'searchService' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SPTrimming.cs(87,33): error CS0103: The name 'searchService' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SPTrimming.cs(91,33): error CS0103: The name 'searchService' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SPTrimming.cs(100,17): error CS1501: No overload for method 'RegisterPluggableSecurityTrimmer' takes 3 arguments
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SPTrimming.cs(166,33): error CS0103: The name 'searchService' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SPTrimming.cs(170,33): error CS0103: The name 'searchService' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(2951,84): error CS0103: The name 'serverContext' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(2968,84): error CS0103: The name 'serverContext' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(3082,92): error CS0103: The name 'serverContext' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(3101,92): error CS0103: The name 'serverContext' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(4239,39): error CS0103: The name 'searchService' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(4262,57): error CS0103: The name 'searchService' does not exist in the current context
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(5069,29): warning CS0618: 'Microsoft.SharePoint.SPRoleCollection' is obsolete: 'Use the SPRoleDefinitionCollection class instead'
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(5070,29): warning CS0618: 'Microsoft.SharePoint.SPRole' is obsolete: 'Use the SPRoleDefinition class instead'
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(5071,38): warning CS0618: 'Microsoft.SharePoint.SPRole' is obsolete: 'Use the SPRoleDefinition class instead'
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\Global.cs(5069,56): warning CS0618: 'Microsoft.SharePoint.SPWeb.Roles' is obsolete: 'Use the RoleDefinitions property instead'
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Common\NextLabs.Common\SPAddHeader.cs(261,33): warning CS0467: Ambiguity between method 'Microsoft.Office.Interop.Word._Document.Close(ref object, ref object, ref object)' and non-method 'Microsoft.Office.Interop.Word.DocumentEvents2_Event.Close'. Using method group.
+
+Compile complete -- 12 errors, 5 warnings
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3270: There was a mismatch between the processor architecture of the project being built "MSIL" and the processor architecture of the reference "PdfEditorLib", "AMD64". This mismatch may cause runtime failures. Please consider changing the targeted processor architecture of your project through the Configuration Manager so as to align the processor architectures between your project and references, or take a dependency on references with a processor architecture that matches the targeted processor architecture of your project.
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3270: There was a mismatch between the processor architecture of the project being built "MSIL" and the processor architecture of the reference "SDKWrapperLib", "AMD64". This mismatch may cause runtime failures. Please consider changing the targeted processor architecture of your project through the Configuration Manager so as to align the processor architectures between your project and references, or take a dependency on references with a processor architecture that matches the targeted processor architecture of your project.
+========== Build: 0 succeeded or up-to-date, 1 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+Makefile:156: recipe for target 'sp2016' failed
+make[2]: *** [sp2016] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/NextLabs.Common/NextLabs.Common'
+Makefile:59: recipe for target 'prod/NextLabs.Common/NextLabs.Common' failed
+make[1]: *** [prod/NextLabs.Common/NextLabs.Common] Error 2
+--------------------------------------------------------------------
+Building prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=Nextlabs.SPSecurityTrimming_sp2013.csproj
+PROJECT_SP2016=Nextlabs.SPSecurityTrimming_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building Nextlabs.SPSecurityTrimming_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2013release_build.log
+x:/common7/IDE/devenv.exe Nextlabs.SPSecurityTrimming_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: Nextlabs.SPSecurityTrimming_SP2013, Configuration: SP2013Release Any CPU ------
+  Nextlabs.SPSecurityTrimming_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SP2013Release\Nextlabs.SPSecurityTrimming.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/NextLabs.SPSecurityTrimming.dll
+Done Adding Additional Store
+Successfully signed: sp2013release/Nextlabs.SPSecurityTrimming.dll
+cp -pf sp2013release/Nextlabs.SPSecurityTrimming.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/Nextlabs.SPSecurityTrimming.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building Nextlabs.SPSecurityTrimming_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2016release_build.log
+x:/common7/IDE/devenv.exe Nextlabs.SPSecurityTrimming_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: Nextlabs.SPSecurityTrimming_SP2016, Configuration: SP2016Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSecurityTrimmingControl.cs(14,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPListItemTrimmer2010.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SmtGridViewRowTrimmer.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSecurityTrimmingPage.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\PageEventHook.cs(13,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\WebPartTrimmer.cs(12,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSearchResultTrimmer.cs(13,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPMobileTrimming.cs(11,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPMobileTrimming.cs(82,35): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSecurityTrimmingModule.cs(11,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\FeatureReceiver.cs(8,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\AspMenuItemTrimmer.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\TreeViewNodeTrimmer.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPListItemTrimmer.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\ViewListPageTrimmer.cs(12,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SMTreeViewNodeTrimmer.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSecurityTrimmingManager.cs(8,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\ControlEnumerator.cs(12,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\PostResponseFilter.cs(17,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\PostResponseFilter.cs(42,39): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\PostResponseFilter.cs(129,39): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSoapTrimmig.cs(11,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSoapTrimmig.cs(90,33): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPResponseTrimmer.cs(11,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPListItemTrimmer2010.cs(23,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SmtGridViewRowTrimmer.cs(20,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SmtGridViewRowTrimmer.cs(21,17): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\WebPartTrimmer.cs(30,38): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSearchResultTrimmer.cs(159,65): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPMobileTrimming.cs(546,46): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\AspMenuItemTrimmer.cs(19,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\AspMenuItemTrimmer.cs(30,38): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\TreeViewNodeTrimmer.cs(20,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPListItemTrimmer.cs(18,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SMTreeViewNodeTrimmer.cs(20,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSecurityTrimmingManager.cs(16,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\ControlEnumerator.cs(64,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\ControlEnumerator.cs(72,17): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\ControlEnumerator.cs(73,17): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSoapTrimmig.cs(255,17): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPSoapTrimmig.cs(259,33): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPResponseTrimmer.cs(39,17): error CS0246: The type or namespace name 'UserActionType' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPSecurityTrimming\Nextlabs.SPSecurityTrimming\SPResponseTrimmer.cs(40,32): error CS0246: The type or namespace name 'UserActionType' could not be found (are you missing a using directive or an assembly reference?)
+
+Compile complete -- 43 errors, 0 warnings
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NextLabs.Common". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+========== Build: 0 succeeded or up-to-date, 1 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+Makefile:95: recipe for target 'sp2016' failed
+make[2]: *** [sp2016] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming'
+Makefile:59: recipe for target 'prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming' failed
+make[1]: *** [prod/Nextlabs.SPSecurityTrimming/Nextlabs.SPSecurityTrimming] Error 2
+--------------------------------------------------------------------
+Building prod/Nextlabs.SPE.Console/Nextlabs.SPE.Console.SPEAdmin
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.SPE.Console/Nextlabs.SPE.Console.SPEAdmin'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=NextLabs.SPE.Console.SPEAdmin_sp2013.csproj
+PROJECT_SP2016=NextLabs.SPE.Console.SPEAdmin_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building NextLabs.SPE.Console.SPEAdmin_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2013release_build.log
+x:/common7/IDE/devenv.exe NextLabs.SPE.Console.SPEAdmin_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: Nextlabs.SPE.Console.SPEAdmin_SP2013, Configuration: SP2013Release Any CPU ------
+  Nextlabs.SPE.Console.SPEAdmin_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPE.Console\Nextlabs.SPE.Console.SPEAdmin\SP2013Release\CE_SPAdmin.exe
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/CE_SPAdmin.exe
+Done Adding Additional Store
+Successfully signed: sp2013release/CE_SPAdmin.exe
+cp -pf sp2013release/CE_SPAdmin.exe C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/CE_SPAdmin.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building NextLabs.SPE.Console.SPEAdmin_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2016release_build.log
+x:/common7/IDE/devenv.exe NextLabs.SPE.Console.SPEAdmin_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: Nextlabs.SPE.Console.SPEAdmin_SP2016, Configuration: SP2016Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPE.Console\Nextlabs.SPE.Console.SPEAdmin\SearchResultTrimmingCommand.cs(10,7): error CS0246: The type or namespace name 'NextLabs' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.SPE.Console\Nextlabs.SPE.Console.SPEAdmin\SPSecurityTrimmingCommand.cs(9,16): error CS0234: The type or namespace name 'SPSecurityTrimming' does not exist in the namespace 'Nextlabs' (are you missing an assembly reference?)
+
+Compile complete -- 2 errors, 0 warnings
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NextLabs.Common". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Nextlabs.SPSecurityTrimming". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+========== Build: 0 succeeded or up-to-date, 1 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+Makefile:95: recipe for target 'sp2016' failed
+make[2]: *** [sp2016] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.SPE.Console/Nextlabs.SPE.Console.SPEAdmin'
+Makefile:59: recipe for target 'prod/Nextlabs.SPE.Console/Nextlabs.SPE.Console.SPEAdmin' failed
+make[1]: *** [prod/Nextlabs.SPE.Console/Nextlabs.SPE.Console.SPEAdmin] Error 2
+--------------------------------------------------------------------
+Building prod/NextLabs.PLE/NextLabs.PLE
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/NextLabs.PLE/NextLabs.PLE'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=NextLabs.PLE_sp2013.csproj
+PROJECT_SP2016=NextLabs.PLE_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building NextLabs.PLE_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf sp2013release_build.log
+x:/common7/IDE/devenv.exe NextLabs.PLE_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: NextLabs.PLE_SP2013, Configuration: SP2013Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.PLE\NextLabs.PLE\NextLabs.PLE.PageResource.cs(657,63): warning CS0472: The result of the expression is always 'true' since a value of type 'bool' is never equal to 'null' of type 'bool?'
+
+Compile complete -- 0 errors, 1 warnings
+  NextLabs.PLE_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.PLE\NextLabs.PLE\SP2013Release\NextLabs.PLE.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/NextLabs.PLE.dll
+Done Adding Additional Store
+Successfully signed: sp2013release/NextLabs.PLE.dll
+cp -pf sp2013release/Nextlabs.PLE.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/Nextlabs.PLE.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building NextLabs.PLE_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf sp2016release_build.log
+x:/common7/IDE/devenv.exe NextLabs.PLE_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: NextLabs.PLE_SP2016, Configuration: SP2016Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.PLE\NextLabs.PLE\NextLabs.PLE.HttpModule.cs(20,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.PLE\NextLabs.PLE\Nextlabs.PLE.PageFactory.cs(8,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.PLE\NextLabs.PLE\NextLabs.PLE.PageResource.cs(4,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.PLE\NextLabs.PLE\Nextlabs.PLE.AdminPageLogs.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+
+Compile complete -- 4 errors, 0 warnings
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NextLabs.Common". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+========== Build: 0 succeeded or up-to-date, 1 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+Makefile:95: recipe for target 'sp2016' failed
+make[2]: *** [sp2016] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/NextLabs.PLE/NextLabs.PLE'
+Makefile:59: recipe for target 'prod/NextLabs.PLE/NextLabs.PLE' failed
+make[1]: *** [prod/NextLabs.PLE/NextLabs.PLE] Error 2
+--------------------------------------------------------------------
+Building prod/sync_handlers/EventHandlers
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/sync_handlers/EventHandlers'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=EventHandlers_sp2013.csproj
+PROJECT_SP2016=EventHandlers_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building EventHandlers_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2013release_build.log
+x:/common7/IDE/devenv.exe EventHandlers_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: EventHandlers_SP2013, Configuration: SP2013Release Any CPU ------
+  EventHandlers_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SP2013Release\NextLabs.SPEnforcer.dll
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/NextLabs.SPEnforcer.dll
+Done Adding Additional Store
+Successfully signed: sp2013release/NextLabs.SPEnforcer.dll
+cp -pf sp2013release/Nextlabs.SPEnforcer.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/Nextlabs.SPEnforcer.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building EventHandlers_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2016release_build.log
+x:/common7/IDE/devenv.exe EventHandlers_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: EventHandlers_SP2016, Configuration: SP2016Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEUtilities.cs(18,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SoapTrimmig.cs(12,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SoapTrimmig.cs(13,16): error CS0234: The type or namespace name 'SPSecurityTrimming' does not exist in the namespace 'Nextlabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SoapTrimmig.cs(165,31): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ListHandler.cs(7,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ClassificationNotificationMismatchWorker.cs(6,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(19,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(24,16): error CS0234: The type or namespace name 'SPSecurityTrimming' does not exist in the namespace 'Nextlabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEASPXModule.cs(8,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\RequestFilter.cs(17,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ItemVersionControl.cs(4,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\WebSiteHandler.cs(7,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPMobilePropertyTrimming.cs(11,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPMobilePropertyTrimming.cs(14,16): error CS0234: The type or namespace name 'SPSecurityTrimming' does not exist in the namespace 'Nextlabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPMobilePropertyTrimming.cs(58,35): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEReport.cs(8,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\Restapi.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\HttpModuleEventHandler.cs(9,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\NxlClassificationComparisonPage.cs(16,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEISAPIModule.cs(8,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEWebServiceBase.cs(6,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\RestapiTrimming.cs(12,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\RestapiTrimming.cs(13,16): error CS0234: The type or namespace name 'SPSecurityTrimming' does not exist in the namespace 'Nextlabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\RestapiTrimming.cs(127,34): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\Global_Utils.cs(15,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\HttpSoapModule.cs(17,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\CALogViewerPage.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\PreFilterModule.cs(6,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPECOMModule.cs(7,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\NextLabs.HttpModule.cs(19,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\NextLabs.HttpModule.cs(20,16): error CS0234: The type or namespace name 'PLE' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\NextLabs.HttpModule.cs(21,16): error CS0234: The type or namespace name 'SPSecurityTrimming' does not exist in the namespace 'Nextlabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\CASchedule.cs(9,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\UserDriveRightProtectPage.cs(8,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\FeatureHandler.cs(8,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ContentAnalysisPage.cs(14,16): error CS0234: The type or namespace name 'SPSecurityTrimming' does not exist in the namespace 'Nextlabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ContentAnalysisPage.cs(16,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ListContentAnalysisWorker.cs(6,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\Modules\NxlFileNotFoundBlocker.cs(6,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ContentAnalysisObligation.cs(11,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ContentAnalysisObligation.cs(44,46): error CS0246: The type or namespace name 'IObligation' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ResponseEditor.cs(10,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ResponseEditor.cs(33,35): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ItemHandler.cs(16,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\FileContentAnalysis.cs(9,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ResponseFilter.cs(17,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ResponseFilter.cs(18,16): error CS0234: The type or namespace name 'SPSecurityTrimming' does not exist in the namespace 'Nextlabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ResponseFilter.cs(23,35): error CS0246: The type or namespace name 'FilterBase' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEUtilities.cs(25,64): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEUtilities.cs(846,86): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEUtilities.cs(971,99): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEUtilities.cs(1165,46): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(2663,57): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(2698,59): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(2737,59): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(2745,64): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(2785,60): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(2815,75): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(2852,73): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(2891,62): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SoapTrimmig.cs(527,41): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SoapTrimmig.cs(599,46): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ClassificationNotificationMismatchWorker.cs(73,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPEHttpModule.cs(108,72): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\SPMobilePropertyTrimming.cs(254,46): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\Restapi.cs(64,17): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\Restapi.cs(777,17): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\RestapiTrimming.cs(366,17): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\RestapiTrimming.cs(372,34): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\HttpSoapModule.cs(236,53): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\HttpSoapModule.cs(287,47): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\HttpSoapModule.cs(571,60): error CS0246: The type or namespace name 'SPEEvalAttr' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\NextLabs.HttpModule.cs(130,9): error CS0246: The type or namespace name 'PLEHttpModule' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\NextLabs.HttpModule.cs(132,9): error CS0246: The type or namespace name 'SPTHttpModule' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\CASchedule.cs(68,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\CASchedule.cs(189,19): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ListContentAnalysisWorker.cs(19,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ContentAnalysisObligation.cs(117,34): error CS0246: The type or namespace name 'Obligation' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ContentAnalysisObligation.cs(150,48): error CS0246: The type or namespace name 'Obligation' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ResponseEditor.cs(256,46): error CS0246: The type or namespace name 'EvaluationMultiple' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\FileContentAnalysis.cs(70,17): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\FileContentAnalysis.cs(77,16): error CS0246: The type or namespace name 'Logger' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ResponseFilter.cs(27,17): error CS0246: The type or namespace name 'UserActionType' could not be found (are you missing a using directive or an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\sync_handlers\EventHandlers\ResponseFilter.cs(28,32): error CS0246: The type or namespace name 'UserActionType' could not be found (are you missing a using directive or an assembly reference?)
+
+Compile complete -- 84 errors, 0 warnings
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NextLabs.Common". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NextLabs.PLE". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Nextlabs.SPSecurityTrimming". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+========== Build: 0 succeeded or up-to-date, 1 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+Makefile:95: recipe for target 'sp2016' failed
+make[2]: *** [sp2016] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/sync_handlers/EventHandlers'
+Makefile:59: recipe for target 'prod/sync_handlers/EventHandlers' failed
+make[1]: *** [prod/sync_handlers/EventHandlers] Error 2
+--------------------------------------------------------------------
+Building prod/SharepointConfigModifier
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/SharepointConfigModifier'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=SharepointConfigModifier_sp2013.csproj
+PROJECT_SP2016=SharepointConfigModifier_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building SharepointConfigModifier_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2013release_build.log
+x:/common7/IDE/devenv.exe SharepointConfigModifier_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: SharepointConfigModifier_SP2013, Configuration: SP2013Release Any CPU ------
+  SharepointConfigModifier_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\SharepointConfigModifier\SP2013Release\SharepointConfigModifier.exe
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/SharepointConfigModifier.exe
+Done Adding Additional Store
+Successfully signed: sp2013release/SharepointConfigModifier.exe
+cp -pf sp2013release/SharepointConfigModifier.exe C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/SharepointConfigModifier.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building SharepointConfigModifier_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2016release_build.log
+x:/common7/IDE/devenv.exe SharepointConfigModifier_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: SharepointConfigModifier_SP2016, Configuration: SP2016Release Any CPU ------
+  SharepointConfigModifier_SP2016 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\SharepointConfigModifier\SP2016Release\SharepointConfigModifier.exe
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2016release/SharepointConfigModifier.exe
+Done Adding Additional Store
+Successfully signed: sp2016release/SharepointConfigModifier.exe
+cp -pf sp2016release/SharepointConfigModifier.exe C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release
+cp -pf sp2016release/SharepointConfigModifier.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2016release
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/SharepointConfigModifier'
+--------------------------------------------------------------------
+Building prod/Nextlabs.Entitlement.Wizard
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.Entitlement.Wizard'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=Nextlabs.Entitlement.Wizard_sp2013.csproj
+PROJECT_SP2016=Nextlabs.Entitlement.Wizard_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building Nextlabs.Entitlement.Wizard_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2013release_build.log
+x:/common7/IDE/devenv.exe Nextlabs.Entitlement.Wizard_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+------ Build started: Project: Nextlabs.Entitlement.Wizard_SP2013, Configuration: SP2013Release Any CPU ------
+  Nextlabs.Entitlement.Wizard_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.Entitlement.Wizard\SP2013Release\Nextlabs.Entitlement.Wizard.exe
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/Nextlabs.Entitlement.Wizard.exe
+Done Adding Additional Store
+Successfully signed: sp2013release/Nextlabs.Entitlement.Wizard.exe
+cp -pf sp2013release/Nextlabs.Entitlement.Wizard.exe C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/Nextlabs.Entitlement.Wizard.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building Nextlabs.Entitlement.Wizard_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf  sp2016release_build.log
+x:/common7/IDE/devenv.exe Nextlabs.Entitlement.Wizard_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+------ Build started: Project: Nextlabs.Entitlement.Wizard_SP2016, Configuration: SP2016Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\Nextlabs.Entitlement.Wizard\CommonLib.cs(54,43): error CS0103: The name '_subKey' does not exist in the current context
+
+Compile complete -- 1 errors, 0 warnings
+========== Build: 0 succeeded or up-to-date, 1 failed, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+Makefile:95: recipe for target 'sp2016' failed
+make[2]: *** [sp2016] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/Nextlabs.Entitlement.Wizard'
+Makefile:59: recipe for target 'prod/Nextlabs.Entitlement.Wizard' failed
+make[1]: *** [prod/Nextlabs.Entitlement.Wizard] Error 2
+--------------------------------------------------------------------
+Building prod/NextLabs.Deployment
+--------------------------------------------------------------------
+make[2]: Entering directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/NextLabs.Deployment'
+--------------------------------------------------------------------------
+[Targets]
+PROJECT=
+OFFICIALCERT=1
+RCSRC=
+[Parameters]
+BUILDTYPE=release
+TARGETENVARCH=x86
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+[VERSION]
+PRODUCT=
+RELEASE=... (8)
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[Project]
+PROJECT_SP2013=NextLabs.Deployment_sp2013.csproj
+PROJECT_SP2016=NextLabs.Deployment_sp2016.csproj
+PROJECT_CONFIG_SP2013=sp2013release
+PROJECT_CONFIG_SP2016=sp2016release
+[Parameters]
+TARGETS_SP=sp2013 sp2016
+BUILDTYPE=release
+NLBUILDROOT=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace
+NLEXTERNALDIR=C:/P4/external
+BUILDOUTPUTDIR=C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet
+BIN_DIR=release_dotnet
+---------------------------------------------------------------------------
+
+Building NextLabs.Deployment_sp2013.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf sp2013release_build.log
+x:/common7/IDE/devenv.exe NextLabs.Deployment_sp2013.csproj /build "sp2013release|AnyCPU" /out sp2013release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2013release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2013release_build.log]]" ;	\
+	cat sp2013release_build.log ;						\
+	echo "[[DUMP END - sp2013release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2013release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2013release_build.log]]
+The Site URL property of the project has not been set. In the Properties window, enter the URL for the local SharePoint server.
+------ Build started: Project: NextLabs.Deployment_SP2013, Configuration: SP2013Release Any CPU ------
+  NextLabs.Deployment_SP2013 -> C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\SP2013Release\NextLabs.Deployment.dll
+  Successfully created package at: C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\SP2013Release\NextLabs.Entitlement.wsp
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+
+[[DUMP END - sp2013release_build.log]]
+C:/Program Files (x86)/Windows Kits/8.0/bin/x64/signtool.exe sign /ac c:/release/bin/DigiCertAssuredIDRootCA.cer /f c:/release/bin/NextLabs.pfx /p IiVf1itvOrqJ /n NextLabs Inc. /fd sha256 /tr http://timestamp.digicert.com sp2013release/NextLabs.Deployment.dll
+Done Adding Additional Store
+Successfully signed: sp2013release/NextLabs.Deployment.dll
+cp -pf sp2013release/NextLabs.Deployment.dll C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/NextLabs.Deployment.pdb C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+cp -pf sp2013release/NextLabs.Entitlement.wsp C:/Jenkins/jobs/release_SPE_main1611_8.0/workspace/bin/release_dotnet/sp2013release
+
+Building NextLabs.Deployment_sp2016.csproj (release) for NextLabs SharePoint Enforcer
+rm -rf sp2016release_build.log
+x:/common7/IDE/devenv.exe NextLabs.Deployment_sp2016.csproj /build "sp2016release|AnyCPU" /out sp2016release_build.log ; \
+COMPILE_STATUS=$? ;									\
+if [ -f sp2016release_build.log ] ; then				\
+	echo "[[DUMP BEGIN - sp2016release_build.log]]" ;	\
+	cat sp2016release_build.log ;						\
+	echo "[[DUMP END - sp2016release_build.log]]" ;		\
+else													\
+	echo "INFO: Cannot find sp2016release_build.log" ;	\
+fi ;													\
+exit $COMPILE_STATUS
+[[DUMP BEGIN - sp2016release_build.log]]
+The Site URL property of the project has not been set. In the Properties window, enter the URL for the local SharePoint server.
+------ Build started: Project: NextLabs.Deployment_SP2016, Configuration: SP2016Release Any CPU ------
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\StatusReport.aspx.cs(16,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\Features\NextLabs.Entitlement.Basic\NextLabs.Entitlement.Basic.EventReceiver.cs(16,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\DenyPage.aspx.cs(15,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\NxlFilterPage.aspx.cs(15,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\FeatureManagerPage.aspx.cs(14,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\FeatureController.aspx.cs(14,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\SearchResultTrimmingPage.aspx.cs(13,16): error CS0234: The type or namespace name 'Common' does not exist in the namespace 'NextLabs' (are you missing an assembly reference?)
+C:\Jenkins\jobs\release_SPE_main1611_8.0\workspace\prod\NextLabs.Deployment\SearchResultTrimmingPage.aspx.cs(30,9): error CS0246: The type or namespace name 'SPTrimming' could not be found (are you missing a using directive or an assembly reference?)
+
+Compile complete -- 8 errors, 0 warnings
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NextLabs.Common". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "NextLabs.SPEnforcer". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "Nextlabs.SPSecurityTrimming". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+[[DUMP END - sp2016release_build.log]]
+Makefile:96: recipe for target 'sp2016' failed
+make[2]: *** [sp2016] Error 1
+make[2]: Target 'all' not remade because of errors.
+make[2]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace/prod/NextLabs.Deployment'
+Makefile:59: recipe for target 'prod/NextLabs.Deployment' failed
+make[1]: *** [prod/NextLabs.Deployment] Error 2
+make[1]: Target 'all' not remade because of errors.
+make[1]: Leaving directory '/cygdrive/c/Jenkins/jobs/release_SPE_main1611_8.0/workspace'
+build/Makefile.compile:78: recipe for target 'compile_cs' failed
+make: *** [compile_cs] Error 2
++ exit 2
+Build step 'Execute shell' marked build as failure
+Started calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: hudson-build@nextlabs.com Tonny.He@cn.nextlabs.com Icy.Qin@cn.nextlabs.com Daniel.Chen@cn.nextlabs.com
+Finished: FAILURE

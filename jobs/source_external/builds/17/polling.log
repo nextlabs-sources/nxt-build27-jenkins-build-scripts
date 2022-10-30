@@ -1,0 +1,20 @@
+Started on Feb 21, 2017 3:37:00 AM
+Looking for changes...
+Using node: Jenkins
+Using master perforce client: jenkins_nb27_source_main_external
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" workspace -o jenkins_nb27_source_main_external
+Changing P4 Client View from:
+//depot/main/external/... //jenkins_nb27_source_main_external/...
+
+Changing P4 Client View to: 
+  //depot/external/... //jenkins_nb27_source_main_external/...
+Saving modified client jenkins_nb27_source_main_external
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" -s client -i
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" counter change
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" -s changes -s submitted //jenkins_nb27_source_main_external/...@64655,@64712
+Latest submitted change selected by workspace is 64712
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 64712
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" info
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" -G where //...
+Done. Took 1.9 sec
+Changes found

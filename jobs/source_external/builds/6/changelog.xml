@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>63092</changenumber>
+		<date>2016-08-09 23:24:35</date>
+		<description>Adds new SharePoint dll for Taxonomy.</description>
+		<user>scm</user>
+		<workspace>nxbuild_OENO</workspace>
+		<files>
+			<file>
+				<name>//depot/external/microsoft/sharepoint/sp2010/Microsoft.SharePoint.Taxonomy.dll</name>
+				<workspacePath>microsoft/sharepoint/sp2010/Microsoft.SharePoint.Taxonomy.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>63092</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

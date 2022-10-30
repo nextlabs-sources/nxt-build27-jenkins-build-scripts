@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64693</changenumber>
+		<date>2017-02-13 03:00:00</date>
+		<description>// Update reference dll for SFB, this is used for Powershell command Get-CsUser</description>
+		<user>the</user>
+		<workspace>the_TASA_Kim</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/SFB SDK/SFB 2013/Microsoft.Rtc.Management.ADConnect/Microsoft.Rtc.Management.ADConnect.dll</name>
+				<workspacePath>SFB SDK/SFB 2013/Microsoft.Rtc.Management.ADConnect/Microsoft.Rtc.Management.ADConnect.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>64693</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/git_external/SFB SDK/SFB 2015/Microsoft.Rtc.Management.ADConnect/Microsoft.Rtc.Management.ADConnect.dll</name>
+				<workspacePath>SFB SDK/SFB 2015/Microsoft.Rtc.Management.ADConnect/Microsoft.Rtc.Management.ADConnect.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>64693</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

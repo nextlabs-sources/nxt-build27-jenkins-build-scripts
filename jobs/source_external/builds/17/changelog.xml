@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64712</changenumber>
+		<date>2017-02-21 03:12:31</date>
+		<description>Adds new jar required for TC-DCE2.7.1 fscweaver build</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/external/siemens/teamcenter10/fmsclientcache.jar</name>
+				<workspacePath>siemens/teamcenter10/fmsclientcache.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64712</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

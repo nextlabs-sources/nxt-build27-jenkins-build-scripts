@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>This job builds SPE 7.6 from Bitbucket repo: https://bitbucket.org/nxtlbs-devops/sharepointenforcer&#xd;
+    - branch release/mr1609_7.5.4_ISV</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.security.AuthorizationMatrixProperty>
+      <permission>hudson.model.Item.Read:xqian</permission>
+      <permission>hudson.model.Item.Read:tzhou</permission>
+      <permission>hudson.model.Item.Read:iqin</permission>
+    </hudson.security.AuthorizationMatrixProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>15</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.3.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>git@bitbucket.org:nxtlbs-devops/sharepointenforcer.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>release/mr1609_7.5.4_ISV</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
+    </extensions>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>export NLEXTERNALDIR=D:/P4/external
+export XLIB_FATE_SRC_TREE_ROOT=C:/jenkins/jobs/source_fate_release_5_5_4/workspace
+export VERSION_BUILD=${BUILD_NUMBER}
+
+export PUBLISH_TO_BODA=1
+
+cd ${WORKSPACE}
+
+############################
+# Clean the workspace
+############################
+git clean -fd &amp;&amp; true
+git add .
+git stash &amp;&amp; true
+git stash drop &amp;&amp; true
+############################
+
+source ./setEnv
+./buildRelease</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.58">
+      <recipientList>$DEFAULT_RECIPIENTS, Tonny.He@cn.nextlabs.com, Icy.Qin@cn.nextlabs.com, Daniel.Chen@cn.nextlabs.com, Raymond.Zeng@nextlabs.com</recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
+          <email>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
+            <contentType>project</contentType>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
+      </configuredTriggers>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <attachmentsPattern></attachmentsPattern>
+      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo>$DEFAULT_REPLYTO</replyTo>
+      <saveOutput>false</saveOutput>
+      <disabled>false</disabled>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
+  </publishers>
+  <buildWrappers/>
+</project>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64711</changenumber>
+		<date>2017-02-21 00:46:27</date>
+		<description>fix a format case at TokenRequest tostring method</description>
+		<user>the</user>
+		<workspace>C:\preforce</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/Model.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/Model.cs</workspacePath>
+				<rev>13</rev>
+				<changenumber>64711</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

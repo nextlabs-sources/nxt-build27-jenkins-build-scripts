@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64295</changenumber>
+		<date>2016-12-09 01:33:43</date>
+		<description>Add missing library.</description>
+		<user>sgdev</user>
+		<workspace>sgdev_ASCENSION</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/pdfbox/pdfbox-2.0.4/xmpbox-2.0.4-20160925.091136-39.jar</name>
+				<workspacePath>pdfbox/pdfbox-2.0.4/xmpbox-2.0.4-20160925.091136-39.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64295</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

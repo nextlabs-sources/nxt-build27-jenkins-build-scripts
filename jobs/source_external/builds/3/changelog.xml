@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>62604</changenumber>
+		<date>2016-06-24 05:36:04</date>
+		<description>Adds dlls needed for SPE 7.5.3 FBRPOC build.</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/external/microsoft/sharepoint/sp2013/Microsoft.Office.Interop.Word.dll</name>
+				<workspacePath>microsoft/sharepoint/sp2013/Microsoft.Office.Interop.Word.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>62604</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/microsoft/sharepoint/sp2013/Microsoft.SharePoint.Taxonomy.dll</name>
+				<workspacePath>microsoft/sharepoint/sp2013/Microsoft.SharePoint.Taxonomy.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>62604</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

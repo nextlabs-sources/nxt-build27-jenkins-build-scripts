@@ -1,0 +1,23 @@
+commit d62e1a58b0519c05666c418ffe56770a1e4f9414
+tree a474c540e571ba4ecc38560e9b7657ae1251e4ae
+parent 80d2c279a3487c10955f869daf219ac0b30cdb42
+author gguo <George.Guo@nextlabs.com> 2016-07-15 10:47:21 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-15 10:47:21 +0800
+
+    fix bug 35464, the special file is missing one node in xml, I add this
+    node to xml when it not existed.
+
+
+
+:100644 100644 e05c027e7c4e9a468007d57c5a9c97b6ab0b05e5 4c58a428f9ee050c3d61c7992630c49539b36c75 M	prod/NextLabs.Common/NextLabs.Common/Global.cs
+commit e0df4fdf7f9ee8470f60c7ee350c28d3d68824ab
+tree 781e1b55ff1c42832354182de7f93e7a790ae696
+parent 80d2c279a3487c10955f869daf219ac0b30cdb42
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-15 10:46:50 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-07-15 10:46:50 +0800
+
+    Wording.
+
+
+
+:100644 100644 33cc8d2f4ffd02f3fb3556720d74a29e7b8dec3e 2096979f38078707b943abab9be1b7fdc98465a9 M	prod/sync_handlers/EventHandlers/SPEReport.cs

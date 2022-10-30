@@ -1,0 +1,12 @@
+commit d6098dcbbfc55286140574a78d8dadcd0231130b
+tree 6fc3b964c4ab6333a016c6a78d138a514b557cf7
+parent 0210ce483c3722d82e0a0dfe95bb302c495bd896
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-11-25 14:04:31 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-11-25 14:04:31 +0800
+
+    Changes to support SP2016 deployment and wizard.
+
+
+
+:100644 100644 484e529eca9331bf09172c3c6f669ae5deb37dcd de17cc1dd4925b136d738675d6c75d614f878390 M	prod/NextLabs.Deployment/NextLabs.Deployment_SP2016.csproj
+:100644 100644 186b5dd1a6d327fecad6a86cee7a6d9bdb3ced60 e46357ddcb2deca5a8605855a200f1993e0029ff M	prod/Nextlabs.Entitlement.Wizard/Nextlabs.Entitlement.Wizard_SP2016.csproj

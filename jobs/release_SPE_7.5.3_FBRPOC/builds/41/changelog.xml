@@ -1,0 +1,11 @@
+commit 2491875c2194c2621f54b2bf63c3b2adb2d795d0
+tree 45526765bbf16b722162fe4f23931d1bfd9da439
+parent 05c94aca50d7f19f218b718342e9b085a658c6e6
+author emily <emily.lv@nextlabs.com> 2016-07-11 16:22:06 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-11 16:22:06 +0800
+
+    remove useless code
+
+
+
+:100644 100644 6306b2ce4e416322dcd642fad88a1a706de964f5 1171ca57d226c9791a387adc3a517e7a84ddc849 M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs

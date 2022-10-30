@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64678</changenumber>
+		<date>2017-02-07 19:09:23</date>
+		<description>Changed zip file structure</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/chef/chef-client/12.4/gems_winx.zip</name>
+				<workspacePath>chef/chef-client/12.4/gems_winx.zip</workspacePath>
+				<rev>4</rev>
+				<changenumber>64678</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

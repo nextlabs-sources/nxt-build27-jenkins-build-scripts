@@ -1,0 +1,11 @@
+commit f3e7f50d41adb4d0582a1129ddd6b063ed3886f2
+tree 0d3737fc546d2b76c27f0fdf52ab723072053d08
+parent ac7567961ec11c6f6acf3619215a3c1dbf5062ee
+author George Guo <George.Guo@nextlabs.com> 2016-10-08 10:58:09 +0800
+committer George Guo <George.Guo@nextlabs.com> 2016-10-08 10:58:09 +0800
+
+    Implement the rest api JSON decode to instead of Newtonsoft.json.
+
+
+
+:100644 100644 d7efa0878fcd3ae1c7d470fa30a3f6399294e0e8 18ac2d9c29fd6dd7ea5c51799aa515b6b93e732c M	prod/sync_handlers/EventHandlers/RestapiTrimming.cs

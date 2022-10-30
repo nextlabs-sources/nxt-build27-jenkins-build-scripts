@@ -1,0 +1,11 @@
+commit 80d2c279a3487c10955f869daf219ac0b30cdb42
+tree 18f859a2b81129e635cca2f99d7b7effddff2961
+parent 788e99a606f5155d5e598358ae962c6163eeb7d6
+author emily <emily.lv@nextlabs.com> 2016-07-14 17:25:57 +0800
+committer emily <emily.lv@nextlabs.com> 2016-07-14 17:25:57 +0800
+
+    modify classification comparison page UI
+
+
+
+:100644 100644 92eab8cf71f36730ccba078954daea1d09e23825 7a96ed4e1ba0ebdae188624d633a70dbb7dfabb4 M	configuration/sp2013/pages/NxlClassificationComparison.aspx

@@ -1,0 +1,13 @@
+Started on Nov 24, 2016 10:37:00 PM
+Looking for changes...
+Using node: Jenkins
+Using master perforce client: jenkins_nb27_source_main_external
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" workspace -o jenkins_nb27_source_main_external
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" counter change
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" -s changes -s submitted //jenkins_nb27_source_main_external/...@63399,@64182
+Latest submitted change selected by workspace is 64182
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 64182
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" info
+[Jenkins] $ "C:\Program Files (x86)\Perforce\p4.exe" -G where //...
+Done. Took 1.4 sec
+Changes found

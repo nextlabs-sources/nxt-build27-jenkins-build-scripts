@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64381</changenumber>
+		<date>2016-12-22 00:35:25</date>
+		<description>fix some issues</description>
+		<user>the</user>
+		<workspace>C:\preforce</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</workspacePath>
+				<rev>14</rev>
+				<changenumber>64381</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+	<entry>
+		<changenumber>64380</changenumber>
+		<date>2016-12-22 00:33:36</date>
+		<description>add new interface , add log deletage</description>
+		<user>the</user>
+		<workspace>C:\preforce</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/DataAccess.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/DataAccess.cs</workspacePath>
+				<rev>5</rev>
+				<changenumber>64380</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</workspacePath>
+				<rev>13</rev>
+				<changenumber>64380</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

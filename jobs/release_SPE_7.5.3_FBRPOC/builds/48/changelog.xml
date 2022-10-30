@@ -1,0 +1,12 @@
+commit 9c92528734bf79f094936be47da93df51cd0e578
+tree a5d8dae46c42c962db71a6478357fc59b49815b4
+parent e4a488b6ebc19360a466bdfbbc18f0a05a9559ed
+author gguo <George.Guo@nextlabs.com> 2016-07-15 17:52:48 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-15 17:52:48 +0800
+
+    fix bug 35480, using "SPFile.GetFieldValueAsText" function to get the
+    string value for all types field.
+
+
+
+:100644 100644 89ea41b304ffb5c18d6a773e7cbce02584cfb99f 662f45b2c69fcb29350eb2bc90e59f4017c2fe88 M	prod/sync_handlers/EventHandlers/ContentAnalysisObligation.cs

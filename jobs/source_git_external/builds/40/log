@@ -1,0 +1,23 @@
+Started by an SCM change
+Building in workspace D:\P4\git_external
+Using master perforce client: jenkins_nb27_source_git_external
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" workspace -o jenkins_nb27_source_git_external
+Last build changeset: 64375
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" changes -s submitted -m 1 //jenkins_nb27_source_git_external/...
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" -s changes -s submitted //jenkins_nb27_source_git_external/...@64376,@64376
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" describe -s 64376
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" info
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" -G where //...
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" -s users the
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" user -o the
+Sync'ing workspace to changelist 64376.
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" -s sync //jenkins_nb27_source_git_external/...@64376
+Sync complete, took 329 ms
+Labelling Build in Perforce using ${BUILD_TAG}_nb27
+[git_external] $ "C:\Program Files (x86)\Perforce\p4.exe" -s label -i
+Label 'jenkins-source_git_external-40_nb27' successfully generated.
+Started calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+Finished: SUCCESS

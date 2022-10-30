@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64703</changenumber>
+		<date>2017-02-15 01:49:18</date>
+		<description>support cloudaz 8.0.4 ,support auto2</description>
+		<user>the</user>
+		<workspace>C:\preforce</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/DataAccess.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/DataAccess.cs</workspacePath>
+				<rev>7</rev>
+				<changenumber>64703</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/JavaPC.cs</workspacePath>
+				<rev>17</rev>
+				<changenumber>64703</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/Nextlabs.JavaPC.RestAPISDK/Model.cs</name>
+				<workspacePath>Nextlabs.JavaPC.RestAPISDK/Model.cs</workspacePath>
+				<rev>12</rev>
+				<changenumber>64703</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

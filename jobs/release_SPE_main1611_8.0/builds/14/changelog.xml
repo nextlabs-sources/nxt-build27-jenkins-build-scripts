@@ -1,0 +1,11 @@
+commit f683027882a8a63cf7edada439bca5564321598a
+tree 6fd5e80d3bee81ef85d236e5a2d4f40663ab050e
+parent bf0a50fc6a8c1c8df79288a3cb5e36ee4d1b5c7f
+author Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-11-25 20:49:05 +0800
+committer Daniel (Demiao) Chen <Daniel.Chen@nextlabs.com> 2016-11-25 20:49:05 +0800
+
+    commit for use vs2012 instead of 2010
+
+
+
+:100644 100644 4ff15ce04930c76fb9866832fc8f38f206e6c7c6 fcb645adfb9210ca40e94f64f48722f75a5e8ef5 M	prod/NextLabs.Deployment/Makefile.inc

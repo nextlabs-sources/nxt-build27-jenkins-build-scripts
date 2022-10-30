@@ -1,0 +1,19 @@
+Started by user [8mha:AAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ+/dLi1CL9nOyizOKMvMQ8AD/V67jEAAAA[0mLakshminarayanan Krishnan
+Building in workspace C:\Jenkins\jobs\test_email\workspace
+[workspace] $ C:\cygwin\bin\bash.exe -xe C:\TEMP\hudson5991466065727485795.sh
+cygwin warning:
+  MS-DOS style path detected: C:\TEMP\hudson5991466065727485795.sh
+  Preferred POSIX equivalent is: /cygdrive/c/TEMP/hudson5991466065727485795.sh
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
++ echo 'INFO: Testing sending email via SMTP server mailhost.nextlabs.com'
+INFO: Testing sending email via SMTP server mailhost.nextlabs.com
++ exit -1
+Build step 'Execute shell' marked build as failure
+Sending e-mails to: lakshmi.krishnan@nextlabs.com
+Started calculate disk usage of build
+Finished Calculation of disk usage of build in 0 seconds
+Started calculate disk usage of workspace
+Finished Calculation of disk usage of workspace in 0 seconds
+Finished: FAILURE

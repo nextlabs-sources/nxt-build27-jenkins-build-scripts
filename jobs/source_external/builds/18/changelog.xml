@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64828</changenumber>
+		<date>2017-03-22 20:51:01</date>
+		<description>Adds aspect4j 1.8.9 jar</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/external/aspectj/1.8.9/aspectj-1.8.9.jar</name>
+				<workspacePath>aspectj/1.8.9/aspectj-1.8.9.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64828</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

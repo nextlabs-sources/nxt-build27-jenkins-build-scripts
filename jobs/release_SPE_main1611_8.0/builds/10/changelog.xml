@@ -1,0 +1,11 @@
+commit 0ed46e1741a584d840c537eea4b2e54f5a257a3c
+tree 5b6fe11cec5042581bc971411442e3ae988b13e0
+parent 5ed95709a26646c4e26dd2c6b77634b40c8fffdc
+author George Guo <George.Guo@nextlabs.com> 2016-11-22 10:38:35 +0800
+committer George Guo <George.Guo@nextlabs.com> 2016-11-22 10:38:35 +0800
+
+    Miss the project "IrmSettingTool_SP2016.csproj".
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 c36572c86a35ba044d2b953f43954fa8cebda8c6 A	prod/IrmSettingTool/IrmSettingTool_SP2016.csproj

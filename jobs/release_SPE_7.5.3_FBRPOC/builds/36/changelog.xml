@@ -1,0 +1,12 @@
+commit a754e68e24e89d65d6a6652d861eacf463c9bf07
+tree 619a1fcc7e5fdd8c4f94f048bda33ed6906bb532
+parent 823b19692bc6323d8a618df430d95833d1be19f1
+author gguo <George.Guo@nextlabs.com> 2016-07-08 14:54:56 +0800
+committer gguo <George.Guo@nextlabs.com> 2016-07-08 14:54:56 +0800
+
+    Remove the "AddProperty", using "SetProprtty" instead to avoid
+    exception.
+
+
+
+:100644 100644 7ddaa4ed9d2906c79eb80806e0f6cb3e7a305ba7 c65f0e3bf7f8077c17d4f5df8696cf6d68128619 M	prod/NextLabs.Common/NextLabs.Common/Global.cs

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>63203</changenumber>
+		<date>2016-08-24 20:02:37</date>
+		<description>Adds sharepoint related common files.</description>
+		<user>scm</user>
+		<workspace>nxbuild_OENO</workspace>
+		<files>
+			<file>
+				<name>//depot/external/microsoft/sharepoint/Common/Microsoft.Office.Interop.Excel.dll</name>
+				<workspacePath>microsoft/sharepoint/Common/Microsoft.Office.Interop.Excel.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>63203</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/microsoft/sharepoint/Common/Microsoft.Office.Interop.PowerPoint.dll</name>
+				<workspacePath>microsoft/sharepoint/Common/Microsoft.Office.Interop.PowerPoint.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>63203</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/microsoft/sharepoint/Common/Microsoft.Office.Interop.Word.dll</name>
+				<workspacePath>microsoft/sharepoint/Common/Microsoft.Office.Interop.Word.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>63203</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/external/microsoft/sharepoint/Common/Office.dll</name>
+				<workspacePath>microsoft/sharepoint/Common/Office.dll</workspacePath>
+				<rev>1</rev>
+				<changenumber>63203</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

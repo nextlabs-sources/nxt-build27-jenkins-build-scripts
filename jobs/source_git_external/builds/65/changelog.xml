@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64840</changenumber>
+		<date>2017-03-29 00:23:57</date>
+		<description>add partial download for mac&apos;s onedrive</description>
+		<user>kzhou</user>
+		<workspace>my</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/OneDriveSDK/Mac/1.0/OneDriveCoreSDK/Core/ODRequest.h</name>
+				<workspacePath>OneDriveSDK/Mac/1.0/OneDriveCoreSDK/Core/ODRequest.h</workspacePath>
+				<rev>2</rev>
+				<changenumber>64840</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+	<entry>
+		<changenumber>64839</changenumber>
+		<date>2017-03-29 00:23:27</date>
+		<description>add partial download for mac&apos;s google drive</description>
+		<user>kzhou</user>
+		<workspace>my</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/GoogleDriveSDK/Mac/2.0/Deps/gtm-session-fetcher/Source/GTMSessionFetcherService.h</name>
+				<workspacePath>GoogleDriveSDK/Mac/2.0/Deps/gtm-session-fetcher/Source/GTMSessionFetcherService.h</workspacePath>
+				<rev>2</rev>
+				<changenumber>64839</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/GoogleDriveSDK/Mac/2.0/Deps/gtm-session-fetcher/Source/GTMSessionFetcherService.m</name>
+				<workspacePath>GoogleDriveSDK/Mac/2.0/Deps/gtm-session-fetcher/Source/GTMSessionFetcherService.m</workspacePath>
+				<rev>2</rev>
+				<changenumber>64839</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+	<entry>
+		<changenumber>64838</changenumber>
+		<date>2017-03-29 00:22:42</date>
+		<description>1. add partial download for mac&apos;s dropbox</description>
+		<user>kzhou</user>
+		<workspace>my</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/DropboxSDK/Mac/4.1.1-swift/srcCode/SwiftyDropbox-master/SwiftyDropbox-master/Source/SwiftyDropbox/PlatformNeutral/DropboxTransportClient.swift</name>
+				<workspacePath>DropboxSDK/Mac/4.1.1-swift/srcCode/SwiftyDropbox-master/SwiftyDropbox-master/Source/SwiftyDropbox/PlatformNeutral/DropboxTransportClient.swift</workspacePath>
+				<rev>2</rev>
+				<changenumber>64838</changenumber>
+				<action>EDIT</action>
+			</file>
+			<file>
+				<name>//depot/git_external/DropboxSDK/Mac/4.1.1-swift/srcCode/SwiftyDropbox-master/SwiftyDropbox-master/Source/SwiftyDropbox/PlatformNeutral/FilesRoutes.swift</name>
+				<workspacePath>DropboxSDK/Mac/4.1.1-swift/srcCode/SwiftyDropbox-master/SwiftyDropbox-master/Source/SwiftyDropbox/PlatformNeutral/FilesRoutes.swift</workspacePath>
+				<rev>2</rev>
+				<changenumber>64838</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

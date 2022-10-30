@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>63697</changenumber>
+		<date>2016-10-09 19:08:52</date>
+		<description>fix bug 37013 - PWC: EM Log error when opening prior version of a pdf document</description>
+		<user>jjin</user>
+		<workspace>Emily</workspace>
+		<files>
+			<file>
+				<name>//depot/SharePointEnforcer/release/mr1610_PWC_7.1.3.5/prod/sync_handlers/EventHandlers/SPEHttpModule.cs</name>
+				<workspacePath>prod/sync_handlers/EventHandlers/SPEHttpModule.cs</workspacePath>
+				<rev>2</rev>
+				<changenumber>63697</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

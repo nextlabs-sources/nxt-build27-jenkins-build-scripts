@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64440</changenumber>
+		<date>2017-01-05 22:16:54</date>
+		<description>Added a library for jwt authentication related projects (jwt filter)</description>
+		<user>skaranam</user>
+		<workspace>skaranam_DUAN</workspace>
+		<files>
+			<file>
+				<name>//depot/main/external/auth0-java-jwt/3.0.2/java-jwt-3.0.2-javadoc.jar</name>
+				<workspacePath>auth0-java-jwt/3.0.2/java-jwt-3.0.2-javadoc.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64440</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/auth0-java-jwt/3.0.2/java-jwt-3.0.2-sources.jar</name>
+				<workspacePath>auth0-java-jwt/3.0.2/java-jwt-3.0.2-sources.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64440</changenumber>
+				<action>ADD</action>
+			</file>
+			<file>
+				<name>//depot/main/external/auth0-java-jwt/3.0.2/java-jwt-3.0.2.jar</name>
+				<workspacePath>auth0-java-jwt/3.0.2/java-jwt-3.0.2.jar</workspacePath>
+				<rev>1</rev>
+				<changenumber>64440</changenumber>
+				<action>ADD</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<changelog>
+	<entry>
+		<changenumber>64883</changenumber>
+		<date>2017-04-25 03:34:13</date>
+		<description>Updates common SDKWrapper module for product name and version.</description>
+		<user>nxbuild</user>
+		<workspace>kln_nb28</workspace>
+		<files>
+			<file>
+				<name>//depot/git_external/SDKWrapper/src/SDKWrapper.rc</name>
+				<workspacePath>SDKWrapper/src/SDKWrapper.rc</workspacePath>
+				<rev>4</rev>
+				<changenumber>64883</changenumber>
+				<action>EDIT</action>
+			</file>
+		</files>
+		<jobs>
+		</jobs>
+	</entry>
+</changelog>
